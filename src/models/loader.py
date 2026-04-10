@@ -10,7 +10,7 @@ import logging
 from typing import Any, Optional, Tuple
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoProcessor
 
 logger = logging.getLogger(__name__)
 
@@ -137,7 +137,14 @@ def load_model_and_tokenizer(
         dtype,
         "4bit" if quantization_config else "none",
     )
-    model = AutoModelForCausalLM.from_pretrained(**model_kwargs)
+    try:
+        model = AutoModelForCausalLM.from_pretrained(**model_kwargs)
+    except Exception:
+        # Multimodal models (e.g. Gemma4) are not registered under
+        # AutoModelForCausalLM; fall back to generic AutoModel.
+        from transformers import AutoModel
+        logger.info("AutoModelForCausalLM failed, retrying with AutoModel")
+        model = AutoModel.from_pretrained(**model_kwargs)
     model.eval()
 
     num_params = sum(p.numel() for p in model.parameters())
@@ -148,3 +155,29 @@ def load_model_and_tokenizer(
     )
 
     return model, tokenizer
+
+
+def get_model_layers(model) -> "torch.nn.ModuleList":
+    """Return the transformer decoder layers for any supported model architecture.
+
+    Tries common layer paths in order:
+      1. ``model.model.layers``          — Qwen, LLaMA style
+      2. ``model.language_model.model.layers`` — Gemma4 multimodal style
+
+    Raises
+    ------
+    AttributeError
+        If none of the known paths exist on the model.
+    """
+    if hasattr(model, "model") and hasattr(model.model, "layers"):
+        return model.model.layers
+    if (
+        hasattr(model, "language_model")
+        and hasattr(model.language_model, "model")
+        and hasattr(model.language_model.model, "layers")
+    ):
+        return model.language_model.model.layers
+    raise AttributeError(
+        f"Cannot locate transformer layers on {type(model).__name__}. "
+        "Expected model.model.layers or model.language_model.model.layers."
+    )

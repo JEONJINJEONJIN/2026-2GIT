@@ -13,6 +13,7 @@ from typing import Any, Callable, List, Optional, Tuple
 import torch
 from torch import Tensor, nn
 from torch.utils.hooks import RemovableHandle as RemovableHook
+from src.models.loader import get_model_layers
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +75,7 @@ class HookManager:
         RemovableHook
             The handle returned by :meth:`nn.Module.register_forward_hook`.
         """
-        layer = model.model.layers[layer_idx]
+        layer = get_model_layers(model)[layer_idx]
         handle = layer.register_forward_hook(hook_fn)
         self._handles.append(handle)
         logger.debug("Hook registered on layer %d (%d total)", layer_idx, len(self._handles))

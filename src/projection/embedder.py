@@ -1,6 +1,7 @@
 """Action description embedding using model hidden states."""
 
 import torch
+from src.models.loader import get_model_layers
 
 
 class ActionEmbedder:
@@ -10,7 +11,7 @@ class ActionEmbedder:
     to produce a fixed-size embedding for each action description.
     """
 
-    def __init__(self, model, tokenizer, layer_idx=18):
+    def __init__(self, model, tokenizer, layer_idx=21):  # middle of 42-layer Gemma4
         """Initialize the action embedder.
 
         Args:
@@ -52,7 +53,7 @@ class ActionEmbedder:
                 hidden_state["value"] = output
 
         # Register hook on the target layer
-        layer = self.model.model.layers[self.layer_idx]
+        layer = get_model_layers(self.model)[self.layer_idx]
         handle = layer.register_forward_hook(hook_fn)
 
         try:

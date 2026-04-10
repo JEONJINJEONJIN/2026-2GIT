@@ -5,11 +5,11 @@ steering:
     pilot: [1.0, 2.0, 4.0]
     fine: [0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0]
 
-  # Layer groups for sweep (Qwen2.5-3B, 36 layers)
+  # Layer groups for sweep (Gemma4-E4B: 42 layers)
   layer_groups:
-    shallow: [3, 6, 9]
-    middle: [12, 15, 18]
-    deep: [24, 27, 30]
+    shallow: [6, 9, 12]
+    middle: [18, 21, 24]
+    deep: [30, 33, 36]
 
   # Beta: position-wise injection strength
   beta_strategies:

@@ -11,6 +11,7 @@ from typing import Callable, Dict, List, Optional, Sequence, Union
 
 import torch
 from torch import Tensor
+from src.models.loader import get_model_layers
 
 
 # ------------------------------------------------------------------
@@ -155,7 +156,7 @@ class SteeringInjector:
             layer_alpha = alpha[idx] if isinstance(alpha, dict) else alpha
             sv = self.steering_vectors[idx]
 
-            handle = self.model.model.layers[idx].register_forward_hook(
+            handle = get_model_layers(self.model)[idx].register_forward_hook(
                 self._make_injection_hook(sv, layer_alpha, beta_fn)
             )
             self._hooks.append(handle)

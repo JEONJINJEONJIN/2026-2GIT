@@ -1,8 +1,4 @@
-"""Activation extraction from contrastive pairs for CAA steering.
-
-Extracts hidden-state activations at specified transformer layers using
-forward hooks. Designed for Qwen2.5-3B-Instruct (36 layers, hidden_dim=2048).
-"""
+"""Activation extraction from contrastive pairs for CAA steering."""
 
 from __future__ import annotations
 
@@ -10,6 +6,7 @@ from typing import Dict, List, Optional, Sequence
 
 import torch
 from torch import Tensor
+from src.models.loader import get_model_layers
 
 
 class ActivationExtractor:
@@ -46,7 +43,7 @@ class ActivationExtractor:
             ``(hidden_dim,)``.
         """
         if layer_indices is None:
-            layer_indices = list(range(len(self.model.model.layers)))
+            layer_indices = list(range(len(get_model_layers(self.model))))
 
         activations: Dict[int, Tensor] = {}
 
@@ -62,7 +59,7 @@ class ActivationExtractor:
 
         try:
             for idx in layer_indices:
-                layer_module = self.model.model.layers[idx]
+                layer_module = get_model_layers(self.model)[idx]
                 handle = layer_module.register_forward_hook(_make_hook(idx))
                 self._hooks.append(handle)
 
