@@ -140,11 +140,15 @@ def load_model_and_tokenizer(
     try:
         model = AutoModelForCausalLM.from_pretrained(**model_kwargs)
     except Exception:
-        # Multimodal models (e.g. Gemma4) are not registered under
-        # AutoModelForCausalLM; fall back to generic AutoModel.
-        from transformers import AutoModel
-        logger.info("AutoModelForCausalLM failed, retrying with AutoModel")
-        model = AutoModel.from_pretrained(**model_kwargs)
+        try:
+            # Gemma4 and other multimodal models need their specific class
+            from transformers import AutoModelForImageTextToText
+            logger.info("Retrying with AutoModelForImageTextToText")
+            model = AutoModelForImageTextToText.from_pretrained(**model_kwargs)
+        except Exception:
+            from transformers import AutoModel
+            logger.info("Retrying with AutoModel")
+            model = AutoModel.from_pretrained(**model_kwargs)
     model.eval()
 
     num_params = sum(p.numel() for p in model.parameters())
@@ -161,16 +165,26 @@ def get_model_layers(model) -> "torch.nn.ModuleList":
     """Return the transformer decoder layers for any supported model architecture.
 
     Tries common layer paths in order:
-      1. ``model.model.layers``          — Qwen, LLaMA style
-      2. ``model.language_model.model.layers`` — Gemma4 multimodal style
+      1. ``model.model.layers``                       — Qwen, LLaMA style
+      2. ``model.model.language_model.layers``         — Gemma4 multimodal style
+      3. ``model.language_model.model.layers``         — alternative multimodal style
 
     Raises
     ------
     AttributeError
         If none of the known paths exist on the model.
     """
+    # Qwen / LLaMA style
     if hasattr(model, "model") and hasattr(model.model, "layers"):
         return model.model.layers
+    # Gemma4 style: model.model.language_model.layers
+    if (
+        hasattr(model, "model")
+        and hasattr(model.model, "language_model")
+        and hasattr(model.model.language_model, "layers")
+    ):
+        return model.model.language_model.layers
+    # Alternative multimodal style
     if (
         hasattr(model, "language_model")
         and hasattr(model.language_model, "model")
@@ -179,5 +193,5 @@ def get_model_layers(model) -> "torch.nn.ModuleList":
         return model.language_model.model.layers
     raise AttributeError(
         f"Cannot locate transformer layers on {type(model).__name__}. "
-        "Expected model.model.layers or model.language_model.model.layers."
+        "Expected model.model.layers or model.model.language_model.layers."
     )

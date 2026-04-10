@@ -4,8 +4,8 @@ model:
   backup: "Qwen/Qwen2.5-3B-Instruct"
   device: "cuda"
   dtype: "bfloat16"          # gemma4 uses bfloat16
-  quantization: null         # null for full precision, "4bit" for bitsandbytes
-  load_in_4bit: false
+  quantization: "4bit"       # 4bit: ~4GB VRAM (fits 16GB GPU with room to spare)
+  load_in_4bit: true
   bnb_4bit_compute_dtype: "bfloat16"
   bnb_4bit_quant_type: "nf4"
   trust_remote_code: true

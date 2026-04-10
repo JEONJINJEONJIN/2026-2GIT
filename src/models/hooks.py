@@ -136,12 +136,12 @@ class HookManager:
             input: Tuple[Tensor, ...],
             output: Any,
         ) -> Any:
-            hidden_states = output[0]  # (batch, seq_len, hidden_dim)
+            hidden_states = output[0]  # (batch, seq, hidden) or (seq, hidden)
 
-            # Move steering vector to match hidden states if needed.
             vec = sv.to(device=hidden_states.device, dtype=hidden_states.dtype)
 
-            seq_len = hidden_states.size(1)
+            # seq_len is dim 1 for 3D, dim 0 for 2D
+            seq_len = hidden_states.size(1) if hidden_states.dim() == 3 else hidden_states.size(0)
 
             if beta_fn is not None:
                 beta = beta_fn(seq_len)

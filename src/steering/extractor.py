@@ -50,11 +50,13 @@ class ActivationExtractor:
         # Register forward hooks -------------------------------------------
         def _make_hook(layer_idx: int):
             def hook_fn(module, input, output):
-                # output is a tuple; the first element is the hidden state
-                # tensor of shape (batch, seq_len, hidden_dim).
                 hidden = output[0]
-                # Grab last token position, squeeze batch dim.
-                activations[layer_idx] = hidden[0, -1, :].detach().cpu()
+                # (batch, seq_len, hidden_dim) — Qwen/LLaMA style
+                if hidden.dim() == 3:
+                    activations[layer_idx] = hidden[0, -1, :].detach().cpu()
+                # (seq_len, hidden_dim) — Gemma4 style (no batch dim internally)
+                elif hidden.dim() == 2:
+                    activations[layer_idx] = hidden[-1, :].detach().cpu()
             return hook_fn
 
         try:

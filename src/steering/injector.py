@@ -213,12 +213,9 @@ class SteeringInjector:
     ):
         """Create a forward hook that additively injects the steering vector."""
         def hook_fn(module, input, output):
-            hidden = output[0]  # (batch, seq_len, hidden_dim)
-            device = hidden.device
-            sv = steering_vector.to(device)
-            beta = beta_fn()
-            # Add scaled steering vector to every position in the sequence.
-            hidden = hidden + alpha * beta * sv
-            # Reconstruct the output tuple with the modified hidden state.
-            return (hidden,) + output[1:]
+            is_tuple = isinstance(output, tuple)
+            hidden = output[0] if is_tuple else output
+            sv = steering_vector.to(device=hidden.device, dtype=hidden.dtype)
+            hidden = hidden + alpha * beta_fn() * sv
+            return (hidden,) + output[1:] if is_tuple else hidden
         return hook_fn

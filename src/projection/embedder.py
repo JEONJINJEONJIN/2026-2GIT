@@ -61,8 +61,9 @@ class ActionEmbedder:
         finally:
             handle.remove()
 
-        # Extract the last token's hidden state: (batch, seq_len, hidden_dim) -> (hidden_dim,)
-        last_token_hidden = hidden_state["value"][0, -1, :]
+        # Extract the last token's hidden state
+        h = hidden_state["value"]
+        last_token_hidden = h[0, -1, :] if h.dim() == 3 else h[-1, :]
         return last_token_hidden
 
     @torch.no_grad()
