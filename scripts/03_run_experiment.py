@@ -24,12 +24,12 @@ sys.path.insert(0, str(PROJECT_ROOT))
 import torch
 from tqdm import tqdm
 
-from src.models.hooks import HookManager
 from src.models.loader import load_model_and_tokenizer
 from src.generation.generator import TextGenerator
 from src.generation.prompt_builder import PromptBuilder
 from src.projection.embedder import ActionEmbedder
-from src.projection.selector import PersonaActionSelector, ProjectedActionResolver
+from src.projection.selector import ProjectedActionResolver
+from src.steering.injector import SteeringInjector
 from src.steering.vector import SteeringVectorComputer
 from src.utils.config import load_config
 from src.utils.seed import set_seed
@@ -194,15 +194,15 @@ def main():
     # Prepare output
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Compute alpha from steering config
+    # Steering config
     steer_cfg = steering_config.get("steering", steering_config)
     alpha_presets = steer_cfg.get("alpha_presets", {})
-    alpha = alpha_presets.get("pilot", [2.0])[1] if "pilot" in alpha_presets else 2.0
+    alpha = alpha_presets.get("pilot", [1.0, 2.0, 4.0])[1]  # 2.0
 
-    # Layer selection for steering
     layer_groups = steer_cfg.get("layer_groups", {})
-    middle_layers = layer_groups.get("middle", [15])
-    steering_layer = middle_layers[len(middle_layers) // 2] if middle_layers else 15
+    middle_layers = layer_groups.get("middle", [12, 15, 18])
+    # Layer used for projection embedding (middle of middle group)
+    embed_layer = middle_layers[len(middle_layers) // 2]
 
     # Run experiment
     for condition_name in condition_names:
@@ -225,6 +225,13 @@ def main():
 
         with tqdm(total=total_runs, desc=condition_name) as pbar:
             for persona in personas:
+                # aggressive → +v (positive direction), cooperative → -v
+                persona_sign = 1.0 if persona == "aggressive" else -1.0
+                persona_vectors = (
+                    {layer: persona_sign * vec for layer, vec in vectors.items()}
+                    if vectors is not None else None
+                )
+
                 for scenario in scenarios:
                     for repeat_idx in range(num_repeats):
                         # Build prompt
@@ -232,22 +239,21 @@ def main():
                             scenario, persona
                         )
 
-                        # Optionally inject steering
-                        hook_manager = None
-                        if use_steering and vectors is not None:
-                            hook_manager = HookManager()
-                            if steering_layer in vectors:
-                                sv = vectors[steering_layer]
-                                hook_manager.register_steering_hook(
-                                    model, steering_layer, sv, alpha
-                                )
+                        # Optionally inject steering across all middle layers
+                        injector = None
+                        if use_steering and persona_vectors is not None:
+                            injector = SteeringInjector(model, persona_vectors)
+                            injector.inject(
+                                middle_layers,
+                                alpha=alpha,
+                                beta_strategy="uniform",
+                            )
 
                         try:
-                            # Generate
                             generated_text = generator.generate(messages)
                         finally:
-                            if hook_manager is not None:
-                                hook_manager.remove_all()
+                            if injector is not None:
+                                injector.clear()
 
                         # Parse action
                         action = parse_action(generated_text)
@@ -256,9 +262,9 @@ def main():
                         # Optionally apply projection
                         final_action = action
                         projection_override = False
-                        if use_projection and action_embeddings is not None and vectors is not None:
-                            if steering_layer in vectors:
-                                persona_vector = vectors[steering_layer]
+                        if use_projection and action_embeddings is not None and persona_vectors is not None:
+                            if embed_layer in persona_vectors:
+                                persona_vector = persona_vectors[embed_layer]
                                 resolver = ProjectedActionResolver(action_embeddings)
                                 final_action = resolver.resolve(
                                     persona_vector, action or "", threshold=0.0
