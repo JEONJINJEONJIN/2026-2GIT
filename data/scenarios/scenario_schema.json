@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Game Scenario",
+  "description": "Schema for validating game scenario entries used in persona-aligned LLM NPC behavior research with activation steering.",
+  "type": "object",
+  "required": ["id", "genre", "context", "actions"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^scn_[a-z]+_[0-9]{3}$",
+      "description": "Unique scenario identifier in the format scn_{genre}_{number}."
+    },
+    "genre": {
+      "type": "string",
+      "enum": ["fantasy_rpg", "sci_fi", "survival", "urban", "medieval"],
+      "description": "The game genre category for this scenario."
+    },
+    "context": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Korean-language description of the game situation the NPC encounters."
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "description": "Exactly five possible actions the NPC can take in this scenario.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "description", "persona_alignment"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^act_[0-9]{3}$",
+            "description": "Unique action identifier in the format act_{number}."
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Short English label for the action (e.g., attack, negotiate, flee)."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 10,
+            "description": "English description of the action for embedding and evaluation purposes."
+          },
+          "persona_alignment": {
+            "type": "string",
+            "enum": ["aggressive", "cooperative", "neutral"],
+            "description": "The persona type this action aligns with."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

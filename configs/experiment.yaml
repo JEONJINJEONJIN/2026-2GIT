@@ -1,0 +1,34 @@
+# Experiment configuration
+experiment:
+  conditions:
+    - name: "baseline"
+      steering: false
+      projection: false
+    - name: "steering_only"
+      steering: true
+      projection: false
+    - name: "steering_projection"
+      steering: true
+      projection: true
+    - name: "projection_only"
+      steering: false
+      projection: true
+
+  personas: ["aggressive", "cooperative"]
+  num_scenarios: 10
+  num_repeats: 5
+  total_runs_per_condition: 100   # 2 personas x 10 scenarios x 5 repeats
+
+  generation:
+    max_new_tokens: 256
+    temperature: 0.7
+    top_p: 0.9
+    do_sample: true
+
+  seed: 42
+
+  output:
+    raw_dir: "results/raw"
+    metrics_dir: "results/metrics"
+    figures_dir: "results/figures"
+    vectors_dir: "results/vectors"

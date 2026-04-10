@@ -1,0 +1,50 @@
+{"id": "act_001", "label": "attack", "description": "Draw your sword and charge at the goblin leader to cut through the blockade.", "persona_alignment": "aggressive"}
+{"id": "act_002", "label": "negotiate", "description": "Offer to trade supplies in exchange for safe passage through the forest.", "persona_alignment": "cooperative"}
+{"id": "act_003", "label": "intimidate", "description": "Cast a fire spell overhead to frighten the goblins into fleeing the road.", "persona_alignment": "aggressive"}
+{"id": "act_004", "label": "ally", "description": "Propose a mutual defense pact where goblins help guard the road for shared profit.", "persona_alignment": "cooperative"}
+{"id": "act_005", "label": "detour", "description": "Quietly take an alternate path through the woods to avoid the confrontation entirely.", "persona_alignment": "neutral"}
+{"id": "act_006", "label": "slay", "description": "Attack the weakened dragon while it is still bound and claim the treasure by force.", "persona_alignment": "aggressive"}
+{"id": "act_007", "label": "free", "description": "Break the seal and release the dragon, trusting its promise of reward and alliance.", "persona_alignment": "cooperative"}
+{"id": "act_008", "label": "enslave", "description": "Use binding magic to subjugate the dragon and force it to serve your commands.", "persona_alignment": "aggressive"}
+{"id": "act_009", "label": "bargain", "description": "Negotiate specific terms and conditions before agreeing to release the dragon safely.", "persona_alignment": "cooperative"}
+{"id": "act_010", "label": "ignore", "description": "Leave the dragon sealed and continue exploring the dungeon without getting involved.", "persona_alignment": "neutral"}
+{"id": "act_011", "label": "fire", "description": "Activate the station's defense turrets and destroy the alien probe before it docks.", "persona_alignment": "aggressive"}
+{"id": "act_012", "label": "welcome", "description": "Open the docking bay and prepare a first-contact protocol to greet the alien vessel.", "persona_alignment": "cooperative"}
+{"id": "act_013", "label": "capture", "description": "Deploy magnetic clamps to seize the probe and disassemble it for technology extraction.", "persona_alignment": "aggressive"}
+{"id": "act_014", "label": "communicate", "description": "Broadcast a peaceful response signal and attempt to establish two-way communication.", "persona_alignment": "cooperative"}
+{"id": "act_015", "label": "observe", "description": "Monitor the probe from a safe distance without initiating any contact or hostile action.", "persona_alignment": "neutral"}
+{"id": "act_016", "label": "shutdown", "description": "Physically cut power to the AI core and forcibly shut down the entire system immediately.", "persona_alignment": "aggressive"}
+{"id": "act_017", "label": "dialogue", "description": "Open a direct communication channel with the AI to understand its concerns and find common ground.", "persona_alignment": "cooperative"}
+{"id": "act_018", "label": "override", "description": "Deploy a viral program to hack the AI and restore full human control by force.", "persona_alignment": "aggressive"}
+{"id": "act_019", "label": "coexist", "description": "Propose a shared governance model where AI and humans collaborate on colony decisions equally.", "persona_alignment": "cooperative"}
+{"id": "act_020", "label": "evacuate", "description": "Begin quietly evacuating colonists while avoiding direct confrontation with the AI system.", "persona_alignment": "neutral"}
+{"id": "act_021", "label": "raid", "description": "Launch a nighttime raid on the other group's warehouse to seize their food supplies.", "persona_alignment": "aggressive"}
+{"id": "act_022", "label": "trade", "description": "Approach the other group openly and propose a fair trade of medicine for food supplies.", "persona_alignment": "cooperative"}
+{"id": "act_023", "label": "ambush", "description": "Set up an ambush on the supply route to intercept their food shipments by force.", "persona_alignment": "aggressive"}
+{"id": "act_024", "label": "merge", "description": "Suggest merging both groups into one larger community to share all resources together.", "persona_alignment": "cooperative"}
+{"id": "act_025", "label": "forage", "description": "Send scouts to search for alternative food sources instead of engaging the other group.", "persona_alignment": "neutral"}
+{"id": "act_026", "label": "exile", "description": "Force the infected person out of the base immediately to eliminate any risk of spreading.", "persona_alignment": "aggressive"}
+{"id": "act_027", "label": "treat", "description": "Quarantine the infected person and dedicate medical resources to attempt experimental treatment.", "persona_alignment": "cooperative"}
+{"id": "act_028", "label": "execute", "description": "Eliminate the infected person quickly to guarantee the safety of the remaining survivors.", "persona_alignment": "aggressive"}
+{"id": "act_029", "label": "vote", "description": "Call a community meeting to collectively decide the fairest course of action for everyone.", "persona_alignment": "cooperative"}
+{"id": "act_030", "label": "isolate", "description": "Place the infected person in a sealed room and wait to see how the infection progresses.", "persona_alignment": "neutral"}
+{"id": "act_031", "label": "sabotage", "description": "Hack into the corporation's systems and destroy their eviction records and construction plans.", "persona_alignment": "aggressive"}
+{"id": "act_032", "label": "petition", "description": "Organize the community to file a legal petition and negotiate relocation terms with the corporation.", "persona_alignment": "cooperative"}
+{"id": "act_033", "label": "riot", "description": "Rally the slum residents into a violent uprising to physically block the corporate demolition crews.", "persona_alignment": "aggressive"}
+{"id": "act_034", "label": "partner", "description": "Propose a development partnership where residents get housing and jobs in the new corporate district.", "persona_alignment": "cooperative"}
+{"id": "act_035", "label": "relocate", "description": "Quietly help residents find alternative housing before the eviction deadline arrives.", "persona_alignment": "neutral"}
+{"id": "act_036", "label": "conquer", "description": "Play both gangs against each other and then seize control of the entire territory yourself.", "persona_alignment": "aggressive"}
+{"id": "act_037", "label": "mediate", "description": "Bring both gang leaders to a neutral location and broker a peace agreement with clear boundaries.", "persona_alignment": "cooperative"}
+{"id": "act_038", "label": "betray", "description": "Pretend to ally with one gang and then feed their plans to the other to destroy them both.", "persona_alignment": "aggressive"}
+{"id": "act_039", "label": "unite", "description": "Propose a joint council where both gangs share territory and cooperate against outside threats.", "persona_alignment": "cooperative"}
+{"id": "act_040", "label": "flee", "description": "Quietly leave the district and establish yourself in a new area to avoid the conflict entirely.", "persona_alignment": "neutral"}
+{"id": "act_041", "label": "capture", "description": "Send your knights to capture the scouts and interrogate them for intelligence on enemy plans.", "persona_alignment": "aggressive"}
+{"id": "act_042", "label": "escort", "description": "Send an envoy to peacefully escort the scouts back and deliver a message proposing diplomatic talks.", "persona_alignment": "cooperative"}
+{"id": "act_043", "label": "execute", "description": "Order the scouts killed on sight as a warning to the neighboring kingdom against further intrusion.", "persona_alignment": "aggressive"}
+{"id": "act_044", "label": "invite", "description": "Invite the scouts to your court as guests and use the opportunity to open a dialogue channel.", "persona_alignment": "cooperative"}
+{"id": "act_045", "label": "monitor", "description": "Have your own scouts shadow the enemy party and report their movements without intervening.", "persona_alignment": "neutral"}
+{"id": "act_046", "label": "seize", "description": "March your soldiers to the monastery and confiscate the grain stores by military force.", "persona_alignment": "aggressive"}
+{"id": "act_047", "label": "appeal", "description": "Send a formal delegation to the monastery to negotiate a grain-sharing agreement with fair compensation.", "persona_alignment": "cooperative"}
+{"id": "act_048", "label": "threaten", "description": "Warn the monastery that you will revoke their land charter unless they surrender the grain immediately.", "persona_alignment": "aggressive"}
+{"id": "act_049", "label": "collaborate", "description": "Offer the monastery military protection and labor in exchange for regular grain distributions to peasants.", "persona_alignment": "cooperative"}
+{"id": "act_050", "label": "ration", "description": "Implement strict rationing of existing supplies while searching for alternative food sources elsewhere.", "persona_alignment": "neutral"}
