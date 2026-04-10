@@ -12,7 +12,7 @@ from typing import Any, Callable, List, Optional, Tuple
 
 import torch
 from torch import Tensor, nn
-from torch.utils.hooks import RemovableHook
+from torch.utils.hooks import RemovableHandle as RemovableHook
 
 logger = logging.getLogger(__name__)
 

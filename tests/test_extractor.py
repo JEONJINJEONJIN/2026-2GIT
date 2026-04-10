@@ -60,15 +60,8 @@ def create_mock_model(num_layers: int = 36, hidden_dim: int = 2048):
             x = layer(x)[0]
         return MagicMock(logits=x)
 
-    model.__call__ = lambda self_unused=None, **kw: model_forward(**kw)
-    model.side_effect = None
-    model.return_value = None
-
-    # Override __call__ properly for MagicMock
-    def call_fn(**kwargs):
-        return model_forward(**kwargs)
-
-    model.__call__ = call_fn
+    # side_effect is called with the same args as the mock, so **kwargs works
+    model.side_effect = lambda **kw: model_forward(**kw)
 
     return model
 
