@@ -65,8 +65,8 @@ def main():
     parser.add_argument(
         "--num_pairs",
         type=int,
-        default=100,
-        help="Total number of pairs to generate (default: 100).",
+        default=30,
+        help="Total number of pairs to generate (default: 30).",
     )
     parser.add_argument(
         "--output_path",

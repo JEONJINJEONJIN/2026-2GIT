@@ -17,6 +17,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.models.hooks import HookManager
+from src.steering.injector import SteeringInjector
 
 
 class FakeTransformerLayer(nn.Module):
@@ -283,3 +284,34 @@ class TestHookManagerInjection(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSteeringInjector(unittest.TestCase):
+    """Test the AS-only SteeringInjector."""
+
+    def setUp(self):
+        self.hidden_dim = 4
+        self.model, self.layers = create_test_model(
+            num_layers=2,
+            hidden_dim=self.hidden_dim,
+        )
+
+    def test_uniform_unit_vector_injection(self):
+        vector = torch.tensor([3.0, 4.0, 0.0, 0.0])
+        injector = SteeringInjector(self.model, {0: vector}, normalize_vectors=True)
+        x = torch.randn(1, 3, self.hidden_dim)
+        baseline = self.layers[0](x)[0]
+
+        injector.inject([0], alpha=2.0)
+        try:
+            modified = self.layers[0](x)[0]
+        finally:
+            injector.clear()
+
+        expected_delta = 2.0 * torch.tensor([0.6, 0.8, 0.0, 0.0])
+        self.assertTrue(torch.allclose(modified, baseline + expected_delta, atol=1e-5))
+
+    def test_missing_vector_raises(self):
+        injector = SteeringInjector(self.model, {}, normalize_vectors=True)
+        with self.assertRaises(ValueError):
+            injector.inject([0], alpha=1.0)

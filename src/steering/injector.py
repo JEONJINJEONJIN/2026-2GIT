@@ -1,175 +1,63 @@
-"""Layer/position-aware steering injection for CAA.
-
-Registers forward hooks that add scaled steering vectors to transformer layer
-outputs during generation. Supports uniform, action-boosted, and action-only
-beta strategies for differentiating speech vs. action regions.
-"""
+"""Uniform post-block activation steering injection."""
 
 from __future__ import annotations
 
-from typing import Callable, Dict, List, Optional, Sequence, Union
+from typing import Dict, Sequence, Union
 
-import torch
 from torch import Tensor
+
 from src.models.loader import get_model_layers
+from src.steering.vector import SteeringVectorComputer
 
-
-# ------------------------------------------------------------------
-# Action tag detection
-# ------------------------------------------------------------------
-
-class ActionTagDetector:
-    """Tracks whether the current generation position is inside
-    ``<Action>...</Action>`` tags.
-
-    Call :meth:`update` with each batch of newly generated token IDs to keep
-    the detector in sync with generation progress.
-    """
-
-    def __init__(self):
-        self._in_action: bool = False
-        self._buffer: str = ""
-
-    def reset(self) -> None:
-        """Reset internal state for a new generation run."""
-        self._in_action = False
-        self._buffer = ""
-
-    def update(self, token_ids: Union[List[int], Tensor], tokenizer) -> None:
-        """Decode new tokens and update the action-region state.
-
-        Args:
-            token_ids: Newly generated token IDs (1-D sequence).
-            tokenizer: The tokenizer used for decoding.
-        """
-        if isinstance(token_ids, Tensor):
-            token_ids = token_ids.tolist()
-
-        new_text = tokenizer.decode(token_ids, skip_special_tokens=True)
-        self._buffer += new_text
-
-        # Scan for tag transitions in the accumulated buffer.
-        while True:
-            if not self._in_action:
-                open_pos = self._buffer.find("<Action>")
-                if open_pos != -1:
-                    self._in_action = True
-                    # Keep buffer from the tag onward so we can find the close.
-                    self._buffer = self._buffer[open_pos + len("<Action>"):]
-                else:
-                    # Keep only a tail long enough to contain a partial tag.
-                    self._buffer = self._buffer[-16:] if len(self._buffer) > 16 else self._buffer
-                    break
-            else:
-                close_pos = self._buffer.find("</Action>")
-                if close_pos != -1:
-                    self._in_action = False
-                    self._buffer = self._buffer[close_pos + len("</Action>"):]
-                else:
-                    self._buffer = self._buffer[-16:] if len(self._buffer) > 16 else self._buffer
-                    break
-
-    def is_in_action_region(self) -> bool:
-        """Return ``True`` if the most recent token falls inside an action region."""
-        return self._in_action
-
-
-# ------------------------------------------------------------------
-# Steering injector
-# ------------------------------------------------------------------
 
 class SteeringInjector:
-    """Injects steering vectors into transformer layers via forward hooks.
+    """Inject unit steering vectors into transformer block outputs.
 
-    Supports context-manager usage::
-
-        with SteeringInjector(model, vectors) as inj:
-            inj.inject([10, 14, 18], alpha=1.5)
-            output = model.generate(...)
+    The hook target is the post-block residual stream: the first tensor returned
+    by ``model.model.layers[layer_idx]``. Only uniform injection is implemented
+    for the AS-first rebuild.
     """
 
     def __init__(
         self,
         model,
         steering_vectors: Dict[int, Tensor],
-        hook_manager=None,
+        normalize_vectors: bool = True,
     ):
-        """
-        Args:
-            model: The HuggingFace causal-LM to steer.
-            steering_vectors: Dict mapping layer index to a 1-D steering
-                vector of shape ``(hidden_dim,)``.
-            hook_manager: Optional external hook manager. If ``None``, hooks
-                are tracked internally.
-        """
         self.model = model
         self.steering_vectors = steering_vectors
-        self.hook_manager = hook_manager
+        self.normalize_vectors = normalize_vectors
         self._hooks: list = []
-        self.action_detector = ActionTagDetector()
-
-    # ------------------------------------------------------------------
-    # Public API
-    # ------------------------------------------------------------------
 
     def inject(
         self,
         layer_indices: Sequence[int],
         alpha: Union[float, Dict[int, float]],
-        beta_strategy: str = "uniform",
-        beta_config: Optional[dict] = None,
     ) -> None:
-        """Register steering hooks on the specified layers.
-
-        Args:
-            layer_indices: Which layers to hook.
-            alpha: Overall steering strength. Either a single float applied to
-                every layer, or a dict ``{layer_idx: float}`` for per-layer
-                control.
-            beta_strategy: One of ``"uniform"``, ``"action_boosted"``, or
-                ``"action_only"``.
-
-                * **uniform** -- ``beta = 1.0`` everywhere.
-                * **action_boosted** -- ``beta = speech_mult`` outside action
-                  tags, ``beta = action_mult`` inside them.
-                * **action_only** -- ``beta = 0.0`` outside action tags,
-                  ``beta = action_mult`` inside them.
-
-            beta_config: Dict with optional keys ``speech_mult`` (default 1.0)
-                and ``action_mult`` (default 2.0) used by the non-uniform beta
-                strategies.
-        """
-        # Clear any previously registered hooks.
+        """Register uniform AS hooks on the requested layers."""
         self.clear()
-        self.action_detector.reset()
+        layers = get_model_layers(self.model)
+        self._validate_layers(layer_indices, len(layers))
 
-        beta_config = beta_config or {}
-        speech_mult: float = beta_config.get("speech_mult", 1.0)
-        action_mult: float = beta_config.get("action_mult", 2.0)
+        for layer_idx in layer_indices:
+            if layer_idx not in self.steering_vectors:
+                raise ValueError(f"No steering vector available for layer {layer_idx}.")
 
-        beta_fn = self._build_beta_fn(beta_strategy, speech_mult, action_mult)
+            vector = self.steering_vectors[layer_idx].detach().clone()
+            if self.normalize_vectors:
+                vector = SteeringVectorComputer.normalize_vector(vector)
 
-        for idx in layer_indices:
-            if idx not in self.steering_vectors:
-                continue
-
-            layer_alpha = alpha[idx] if isinstance(alpha, dict) else alpha
-            sv = self.steering_vectors[idx]
-
-            handle = get_model_layers(self.model)[idx].register_forward_hook(
-                self._make_injection_hook(sv, layer_alpha, beta_fn)
+            layer_alpha = alpha[layer_idx] if isinstance(alpha, dict) else alpha
+            handle = layers[layer_idx].register_forward_hook(
+                self._make_hook(vector, float(layer_alpha))
             )
             self._hooks.append(handle)
 
     def clear(self) -> None:
-        """Remove all injection hooks."""
+        """Remove all registered hooks."""
         for handle in self._hooks:
             handle.remove()
         self._hooks.clear()
-
-    # ------------------------------------------------------------------
-    # Context manager
-    # ------------------------------------------------------------------
 
     def __enter__(self):
         return self
@@ -178,44 +66,26 @@ class SteeringInjector:
         self.clear()
         return False
 
-    # ------------------------------------------------------------------
-    # Internal helpers
-    # ------------------------------------------------------------------
-
-    def _build_beta_fn(
-        self,
-        strategy: str,
-        speech_mult: float,
-        action_mult: float,
-    ) -> Callable[[], float]:
-        """Return a callable that yields the current beta multiplier."""
-        if strategy == "uniform":
-            def beta_fn() -> float:
-                return 1.0
-        elif strategy == "action_boosted":
-            def beta_fn() -> float:
-                return action_mult if self.action_detector.is_in_action_region() else speech_mult
-        elif strategy == "action_only":
-            def beta_fn() -> float:
-                return action_mult if self.action_detector.is_in_action_region() else 0.0
-        else:
-            raise ValueError(
-                f"Unknown beta_strategy '{strategy}'. "
-                "Choose from 'uniform', 'action_boosted', 'action_only'."
-            )
-        return beta_fn
-
     @staticmethod
-    def _make_injection_hook(
-        steering_vector: Tensor,
-        alpha: float,
-        beta_fn: Callable[[], float],
-    ):
-        """Create a forward hook that additively injects the steering vector."""
+    def _make_hook(steering_vector: Tensor, alpha: float):
+        """Create a hook implementing ``h' = h + alpha * v``."""
+
         def hook_fn(module, input, output):
             is_tuple = isinstance(output, tuple)
             hidden = output[0] if is_tuple else output
-            sv = steering_vector.to(device=hidden.device, dtype=hidden.dtype)
-            hidden = hidden + alpha * beta_fn() * sv
-            return (hidden,) + output[1:] if is_tuple else hidden
+            vector = steering_vector.to(device=hidden.device, dtype=hidden.dtype)
+            modified = hidden + alpha * vector
+            if is_tuple:
+                return (modified,) + output[1:]
+            return modified
+
         return hook_fn
+
+    @staticmethod
+    def _validate_layers(layer_indices: Sequence[int], num_layers: int) -> None:
+        invalid = [idx for idx in layer_indices if idx < 0 or idx >= num_layers]
+        if invalid:
+            raise ValueError(
+                f"Invalid layer index/indices {invalid}; model has "
+                f"{num_layers} layers indexed 0..{num_layers - 1}."
+            )

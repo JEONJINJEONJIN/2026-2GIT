@@ -1,4 +1,4 @@
-"""Activation extraction from contrastive pairs for CAA steering."""
+"""Activation extraction from contrastive pairs for AS steering."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from src.models.loader import get_model_layers
 
 
 class ActivationExtractor:
-    """Extracts last-token hidden states from specified transformer layers."""
+    """Extracts last-input-token hidden states from transformer layers."""
 
     def __init__(self, model, tokenizer):
         """
@@ -31,42 +31,47 @@ class ActivationExtractor:
         text: str,
         layer_indices: Optional[Sequence[int]] = None,
     ) -> Dict[int, Tensor]:
-        """Extract last-token hidden states from the given text.
+        """Extract last-input-token hidden states from the given text.
 
         Args:
             text: Input string to feed through the model.
-            layer_indices: Which layers to capture.  ``None`` means all 36
-                layers (indices 0-35).
+            layer_indices: Which layers to capture. ``None`` means all layers.
 
         Returns:
             Dict mapping each requested layer index to a 1-D tensor of shape
             ``(hidden_dim,)``.
         """
+        layers = get_model_layers(self.model)
         if layer_indices is None:
-            layer_indices = list(range(len(get_model_layers(self.model))))
+            layer_indices = list(range(len(layers)))
+
+        self._validate_layers(layer_indices, len(layers))
 
         activations: Dict[int, Tensor] = {}
 
-        # Register forward hooks -------------------------------------------
         def _make_hook(layer_idx: int):
             def hook_fn(module, input, output):
-                hidden = output[0]
-                # (batch, seq_len, hidden_dim) — Qwen/LLaMA style
+                hidden = output[0] if isinstance(output, tuple) else output
                 if hidden.dim() == 3:
                     activations[layer_idx] = hidden[0, -1, :].detach().cpu()
-                # (seq_len, hidden_dim) — Gemma4 style (no batch dim internally)
                 elif hidden.dim() == 2:
                     activations[layer_idx] = hidden[-1, :].detach().cpu()
+                else:
+                    raise ValueError(
+                        f"Unsupported hidden state rank {hidden.dim()} "
+                        f"at layer {layer_idx}."
+                    )
             return hook_fn
 
         try:
             for idx in layer_indices:
-                layer_module = get_model_layers(self.model)[idx]
+                layer_module = layers[idx]
                 handle = layer_module.register_forward_hook(_make_hook(idx))
                 self._hooks.append(handle)
 
             inputs = self.tokenizer(text, return_tensors="pt")
-            inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
+            device = self._get_model_device()
+            inputs = {k: v.to(device) for k, v in inputs.items()}
 
             with torch.no_grad():
                 self.model(**inputs)
@@ -107,6 +112,25 @@ class ActivationExtractor:
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------
+
+    def _get_model_device(self) -> torch.device:
+        """Return a real model device, falling back to CPU for test doubles."""
+        device = getattr(self.model, "device", None)
+        if isinstance(device, torch.device):
+            return device
+        try:
+            return next(self.model.parameters()).device
+        except (AttributeError, StopIteration, TypeError):
+            return torch.device("cpu")
+
+    @staticmethod
+    def _validate_layers(layer_indices: Sequence[int], num_layers: int) -> None:
+        invalid = [idx for idx in layer_indices if idx < 0 or idx >= num_layers]
+        if invalid:
+            raise ValueError(
+                f"Invalid layer index/indices {invalid}; model has "
+                f"{num_layers} layers indexed 0..{num_layers - 1}."
+            )
 
     def _cleanup_hooks(self) -> None:
         """Remove all registered forward hooks."""

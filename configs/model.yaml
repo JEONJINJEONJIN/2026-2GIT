@@ -1,18 +1,15 @@
-# Model configuration
 model:
-  name: "google/gemma-4-E4B-it"
-  backup: "Qwen/Qwen2.5-3B-Instruct"
+  name: "Qwen/Qwen2.5-3B-Instruct"
   device: "cuda"
-  dtype: "bfloat16"          # gemma4 uses bfloat16
-  quantization: "4bit"       # 4bit: ~4GB VRAM (fits 16GB GPU with room to spare)
-  load_in_4bit: true
-  bnb_4bit_compute_dtype: "bfloat16"
+  dtype: "float16"
+  quantization: null
+  load_in_4bit: false
+  bnb_4bit_compute_dtype: "float16"
   bnb_4bit_quant_type: "nf4"
   trust_remote_code: true
-  max_memory: null           # e.g. {0: "14GiB"} for explicit VRAM limit
+  max_memory: null
 
-# Layer info (Gemma4-E4B: 42 layers, hidden_dim=2560)
 architecture:
-  num_layers: 42
-  hidden_dim: 2560
-  layers_path: "language_model.model.layers"  # multimodal model structure
+  num_layers: 36
+  hidden_dim: 2048
+  layers_path: "model.layers"

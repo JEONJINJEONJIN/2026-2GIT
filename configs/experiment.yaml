@@ -1,26 +1,22 @@
-# Experiment configuration
 experiment:
   conditions:
-    - name: "baseline"
+    - name: "neutral_baseline"
       steering: false
-      projection: false
-    - name: "steering_only"
-      steering: true
-      projection: false
-    - name: "steering_projection"
-      steering: true
-      projection: true
-    - name: "projection_only"
+      persona_prompt: false
+    - name: "prompt_baseline"
       steering: false
-      projection: true
+      persona_prompt: true
+    - name: "as_only"
+      steering: true
+      persona_prompt: false
 
   personas: ["aggressive", "cooperative"]
   num_scenarios: 10
-  num_repeats: 5
-  total_runs_per_condition: 100   # 2 personas x 10 scenarios x 5 repeats
+  num_repeats: 30
+  total_runs_per_condition: 600
 
   generation:
-    max_new_tokens: 256
+    max_new_tokens: 128
     temperature: 0.7
     top_p: 0.9
     do_sample: true

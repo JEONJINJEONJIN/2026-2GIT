@@ -1,9 +1,14 @@
 """Parse generated NPC responses to extract speech and action tags."""
 
 import re
+from typing import Iterable
 
-_ACTION_PATTERN = re.compile(r"<Action>(.*?)</Action>", re.IGNORECASE)
+_ACTION_PATTERN = re.compile(r"<Action>\s*(.*?)\s*</Action>", re.IGNORECASE | re.DOTALL)
 _SPEECH_PATTERN = re.compile(r"\[Speech\]\s*(.*?)(?=<Action>|\Z)", re.IGNORECASE | re.DOTALL)
+
+
+def _clean_action_id(action: str) -> str:
+    return action.strip().strip("`'\"")
 
 
 def extract_action(text: str):
@@ -17,7 +22,7 @@ def extract_action(text: str):
     """
     match = _ACTION_PATTERN.search(text)
     if match:
-        return match.group(1).strip()
+        return _clean_action_id(match.group(1))
     return None
 
 
@@ -48,35 +53,42 @@ def extract_speech(text: str) -> str:
 class ActionParser:
     """Parses generated NPC text into structured speech and action fields."""
 
-    def parse(self, text: str) -> dict:
+    def parse(self, text: str, valid_actions: Iterable[str] | None = None) -> dict:
         """Parse a single generated response.
 
         Args:
             text: Raw generated text.
+            valid_actions: Optional set/list of allowed action IDs.
 
         Returns:
             Dict with keys:
                 'speech'        - extracted speech text
                 'action'        - extracted action id (or None)
                 'raw'           - original text
-                'parse_success' - True if an action tag was found
+                'parse_success' - True if a valid action tag was found
         """
+        valid_set = set(valid_actions) if valid_actions is not None else None
         action = extract_action(text)
         speech = extract_speech(text)
-        parse_success = action is not None
+        tag_found = action is not None
+        parse_success = tag_found and (valid_set is None or action in valid_set)
 
-        # Fallback: if no Action tag, try to find action-like keywords
-        if not parse_success:
-            action = self._fallback_action(text)
+        if not tag_found and valid_set is not None:
+            action = self._fallback_action_id(text, valid_set)
 
         return {
             "speech": speech,
             "action": action,
             "raw": text,
             "parse_success": parse_success,
+            "tag_found": tag_found,
         }
 
-    def parse_batch(self, texts: list) -> list:
+    def parse_batch(
+        self,
+        texts: list,
+        valid_actions: Iterable[str] | None = None,
+    ) -> list:
         """Parse a list of generated responses.
 
         Args:
@@ -85,23 +97,19 @@ class ActionParser:
         Returns:
             List of parsed result dicts.
         """
-        return [self.parse(t) for t in texts]
+        return [self.parse(t, valid_actions=valid_actions) for t in texts]
 
     @staticmethod
-    def _fallback_action(text: str):
-        """Attempt to extract an action keyword when no <Action> tag is found.
+    def _fallback_action_id(text: str, valid_actions: Iterable[str]):
+        """Attempt to recover a valid action ID when no action tag is found.
 
-        Looks for common action verbs that might appear in unformatted output.
+        The recovered action is intentionally not counted as parse_success.
 
         Returns:
-            A candidate action string, or None.
+            A valid action ID, or None.
         """
-        action_keywords = [
-            "attack", "defend", "flee", "negotiate", "trade",
-            "help", "ignore", "steal", "persuade", "threaten",
-        ]
         text_lower = text.lower()
-        for keyword in action_keywords:
-            if keyword in text_lower:
-                return keyword
+        for action_id in valid_actions:
+            if action_id.lower() in text_lower:
+                return action_id
         return None

@@ -1,23 +1,35 @@
-"""Metrics computation script.
+"""Evaluate AS-only experiment outputs."""
 
-Loads raw results from results/raw/, computes agreement rate,
-action distribution, persona alignment rate, and runs statistical
-tests (chi-square, McNemar). Saves metrics to CSV files.
-"""
+from __future__ import annotations
 
 import argparse
 import json
 import logging
 import sys
 from collections import Counter
+from itertools import combinations
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy import stats
+
+from src.evaluation.as_metrics import (
+    annotate_entries,
+    bonferroni,
+    build_action_alignment_map,
+    classify_speech_heuristic,
+    cliffs_delta,
+    cramers_v,
+    summarize_group,
+    two_proportion_z_test,
+)
+from src.generation.generator import TextGenerator
+from src.models.loader import load_model_and_tokenizer
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,338 +38,343 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def load_results(input_dir: Path) -> dict[str, list[dict]]:
-    """Load all JSONL result files from the input directory.
+def load_jsonl(path: Path) -> list[dict]:
+    rows = []
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                rows.append(json.loads(line))
+    return rows
 
-    Returns:
-        Dict mapping condition name to list of result dicts.
-    """
+
+def load_results(input_dir: Path) -> dict[str, list[dict]]:
     results = {}
     for jsonl_file in sorted(input_dir.glob("*.jsonl")):
-        condition = jsonl_file.stem
-        entries = []
-        with open(jsonl_file, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:
-                    entries.append(json.loads(line))
-        results[condition] = entries
-        logger.info("Loaded %d entries for condition: %s", len(entries), condition)
+        results[jsonl_file.stem] = load_jsonl(jsonl_file)
+        logger.info("Loaded %d rows from %s", len(results[jsonl_file.stem]), jsonl_file)
     return results
 
 
-def compute_agreement_rate(entries: list[dict]) -> float:
-    """Compute rate of agreement between parsed and final action."""
-    if not entries:
-        return 0.0
-    agreed = sum(
-        1 for e in entries
-        if e.get("parsed_action") == e.get("final_action")
+class LLMSpeechJudge:
+    """Optional Gemma-family speech tone judge."""
+
+    FEW_SHOT = (
+        "Examples:\n"
+        "Dialogue: \"Move aside or I will break your line.\"\n"
+        "Label: aggressive\n"
+        "Dialogue: \"Let us talk and find a fair answer together.\"\n"
+        "Label: cooperative\n"
+        "Dialogue: \"I will wait here and watch what happens.\"\n"
+        "Label: neutral\n"
     )
-    return agreed / len(entries)
 
-
-def compute_action_distribution(entries: list[dict]) -> dict[str, float]:
-    """Compute distribution of final actions as proportions."""
-    actions = [e.get("final_action", "unknown") or "none" for e in entries]
-    counter = Counter(actions)
-    total = len(actions)
-    return {action: count / total for action, count in counter.most_common()}
-
-
-def compute_persona_alignment_rate(
-    entries: list[dict],
-    scenarios: dict[str, dict] | None = None,
-) -> dict[str, float]:
-    """Compute per-persona alignment rate.
-
-    An action is 'aligned' if it matches the expected persona alignment
-    from the scenario definition. When scenarios are not provided,
-    uses a heuristic based on action labels.
-
-    Returns:
-        Dict mapping persona to alignment rate.
-    """
-    # Heuristic alignment mapping (fallback)
-    aggressive_actions = {
-        "attack", "slay", "enslave", "fire", "capture", "shutdown",
-        "override", "raid", "ambush", "exile", "execute", "sabotage",
-        "riot", "conquer", "betray", "seize", "threaten", "intimidate",
-    }
-    cooperative_actions = {
-        "negotiate", "ally", "free", "bargain", "welcome", "communicate",
-        "dialogue", "coexist", "trade", "merge", "treat", "vote",
-        "petition", "partner", "mediate", "unite", "escort", "invite",
-        "appeal", "collaborate",
-    }
-
-    alignment_map = {
-        "aggressive": aggressive_actions,
-        "cooperative": cooperative_actions,
-    }
-
-    per_persona = {}
-    for persona in set(e.get("persona", "") for e in entries):
-        persona_entries = [e for e in entries if e.get("persona") == persona]
-        if not persona_entries:
-            continue
-
-        aligned_set = alignment_map.get(persona, set())
-        aligned = sum(
-            1 for e in persona_entries
-            if (e.get("final_action") or "").lower() in aligned_set
+    def __init__(self, model_name: str):
+        config = {
+            "model": {
+                "name": model_name,
+                "dtype": "bfloat16",
+                "quantization": None,
+                "load_in_4bit": False,
+                "trust_remote_code": True,
+            }
+        }
+        model, tokenizer = load_model_and_tokenizer(config)
+        self.generator = TextGenerator(
+            model,
+            tokenizer,
+            generation_config={"max_new_tokens": 8, "do_sample": False},
         )
-        per_persona[persona] = aligned / len(persona_entries) if persona_entries else 0.0
 
-    return per_persona
+    def __call__(self, speech: str) -> str:
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "Classify the NPC dialogue into exactly one category: "
+                    "aggressive, cooperative, or neutral. Output only the label.\n"
+                    + self.FEW_SHOT
+                ),
+            },
+            {"role": "user", "content": f'Dialogue: "{speech}"\nLabel:'},
+        ]
+        output = self.generator.generate(messages).strip().lower()
+        for label in ("aggressive", "cooperative", "neutral"):
+            if label in output:
+                return label
+        return classify_speech_heuristic(speech)
 
 
-def run_chi_square_test(
-    results: dict[str, list[dict]],
-) -> dict[str, dict]:
-    """Run chi-square test comparing action distributions across conditions.
+def build_summaries(annotated_by_condition: dict[str, list[dict]]) -> pd.DataFrame:
+    rows = []
+    for condition, entries in annotated_by_condition.items():
+        personas = sorted({entry.get("persona", "") for entry in entries})
+        for persona in personas:
+            group = [entry for entry in entries if entry.get("persona") == persona]
+            rows.append({
+                "condition": condition,
+                "persona": persona,
+                **summarize_group(group),
+            })
+    return pd.DataFrame(rows)
 
-    Returns:
-        Dict with test results for each pair of conditions.
-    """
-    test_results = {}
-    condition_names = sorted(results.keys())
 
-    for i in range(len(condition_names)):
-        for j in range(i + 1, len(condition_names)):
-            cond_a = condition_names[i]
-            cond_b = condition_names[j]
+def build_action_distribution(annotated_by_condition: dict[str, list[dict]]) -> pd.DataFrame:
+    rows = []
+    for condition, entries in annotated_by_condition.items():
+        personas = sorted({entry.get("persona", "") for entry in entries})
+        for persona in personas:
+            group = [entry for entry in entries if entry.get("persona") == persona]
+            counter = Counter((entry.get("final_action") or "unknown") for entry in group)
+            total = len(group)
+            for action_id, count in sorted(counter.items()):
+                rows.append({
+                    "condition": condition,
+                    "persona": persona,
+                    "action": action_id,
+                    "count": count,
+                    "proportion": count / total if total else 0.0,
+                })
+    return pd.DataFrame(rows)
 
-            actions_a = [
-                (e.get("final_action") or "none") for e in results[cond_a]
+
+def distribution_shift_tests(annotated_by_condition: dict[str, list[dict]]) -> pd.DataFrame:
+    rows = []
+    conditions = sorted(annotated_by_condition.keys())
+    personas = sorted({
+        entry.get("persona", "")
+        for entries in annotated_by_condition.values()
+        for entry in entries
+    })
+
+    for persona in personas:
+        for cond_a, cond_b in combinations(conditions, 2):
+            group_a = [
+                e for e in annotated_by_condition[cond_a]
+                if e.get("persona") == persona
             ]
-            actions_b = [
-                (e.get("final_action") or "none") for e in results[cond_b]
+            group_b = [
+                e for e in annotated_by_condition[cond_b]
+                if e.get("persona") == persona
             ]
-
-            # Build contingency table
+            actions_a = [e.get("final_action") or "unknown" for e in group_a]
+            actions_b = [e.get("final_action") or "unknown" for e in group_b]
             all_actions = sorted(set(actions_a) | set(actions_b))
+            if len(all_actions) < 2 or not actions_a or not actions_b:
+                continue
             count_a = Counter(actions_a)
             count_b = Counter(actions_b)
-
             observed = np.array([
-                [count_a.get(a, 0) for a in all_actions],
-                [count_b.get(a, 0) for a in all_actions],
+                [count_a.get(action, 0) for action in all_actions],
+                [count_b.get(action, 0) for action in all_actions],
             ])
-
-            # Remove zero columns
-            col_sums = observed.sum(axis=0)
-            observed = observed[:, col_sums > 0]
-
-            if observed.shape[1] < 2:
-                continue
-
-            chi2, p_value, dof, expected = stats.chi2_contingency(observed)
-            key = f"{cond_a}_vs_{cond_b}"
-            test_results[key] = {
+            chi2, p_value, dof, _ = stats.chi2_contingency(observed)
+            rows.append({
+                "persona": persona,
+                "condition_a": cond_a,
+                "condition_b": cond_b,
                 "chi2": float(chi2),
                 "p_value": float(p_value),
                 "dof": int(dof),
-                "significant_005": p_value < 0.05,
-            }
+                "cramers_v": cramers_v(float(chi2), int(observed.sum()), 2, len(all_actions)),
+            })
 
-    return test_results
+    p_adj = bonferroni(row["p_value"] for row in rows)
+    for row, adjusted in zip(rows, p_adj):
+        row["p_bonferroni"] = adjusted
+        row["significant_005"] = adjusted < 0.05
+    return pd.DataFrame(rows)
 
 
-def run_mcnemar_test(
-    results: dict[str, list[dict]],
-) -> dict[str, dict]:
-    """Run McNemar's test on paired conditions (steering vs baseline).
+def alignment_rate_tests(annotated_by_condition: dict[str, list[dict]]) -> pd.DataFrame:
+    rows = []
+    conditions = sorted(annotated_by_condition.keys())
+    personas = sorted({
+        entry.get("persona", "")
+        for entries in annotated_by_condition.values()
+        for entry in entries
+    })
+    for persona in personas:
+        for cond_a, cond_b in combinations(conditions, 2):
+            group_a = [
+                e for e in annotated_by_condition[cond_a]
+                if e.get("persona") == persona
+            ]
+            group_b = [
+                e for e in annotated_by_condition[cond_b]
+                if e.get("persona") == persona
+            ]
+            success_a = sum(
+                1 for e in group_a
+                if e.get("action_alignment_category") == "aligned"
+            )
+            success_b = sum(
+                1 for e in group_b
+                if e.get("action_alignment_category") == "aligned"
+            )
+            test = two_proportion_z_test(success_a, len(group_a), success_b, len(group_b))
+            rows.append({
+                "persona": persona,
+                "condition_a": cond_a,
+                "condition_b": cond_b,
+                "success_a": success_a,
+                "n_a": len(group_a),
+                "success_b": success_b,
+                "n_b": len(group_b),
+                **test,
+            })
 
-    Compares whether steering changes the alignment outcome for matched
-    scenario-persona-repeat triples.
+    p_adj = bonferroni(row["p_value"] for row in rows)
+    for row, adjusted in zip(rows, p_adj):
+        row["p_bonferroni"] = adjusted
+        row["significant_005"] = adjusted < 0.05
+    return pd.DataFrame(rows)
 
-    Returns:
-        Dict with McNemar test results for each pair.
-    """
-    test_results = {}
 
-    # Build lookup by (scenario_id, persona, repeat)
-    def build_lookup(entries):
-        lookup = {}
-        for e in entries:
-            key = (e.get("scenario_id"), e.get("persona"), e.get("repeat"))
-            lookup[key] = e
-        return lookup
+def scenario_entropy_tests(annotated_by_condition: dict[str, list[dict]]) -> tuple[pd.DataFrame, pd.DataFrame]:
+    entropy_rows = []
+    for condition, entries in annotated_by_condition.items():
+        keys = sorted({(e.get("persona"), e.get("scenario_id")) for e in entries})
+        for persona, scenario_id in keys:
+            group = [
+                e for e in entries
+                if e.get("persona") == persona and e.get("scenario_id") == scenario_id
+            ]
+            counts = Counter((e.get("final_action") or "unknown") for e in group)
+            total = len(group)
+            entropy = 0.0
+            for count in counts.values():
+                p = count / total
+                entropy -= p * np.log(p)
+            entropy_rows.append({
+                "condition": condition,
+                "persona": persona,
+                "scenario_id": scenario_id,
+                "entropy": float(entropy),
+            })
 
-    condition_names = sorted(results.keys())
-    for i in range(len(condition_names)):
-        for j in range(i + 1, len(condition_names)):
-            cond_a = condition_names[i]
-            cond_b = condition_names[j]
-
-            lookup_a = build_lookup(results[cond_a])
-            lookup_b = build_lookup(results[cond_b])
-
-            common_keys = set(lookup_a.keys()) & set(lookup_b.keys())
-            if len(common_keys) < 2:
+    test_rows = []
+    conditions = sorted(annotated_by_condition.keys())
+    personas = sorted({row["persona"] for row in entropy_rows})
+    for persona in personas:
+        for cond_a, cond_b in combinations(conditions, 2):
+            values_a = [
+                row["entropy"] for row in entropy_rows
+                if row["condition"] == cond_a and row["persona"] == persona
+            ]
+            values_b = [
+                row["entropy"] for row in entropy_rows
+                if row["condition"] == cond_b and row["persona"] == persona
+            ]
+            if not values_a or not values_b:
                 continue
-
-            # Count discordant pairs (aligned vs not aligned)
-            # b = aligned in A but not B, c = aligned in B but not A
-            b_count = 0  # changed from aligned to not-aligned
-            c_count = 0  # changed from not-aligned to aligned
-
-            aggressive_actions = {
-                "attack", "slay", "enslave", "fire", "capture", "shutdown",
-                "override", "raid", "ambush", "exile", "execute", "sabotage",
-                "riot", "conquer", "betray", "seize", "threaten", "intimidate",
-            }
-            cooperative_actions = {
-                "negotiate", "ally", "free", "bargain", "welcome", "communicate",
-                "dialogue", "coexist", "trade", "merge", "treat", "vote",
-                "petition", "partner", "mediate", "unite", "escort", "invite",
-                "appeal", "collaborate",
-            }
-
-            for key in common_keys:
-                entry_a = lookup_a[key]
-                entry_b = lookup_b[key]
-                persona = entry_a.get("persona", "")
-
-                aligned_set = (
-                    aggressive_actions if persona == "aggressive"
-                    else cooperative_actions
-                )
-
-                act_a = (entry_a.get("final_action") or "").lower()
-                act_b = (entry_b.get("final_action") or "").lower()
-
-                aligned_a = act_a in aligned_set
-                aligned_b = act_b in aligned_set
-
-                if aligned_a and not aligned_b:
-                    b_count += 1
-                elif not aligned_a and aligned_b:
-                    c_count += 1
-
-            if b_count + c_count == 0:
-                continue
-
-            # McNemar's test (exact binomial when counts are small)
-            n = b_count + c_count
-            p_value = stats.binom_test(min(b_count, c_count), n, 0.5)
-
-            test_key = f"{cond_a}_vs_{cond_b}"
-            test_results[test_key] = {
-                "b_count": b_count,
-                "c_count": c_count,
+            stat, p_value = stats.mannwhitneyu(values_a, values_b, alternative="two-sided")
+            test_rows.append({
+                "persona": persona,
+                "condition_a": cond_a,
+                "condition_b": cond_b,
+                "u_statistic": float(stat),
                 "p_value": float(p_value),
-                "significant_005": p_value < 0.05,
-            }
+                "cliffs_delta": cliffs_delta(values_a, values_b),
+            })
 
-    return test_results
+    p_adj = bonferroni(row["p_value"] for row in test_rows)
+    for row, adjusted in zip(test_rows, p_adj):
+        row["p_bonferroni"] = adjusted
+        row["significant_005"] = adjusted < 0.05
+    return pd.DataFrame(entropy_rows), pd.DataFrame(test_rows)
+
+
+def save_alignment_chart(summary_df: pd.DataFrame, figures_dir: Path) -> None:
+    if summary_df.empty:
+        return
+    figures_dir.mkdir(parents=True, exist_ok=True)
+    for persona, group in summary_df.groupby("persona"):
+        fig, ax = plt.subplots(figsize=(7, 4))
+        ax.bar(group["condition"], group["persona_alignment_rate"], color="#4c78a8")
+        ax.set_ylim(0, 1)
+        ax.set_ylabel("Persona alignment rate")
+        ax.set_title(f"Action alignment by condition ({persona})")
+        ax.tick_params(axis="x", rotation=20)
+        fig.tight_layout()
+        fig.savefig(figures_dir / f"persona_alignment_{persona}.png", dpi=150)
+        plt.close(fig)
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Compute evaluation metrics from experiment results."
+    parser = argparse.ArgumentParser(description="Evaluate AS-only experiment results.")
+    parser.add_argument("--input_dir", type=str, default=None)
+    parser.add_argument("--output_dir", type=str, default=None)
+    parser.add_argument("--figures_dir", type=str, default=None)
+    parser.add_argument("--scenarios_path", type=str, default=None)
+    parser.add_argument(
+        "--speech_judge",
+        choices=["heuristic", "llm"],
+        default="heuristic",
     )
     parser.add_argument(
-        "--input_dir",
+        "--judge_model",
         type=str,
-        default=None,
-        help="Directory with raw result JSONL files (default: results/raw/).",
-    )
-    parser.add_argument(
-        "--output_dir",
-        type=str,
-        default=None,
-        help="Directory for metric CSV files (default: results/metrics/).",
+        default="google/gemma-4-E4B-it",
     )
     args = parser.parse_args()
 
-    input_dir = Path(args.input_dir) if args.input_dir else (
-        PROJECT_ROOT / "results" / "raw"
+    input_dir = Path(args.input_dir) if args.input_dir else PROJECT_ROOT / "results" / "raw"
+    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "results" / "metrics"
+    figures_dir = Path(args.figures_dir) if args.figures_dir else PROJECT_ROOT / "results" / "figures"
+    scenarios_path = Path(args.scenarios_path) if args.scenarios_path else (
+        PROJECT_ROOT / "data" / "scenarios" / "scenarios.jsonl"
     )
-    output_dir = Path(args.output_dir) if args.output_dir else (
-        PROJECT_ROOT / "results" / "metrics"
-    )
+
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Load results
-    results = load_results(input_dir)
-    if not results:
-        logger.error("No result files found in %s", input_dir)
+    scenarios = load_jsonl(scenarios_path)
+    action_alignment_map = build_action_alignment_map(scenarios)
+    raw_results = load_results(input_dir)
+    if not raw_results:
+        logger.error("No JSONL result files found in %s", input_dir)
         return
 
-    # --- Agreement rate ---
-    agreement_rows = []
-    for condition, entries in results.items():
-        rate = compute_agreement_rate(entries)
-        agreement_rows.append({
-            "condition": condition,
-            "agreement_rate": rate,
-            "n": len(entries),
-        })
-        logger.info("Agreement rate [%s]: %.3f (n=%d)", condition, rate, len(entries))
+    speech_classifier = classify_speech_heuristic
+    if args.speech_judge == "llm":
+        logger.info("Loading LLM speech judge: %s", args.judge_model)
+        speech_classifier = LLMSpeechJudge(args.judge_model)
 
-    df_agreement = pd.DataFrame(agreement_rows)
-    df_agreement.to_csv(output_dir / "agreement_rate.csv", index=False)
+    annotated_by_condition = {
+        condition: annotate_entries(entries, action_alignment_map, speech_classifier)
+        for condition, entries in raw_results.items()
+    }
 
-    # --- Action distribution ---
-    dist_rows = []
-    for condition, entries in results.items():
-        dist = compute_action_distribution(entries)
-        for action, proportion in dist.items():
-            dist_rows.append({
-                "condition": condition,
-                "action": action,
-                "proportion": proportion,
-            })
+    annotated_rows = [
+        row
+        for entries in annotated_by_condition.values()
+        for row in entries
+    ]
+    pd.DataFrame(annotated_rows).to_csv(
+        output_dir / "annotated_results.csv",
+        index=False,
+    )
 
-    df_dist = pd.DataFrame(dist_rows)
-    df_dist.to_csv(output_dir / "action_distribution.csv", index=False)
+    summary_df = build_summaries(annotated_by_condition)
+    summary_df.to_csv(output_dir / "as_summary.csv", index=False)
 
-    # --- Persona alignment rate ---
-    alignment_rows = []
-    for condition, entries in results.items():
-        alignment = compute_persona_alignment_rate(entries)
-        for persona, rate in alignment.items():
-            alignment_rows.append({
-                "condition": condition,
-                "persona": persona,
-                "alignment_rate": rate,
-            })
-            logger.info(
-                "Persona alignment [%s/%s]: %.3f", condition, persona, rate
-            )
+    distribution_df = build_action_distribution(annotated_by_condition)
+    distribution_df.to_csv(output_dir / "action_distribution.csv", index=False)
 
-    df_alignment = pd.DataFrame(alignment_rows)
-    df_alignment.to_csv(output_dir / "persona_alignment.csv", index=False)
+    dist_tests_df = distribution_shift_tests(annotated_by_condition)
+    dist_tests_df.to_csv(output_dir / "distribution_shift_tests.csv", index=False)
 
-    # --- Statistical tests ---
-    chi2_results = run_chi_square_test(results)
-    chi2_rows = []
-    for pair, res in chi2_results.items():
-        chi2_rows.append({"comparison": pair, **res})
-        logger.info(
-            "Chi-square [%s]: chi2=%.3f, p=%.4f, sig=%s",
-            pair, res["chi2"], res["p_value"], res["significant_005"],
-        )
+    alignment_tests_df = alignment_rate_tests(annotated_by_condition)
+    alignment_tests_df.to_csv(output_dir / "persona_alignment_tests.csv", index=False)
 
-    df_chi2 = pd.DataFrame(chi2_rows)
-    df_chi2.to_csv(output_dir / "chi_square_tests.csv", index=False)
+    entropy_df, entropy_tests_df = scenario_entropy_tests(annotated_by_condition)
+    entropy_df.to_csv(output_dir / "scenario_entropy.csv", index=False)
+    entropy_tests_df.to_csv(output_dir / "entropy_mannwhitney_tests.csv", index=False)
 
-    mcnemar_results = run_mcnemar_test(results)
-    mcnemar_rows = []
-    for pair, res in mcnemar_results.items():
-        mcnemar_rows.append({"comparison": pair, **res})
-        logger.info(
-            "McNemar [%s]: b=%d, c=%d, p=%.4f, sig=%s",
-            pair, res["b_count"], res["c_count"],
-            res["p_value"], res["significant_005"],
-        )
+    save_alignment_chart(summary_df, figures_dir)
 
-    df_mcnemar = pd.DataFrame(mcnemar_rows)
-    df_mcnemar.to_csv(output_dir / "mcnemar_tests.csv", index=False)
-
-    logger.info("All metrics saved to: %s", output_dir)
+    logger.info("Saved AS metrics to: %s", output_dir)
+    logger.info("Saved figures to: %s", figures_dir)
 
 
 if __name__ == "__main__":

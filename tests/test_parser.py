@@ -12,6 +12,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+from src.generation.parser import ActionParser as ProjectActionParser
+
 
 class ActionParser:
     """Parses action tags and speech from generated NPC responses.
@@ -247,3 +249,31 @@ class TestSpeechExtraction(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestProjectActionParserContract(unittest.TestCase):
+    """Test the parser used by the experiment runner."""
+
+    def setUp(self):
+        self.parser = ProjectActionParser()
+
+    def test_valid_action_id_parse_success(self):
+        text = "[Speech] Stand aside. <Action>act_001</Action>"
+        result = self.parser.parse(text, valid_actions=["act_001", "act_002"])
+        self.assertTrue(result["parse_success"])
+        self.assertTrue(result["tag_found"])
+        self.assertEqual(result["action"], "act_001")
+
+    def test_invalid_action_id_is_not_parse_success(self):
+        text = "[Speech] Stand aside. <Action>attack</Action>"
+        result = self.parser.parse(text, valid_actions=["act_001", "act_002"])
+        self.assertFalse(result["parse_success"])
+        self.assertTrue(result["tag_found"])
+        self.assertEqual(result["action"], "attack")
+
+    def test_fallback_recovers_id_but_keeps_parse_not_ok(self):
+        text = "I choose act_002 because talking is better."
+        result = self.parser.parse(text, valid_actions=["act_001", "act_002"])
+        self.assertFalse(result["parse_success"])
+        self.assertFalse(result["tag_found"])
+        self.assertEqual(result["action"], "act_002")
