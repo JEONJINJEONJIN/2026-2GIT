@@ -1,7 +1,6 @@
 torch>=2.1.0
-transformers>=4.36.0
+transformers>=4.37.0
 accelerate>=0.25.0
-bitsandbytes>=0.41.0
 scipy
 numpy
 pandas
@@ -11,3 +10,4 @@ pyyaml
 jsonlines
 tqdm
 scikit-learn
+pytest
