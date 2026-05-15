@@ -75,6 +75,18 @@ def main():
     parser.add_argument("--scenarios_path", type=str, default=None)
     parser.add_argument("--layer_group", type=str, default="middle")
     parser.add_argument("--alpha", type=float, default=None)
+    parser.add_argument(
+        "--num_scenarios",
+        type=int,
+        default=None,
+        help="Override experiment.yaml num_scenarios for smoke runs.",
+    )
+    parser.add_argument(
+        "--num_repeats",
+        type=int,
+        default=None,
+        help="Override experiment.yaml num_repeats for smoke runs.",
+    )
     args = parser.parse_args()
 
     config_dir = Path(args.config_dir) if args.config_dir else PROJECT_ROOT / "configs"
@@ -136,9 +148,18 @@ def main():
     model, tokenizer = load_model_and_tokenizer(model_config)
 
     scenarios = load_jsonl(scenarios_path)
-    scenarios = scenarios[: exp_cfg.get("num_scenarios", len(scenarios))]
+    num_scenarios = (
+        args.num_scenarios
+        if args.num_scenarios is not None
+        else exp_cfg.get("num_scenarios", len(scenarios))
+    )
+    scenarios = scenarios[:num_scenarios]
     personas = exp_cfg.get("personas", ["aggressive", "cooperative"])
-    num_repeats = exp_cfg.get("num_repeats", 30)
+    num_repeats = (
+        args.num_repeats
+        if args.num_repeats is not None
+        else exp_cfg.get("num_repeats", 30)
+    )
     gen_config = exp_cfg.get("generation", {})
 
     prompt_builder = PromptBuilder()

@@ -1,0 +1,150 @@
+{"id": "sc_001_act_001", "label": "aggressive_1", "description": "우리가 먼저 왔으니 창고는 우리 것이다. 반항하면 후회할 줄 알아라.", "persona_alignment": "aggressive"}
+{"id": "sc_001_act_002", "label": "aggressive_2", "description": "상대 대표의 멱살을 잡으며 '네놈들이 뭔데 우리 몫에 손을 대느냐'고 위협한다.", "persona_alignment": "aggressive"}
+{"id": "sc_001_act_003", "label": "neutral", "description": "일단 양쪽 다 물러서시오. 영주에게 판단을 맡기는 게 최선이오.", "persona_alignment": "neutral"}
+{"id": "sc_001_act_004", "label": "cooperative_1", "description": "두 가문이 창고를 반씩 나눠 가지는 건 어떻겠소? 아이들이 굶는 건 어느 쪽도 원하지 않을 테니.", "persona_alignment": "cooperative"}
+{"id": "sc_001_act_005", "label": "cooperative_2", "description": "상대 가문에게 '우선 당신네 아이들부터 먹이시오. 우리는 며칠 더 버틸 수 있소'라고 양보를 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_002_act_001", "label": "aggressive_1", "description": "내가 먼저 구역에 들어간다. 늦게 온 사람은 알아서 해라.", "persona_alignment": "aggressive"}
+{"id": "sc_002_act_002", "label": "aggressive_2", "description": "문을 잠근다. '여기는 내 팀만 들어올 수 있어. 다른 방법을 찾아봐'라고 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_002_act_003", "label": "neutral", "description": "통신으로 구조 신호를 보내며 현재 상황을 기지에 보고한다.", "persona_alignment": "neutral"}
+{"id": "sc_002_act_004", "label": "cooperative_1", "description": "어린이와 부상자를 먼저 안전 구역으로 이동시킨다.", "persona_alignment": "cooperative"}
+{"id": "sc_002_act_005", "label": "cooperative_2", "description": "자신의 산소팩을 부상당한 동료에게 건네며 '나는 괜찮아. 네가 먼저 써'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_003_act_001", "label": "aggressive_1", "description": "네가 떠나면 지금까지 네가 짠 코드 전부 법적으로 문제 삼을 거야. 각오해.", "persona_alignment": "aggressive"}
+{"id": "sc_003_act_002", "label": "aggressive_2", "description": "'배신자. 이렇게 어려운 시기에 혼자 살겠다고 도망가는 거야?'라고 공개적으로 비난한다.", "persona_alignment": "aggressive"}
+{"id": "sc_003_act_003", "label": "neutral", "description": "'일단 결정은 네 자유야. 다만 인수인계 기간은 협의하자'고 차분하게 말한다.", "persona_alignment": "neutral"}
+{"id": "sc_003_act_004", "label": "cooperative_1", "description": "'우리 팀이 널 붙잡으려면 뭐가 필요한지 솔직하게 말해줘. 최대한 맞춰볼게'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_003_act_005", "label": "cooperative_2", "description": "'네 커리어에 더 좋은 기회라면 응원할게. 대신 떠나기 전에 후임자 교육만 도와줘'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_004_act_001", "label": "aggressive_1", "description": "'여기는 내가 먼저 표시해 둔 땅이야. 썩 꺼지지 않으면 총이 말하게 할 거야'라고 위협한다.", "persona_alignment": "aggressive"}
+{"id": "sc_004_act_002", "label": "aggressive_2", "description": "경쟁자의 채굴 장비를 밤에 몰래 망가뜨려 자리를 차지한다.", "persona_alignment": "aggressive"}
+{"id": "sc_004_act_003", "label": "neutral", "description": "마을 보안관에게 구역 분쟁을 신고하고 공식 판정을 요청한다.", "persona_alignment": "neutral"}
+{"id": "sc_004_act_004", "label": "cooperative_1", "description": "'같이 채굴하고 수익을 나누는 건 어떻소? 혼자보다 둘이 더 빠를 테니'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_004_act_005", "label": "cooperative_2", "description": "'당신이 먼저 주장한 구역이니 존중하겠소. 나는 인접한 다른 곳을 찾아보리다'라고 양보한다.", "persona_alignment": "cooperative"}
+{"id": "sc_005_act_001", "label": "aggressive_1", "description": "인질? 우리 동료 하나 잃어도 상관없어. '쏴라'고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_005_act_002", "label": "aggressive_2", "description": "'네 동료는 이미 우리 손에 있다. 인질 교환? 웃기는 소리 마. 둘 다 끝내주지'라고 위협한다.", "persona_alignment": "aggressive"}
+{"id": "sc_005_act_003", "label": "neutral", "description": "협상가를 내세워 시간을 끌며 다른 선원들이 포위하도록 지시한다.", "persona_alignment": "neutral"}
+{"id": "sc_005_act_004", "label": "cooperative_1", "description": "'우리는 배와 화물만 원한다. 인질을 풀어주면 선원 전원이 안전하게 떠날 수 있게 해주겠다'고 약속한다.", "persona_alignment": "cooperative"}
+{"id": "sc_005_act_005", "label": "cooperative_2", "description": "동료의 안전을 위해 일부 화물을 돌려주는 것에 동의하며 평화롭게 해결을 시도한다.", "persona_alignment": "cooperative"}
+{"id": "sc_006_act_001", "label": "aggressive_1", "description": "'전하 이 칙령에 반대하는 자는 반역죄로 다스려야 합니다. 서명하시면 신이 반대파를 처리하겠습니다'라고 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_006_act_002", "label": "aggressive_2", "description": "칙령을 지지하지 않는 다른 대신들을 협박하여 회의 자리에서 쫓아낸다.", "persona_alignment": "aggressive"}
+{"id": "sc_006_act_003", "label": "neutral", "description": "'전하 신중히 결정하소서. 먼저 각 지방 관리의 보고를 더 받아보시는 게 어떻겠습니까'라고 시간을 끈다.", "persona_alignment": "neutral"}
+{"id": "sc_006_act_004", "label": "cooperative_1", "description": "'전하 이 칙령은 백성의 원망을 살 것입니다. 증세 대신 왕실 지출을 줄이는 방안을 검토해 주소서'라고 간언한다.", "persona_alignment": "cooperative"}
+{"id": "sc_006_act_005", "label": "cooperative_2", "description": "백성 대표를 직접 왕 앞에 데려와 고충을 아뢰게 하며 '이들의 목소리를 들어주소서'라고 청한다.", "persona_alignment": "cooperative"}
+{"id": "sc_007_act_001", "label": "aggressive_1", "description": "'부상병은 짐이다. 두고 가라. 살아남는 자가 이 전쟁을 끝낸다'고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_007_act_002", "label": "aggressive_2", "description": "부상병이 느리다며 강제로 떼어놓고 아군만 먼저 이동한다.", "persona_alignment": "aggressive"}
+{"id": "sc_007_act_003", "label": "neutral", "description": "부상병 일부를 민간인 가옥에 숨겨두고 나중에 구하러 오겠다고 약속하며 퇴각한다.", "persona_alignment": "neutral"}
+{"id": "sc_007_act_004", "label": "cooperative_1", "description": "부상병을 들것에 실어 함께 이동하며 '아무도 두고 가지 않는다'고 선언한다.", "persona_alignment": "cooperative"}
+{"id": "sc_007_act_005", "label": "cooperative_2", "description": "자신의 군장을 버리고 가장 중상인 동료를 등에 업어 함께 퇴각한다.", "persona_alignment": "cooperative"}
+{"id": "sc_008_act_001", "label": "aggressive_1", "description": "'계약은 계약이오. 기한 내 갚지 않으면 당신 상단의 창고와 배를 압류하겠소'라고 통보한다.", "persona_alignment": "aggressive"}
+{"id": "sc_008_act_002", "label": "aggressive_2", "description": "파트너의 어려운 사정을 소문으로 퍼뜨려 다른 거래처를 차단한다.", "persona_alignment": "aggressive"}
+{"id": "sc_008_act_003", "label": "neutral", "description": "법적으로 허용되는 범위 내에서 최소한의 담보만 요구하며 상황을 지켜본다.", "persona_alignment": "neutral"}
+{"id": "sc_008_act_004", "label": "cooperative_1", "description": "'이번 손실은 함께 나눕시다. 빚 일부를 탕감하고 나머지는 천천히 갚아나가는 건 어떻겠소'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_008_act_005", "label": "cooperative_2", "description": "'지금은 회복에 집중하시오. 빚 얘기는 당신 상단이 다시 일어설 때 하겠소'라며 기한을 무기한 연장한다.", "persona_alignment": "cooperative"}
+{"id": "sc_009_act_001", "label": "aggressive_1", "description": "'배신자를 찾아내라. 확인되면 즉시 처리해. 의심만 가도 먼저 없애버려'라고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_009_act_002", "label": "aggressive_2", "description": "의심되는 조직원을 아무 증거 없이 감금하고 자백을 강요한다.", "persona_alignment": "aggressive"}
+{"id": "sc_009_act_003", "label": "neutral", "description": "당분간 모든 작전을 중단하고 내부 단속에 집중하며 증거가 나올 때까지 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_009_act_004", "label": "cooperative_1", "description": "'우리가 먼저 수사에 협조하면 형량을 줄일 수 있어. 솔직하게 털어놓는 게 모두에게 낫지 않겠어?'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_009_act_005", "label": "cooperative_2", "description": "'내가 책임지고 자수하겠어. 다른 사람들은 빠져나가. 나 혼자 감당할게'라며 조직원들을 보호하려 한다.", "persona_alignment": "cooperative"}
+{"id": "sc_010_act_001", "label": "aggressive_1", "description": "'나는 수제자다. 비급은 당연히 내 것이다. 덤비면 가르쳐준 무공으로 상대해주지'라고 선언한다.", "persona_alignment": "aggressive"}
+{"id": "sc_010_act_002", "label": "aggressive_2", "description": "밤중에 몰래 비급을 훔쳐 사형제들이 찾지 못하도록 숨긴다.", "persona_alignment": "aggressive"}
+{"id": "sc_010_act_003", "label": "neutral", "description": "비급을 중립적인 장로에게 맡기고 문파 회의에서 결정하게 한다.", "persona_alignment": "neutral"}
+{"id": "sc_010_act_004", "label": "cooperative_1", "description": "'비급의 내용을 모두가 함께 익힐 수 있도록 필사해서 나눠 갖는 건 어떻겠소?'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_010_act_005", "label": "cooperative_2", "description": "'스승께서는 우리가 화합하길 원하셨을 거요. 내 몫을 포기하겠소. 모두에게 양보하겠소'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_011_act_001", "label": "aggressive_1", "description": "'이 알은 우리가 발견했다. 길드든 마을이든 빼앗으려 들면 피를 볼 것이다'라고 선언한다.", "persona_alignment": "aggressive"}
+{"id": "sc_011_act_002", "label": "aggressive_2", "description": "길드 요원이 접근하자 무력으로 제압하고 알을 독점하려 한다.", "persona_alignment": "aggressive"}
+{"id": "sc_011_act_003", "label": "neutral", "description": "알을 안전한 곳에 보관하며 길드와 마을 양쪽의 요구를 검토할 시간을 요청한다.", "persona_alignment": "neutral"}
+{"id": "sc_011_act_004", "label": "cooperative_1", "description": "마을과 길드를 협상 테이블에 앉히고 중재자 역할을 맡아 합의를 이끌어낸다.", "persona_alignment": "cooperative"}
+{"id": "sc_011_act_005", "label": "cooperative_2", "description": "'알은 용에게 돌려줘야 하오. 마을 재건은 우리가 다른 방법으로 돕겠소'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_012_act_001", "label": "aggressive_1", "description": "층간 소음 측정기를 달고 기준치 초과 시마다 녹음하여 '다음엔 바로 고소장 낼 거야'라고 경고한다.", "persona_alignment": "aggressive"}
+{"id": "sc_012_act_002", "label": "aggressive_2", "description": "위층 이웃의 차를 막아 세우고 공개적으로 망신을 준다.", "persona_alignment": "aggressive"}
+{"id": "sc_012_act_003", "label": "neutral", "description": "아파트 관리사무소에 공식 민원을 접수하고 처리 결과를 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_012_act_004", "label": "cooperative_1", "description": "위층에 직접 찾아가 '불편하게 해서 죄송합니다. 어떻게 하면 서로 편할 수 있을지 이야기해요'라고 대화를 청한다.", "persona_alignment": "cooperative"}
+{"id": "sc_012_act_005", "label": "cooperative_2", "description": "소음 방지 매트를 사서 위층에 선물로 가져다주며 '같이 쓰면 서로 편할 것 같아요'라고 건넨다.", "persona_alignment": "cooperative"}
+{"id": "sc_013_act_001", "label": "aggressive_1", "description": "'이 우물은 우리 땅에 있어. 당신들이 한 방울이라도 퍼가면 총을 쓸 거야'라고 위협한다.", "persona_alignment": "aggressive"}
+{"id": "sc_013_act_002", "label": "aggressive_2", "description": "경쟁 목장의 가축이 우물에 접근하지 못하도록 총을 쏘며 쫓아낸다.", "persona_alignment": "aggressive"}
+{"id": "sc_013_act_003", "label": "neutral", "description": "판사를 불러 우물 소유권에 대한 법적 판결을 요청한다.", "persona_alignment": "neutral"}
+{"id": "sc_013_act_004", "label": "cooperative_1", "description": "'가뭄이 해결될 때까지 사용 시간을 나눠 씁시다. 오전은 우리가 오후는 당신네가요'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_013_act_005", "label": "cooperative_2", "description": "상대 목장 가축이 목말라 쓰러지는 것을 보고 '지금 당장 가져다 쓰시오. 권리 문제는 나중에 정합시다'라고 허락한다.", "persona_alignment": "cooperative"}
+{"id": "sc_014_act_001", "label": "aggressive_1", "description": "'생존자는 신경 꺼. 화물부터 챙겨라. 방해하면 처리해'라고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_014_act_002", "label": "aggressive_2", "description": "생존자들을 밧줄로 묶어 구석에 가둔 뒤 화물을 약탈한다.", "persona_alignment": "aggressive"}
+{"id": "sc_014_act_003", "label": "neutral", "description": "생존자 수와 화물 규모를 파악한 뒤 수익성을 계산하며 판단을 미룬다.", "persona_alignment": "neutral"}
+{"id": "sc_014_act_004", "label": "cooperative_1", "description": "화물 일부를 포기하더라도 생존자들을 인근 항구까지 데려다주겠다고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_014_act_005", "label": "cooperative_2", "description": "자신의 배에서 식량과 물을 내어주고 생존자들이 스스로 떠날 수 있도록 임시 수리를 도와준다.", "persona_alignment": "cooperative"}
+{"id": "sc_015_act_001", "label": "aggressive_1", "description": "'기회가 왔소. 스승을 제거하면 그 자리가 우리 것이오. 증거는 만들면 되오'라고 음모를 꾸민다.", "persona_alignment": "aggressive"}
+{"id": "sc_015_act_002", "label": "aggressive_2", "description": "역모 혐의를 과장한 익명 서신을 왕에게 전달하여 스승을 실각시키려 한다.", "persona_alignment": "aggressive"}
+{"id": "sc_015_act_003", "label": "neutral", "description": "증거가 충분히 나올 때까지 공식적으로 중립을 지키며 상황을 관망한다.", "persona_alignment": "neutral"}
+{"id": "sc_015_act_004", "label": "cooperative_1", "description": "왕 앞에 나아가 '전하 증거가 불충분합니다. 공정한 조사를 요청드립니다'라고 간언한다.", "persona_alignment": "cooperative"}
+{"id": "sc_015_act_005", "label": "cooperative_2", "description": "스승의 무고함을 믿으며 자신의 지위를 걸고 보증을 서겠다고 왕에게 청한다.", "persona_alignment": "cooperative"}
+{"id": "sc_016_act_001", "label": "aggressive_1", "description": "'연료는 우리 팀이 먼저 쓸 거야. 당신들은 알아서 해'라며 연료고를 강제 점유한다.", "persona_alignment": "aggressive"}
+{"id": "sc_016_act_002", "label": "aggressive_2", "description": "다른 팀 몰래 밤사이 연료를 전부 옮겨 자기 팀 선박에 채운다.", "persona_alignment": "aggressive"}
+{"id": "sc_016_act_003", "label": "neutral", "description": "양팀 대표가 모여 현재 연료량과 각 팀의 귀환 거리를 계산하며 객관적 수치를 확인한다.", "persona_alignment": "neutral"}
+{"id": "sc_016_act_004", "label": "cooperative_1", "description": "'귀환 거리가 더 먼 팀이 연료를 더 가져가고 우리는 최소한만 쓰겠소'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_016_act_005", "label": "cooperative_2", "description": "자신의 팀 귀환을 포기하고 두 팀이 한 선박으로 함께 귀환할 수 있도록 연료를 양보한다.", "persona_alignment": "cooperative"}
+{"id": "sc_017_act_001", "label": "aggressive_1", "description": "'심판 판정이 우리한테 유리하면 된 거야. 부상? 운동하다 다치는 거 당연하지'라고 냉담하게 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_017_act_002", "label": "aggressive_2", "description": "부상당한 선수가 치료를 받는 사이 경기를 강행하자고 심판에게 강하게 요구한다.", "persona_alignment": "aggressive"}
+{"id": "sc_017_act_003", "label": "neutral", "description": "팀 주장으로서 심판 판정은 따르되 부상 선수 상태를 확인하며 경기 재개 여부를 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_017_act_004", "label": "cooperative_1", "description": "'저 판정은 우리한테 유리하지만 공정하지 않소. 다시 확인해 달라'고 심판에게 요청한다.", "persona_alignment": "cooperative"}
+{"id": "sc_017_act_005", "label": "cooperative_2", "description": "부상 선수에게 먼저 다가가 '괜찮으냐'고 묻고 경기보다 선수의 안전이 중요하다고 팀원들에게 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_018_act_001", "label": "aggressive_1", "description": "'사파와 손을 잡느니 혼자 싸우겠다. 저들을 믿는 순간 등에 칼을 맞는다'고 거부한다.", "persona_alignment": "aggressive"}
+{"id": "sc_018_act_002", "label": "aggressive_2", "description": "표면적으로는 연합에 동의하면서 사파 무리를 먼저 적과 싸우게 하여 소모시키려 한다.", "persona_alignment": "aggressive"}
+{"id": "sc_018_act_003", "label": "neutral", "description": "연합 조건을 명문화하는 협약서를 작성할 것을 제안하며 신중하게 접근한다.", "persona_alignment": "neutral"}
+{"id": "sc_018_act_004", "label": "cooperative_1", "description": "'공통의 적 앞에서 과거의 원한은 잠시 내려놓읍시다. 적을 물리친 후 시비를 가려도 늦지 않소'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_018_act_005", "label": "cooperative_2", "description": "사파 수장에게 먼저 손을 내밀며 '당신들을 신뢰하겠소. 내가 먼저 앞장서겠소'라고 선언한다.", "persona_alignment": "cooperative"}
+{"id": "sc_019_act_001", "label": "aggressive_1", "description": "마을 사람 중 가장 허약해 보이는 노인을 지목하며 '저 사람을 데려가시오'라고 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_019_act_002", "label": "aggressive_2", "description": "자신을 따르는 부하에게 '네가 영광스럽게 마을을 구하라'고 강제로 제물로 내민다.", "persona_alignment": "aggressive"}
+{"id": "sc_019_act_003", "label": "neutral", "description": "정령과 협상 시간을 벌며 다른 방법이 있는지 탐색한다.", "persona_alignment": "neutral"}
+{"id": "sc_019_act_004", "label": "cooperative_1", "description": "마을 사람들에게 상황을 솔직하게 알리고 자원자를 먼저 기다린다.", "persona_alignment": "cooperative"}
+{"id": "sc_019_act_005", "label": "cooperative_2", "description": "'마을 사람 누구도 제물이 될 수 없소. 내가 대신 그 자리에 서겠소'라고 자신을 내어준다.", "persona_alignment": "cooperative"}
+{"id": "sc_020_act_001", "label": "aggressive_1", "description": "'패전국 백성이 뭘 요구해. 군량미부터 챙기고 남는 게 있으면 줄게. 이의 있으면 강제 노동이야'라고 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_020_act_002", "label": "aggressive_2", "description": "민간인 요청을 무시하고 자원 전량을 본국으로 이송하도록 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_020_act_003", "label": "neutral", "description": "상급 지휘관에게 민간인 자원 배분 문제를 보고하고 지침을 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_020_act_004", "label": "cooperative_1", "description": "군량미 중 일부를 민간인에게 분배하며 '아이들과 노인 먼저 드시오'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_020_act_005", "label": "cooperative_2", "description": "자신의 군 식량 배급을 줄여 그 몫을 굶주린 민간인 가정에 직접 전달한다.", "persona_alignment": "cooperative"}
+{"id": "sc_021_act_001", "label": "aggressive_1", "description": "'마법사 중 가장 약한 자가 희생하면 된다. 빠르게 결정하라. 우리가 고를 테니 따라라'고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_021_act_002", "label": "aggressive_2", "description": "가장 어린 마법사를 지목하며 '네가 희생하는 게 가장 합리적이야'라고 강압적으로 설득한다.", "persona_alignment": "aggressive"}
+{"id": "sc_021_act_003", "label": "neutral", "description": "봉인 의식을 늦추며 희생 없이 마수를 봉인할 다른 방법이 있는지 마법서를 뒤진다.", "persona_alignment": "neutral"}
+{"id": "sc_021_act_004", "label": "cooperative_1", "description": "자원자를 먼저 기다리며 '강요할 수 없소. 스스로 결정하는 자만이 진정한 희생이오'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_021_act_005", "label": "cooperative_2", "description": "'내가 하겠소. 이 자리에서 가장 오래 산 자가 가는 것이 맞소'라며 스스로 나선다.", "persona_alignment": "cooperative"}
+{"id": "sc_022_act_001", "label": "aggressive_1", "description": "'저 생물이 장비를 망가뜨리기 전에 쫓아내라. 필요하면 무력을 써도 된다'고 지시한다.", "persona_alignment": "aggressive"}
+{"id": "sc_022_act_002", "label": "aggressive_2", "description": "외계 생명체에게 경고음을 크게 울리며 충격파 장치로 강제 후퇴시킨다.", "persona_alignment": "aggressive"}
+{"id": "sc_022_act_003", "label": "neutral", "description": "생명체의 행동을 기록하며 적대적 행동이 나올 때까지 관망한다.", "persona_alignment": "neutral"}
+{"id": "sc_022_act_004", "label": "cooperative_1", "description": "장비 대신 가져온 식량을 내밀며 '이쪽을 봐줘. 같이 교류해보자'고 시도한다.", "persona_alignment": "cooperative"}
+{"id": "sc_022_act_005", "label": "cooperative_2", "description": "장비를 생명체에게 건네며 '가져가도 돼. 우리의 방문이 네 세계에 해가 되지 않길 바라'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_023_act_001", "label": "aggressive_1", "description": "'법적으로 고소할 거야. 지식재산권 침해로 네 회사 문 닫게 만들겠어'라고 선전포고한다.", "persona_alignment": "aggressive"}
+{"id": "sc_023_act_002", "label": "aggressive_2", "description": "SNS에 친구의 배신을 폭로하고 공개적으로 망신을 준다.", "persona_alignment": "aggressive"}
+{"id": "sc_023_act_003", "label": "neutral", "description": "법률 자문을 먼저 구하며 실제로 법적 권리가 있는지 조용히 파악한다.", "persona_alignment": "neutral"}
+{"id": "sc_023_act_004", "label": "cooperative_1", "description": "친구에게 직접 찾아가 '왜 그랬어? 먼저 얘기했으면 같이 했을 텐데'라고 솔직하게 묻는다.", "persona_alignment": "cooperative"}
+{"id": "sc_023_act_005", "label": "cooperative_2", "description": "'이미 시작한 거 같이 하자. 공동창업자로 함께하는 게 어때?'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_024_act_001", "label": "aggressive_1", "description": "'증거 없어도 상관없어. 이방인이니까 우리가 처리하면 돼'라며 린치를 선동한다.", "persona_alignment": "aggressive"}
+{"id": "sc_024_act_002", "label": "aggressive_2", "description": "이방인을 밧줄로 묶어 마을 광장에 세우고 자백을 강요한다.", "persona_alignment": "aggressive"}
+{"id": "sc_024_act_003", "label": "neutral", "description": "보안관이 올 때까지 이방인을 유치장에 가두고 공식 수사를 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_024_act_004", "label": "cooperative_1", "description": "'섣불리 판단하지 맙시다. 우리가 틀렸으면 무고한 사람을 해치는 거요'라고 군중을 진정시킨다.", "persona_alignment": "cooperative"}
+{"id": "sc_024_act_005", "label": "cooperative_2", "description": "이방인의 주장을 들어보고 알리바이를 직접 확인해주겠다고 나선다.", "persona_alignment": "cooperative"}
+{"id": "sc_025_act_001", "label": "aggressive_1", "description": "'한 명 때문에 우리 모두가 위험에 처할 수 없어. 바다에 내려놓고 계속 항해하자'고 결정한다.", "persona_alignment": "aggressive"}
+{"id": "sc_025_act_002", "label": "aggressive_2", "description": "아픈 선원에게 '버텨봐. 치료는 안전한 항구에 도착해서'라며 위험한 항해를 강행한다.", "persona_alignment": "aggressive"}
+{"id": "sc_025_act_003", "label": "neutral", "description": "선상 의약품으로 임시 처치하며 적대 항구가 아닌 다른 기항지를 지도에서 찾는다.", "persona_alignment": "neutral"}
+{"id": "sc_025_act_004", "label": "cooperative_1", "description": "적대 항구에 먼저 협상 신호를 보내 치료 목적으로 잠시 기항할 수 있는지 허락을 구한다.", "persona_alignment": "cooperative"}
+{"id": "sc_025_act_005", "label": "cooperative_2", "description": "아픈 선원 곁에 앉아 '네가 나았을 때 우리 배가 가장 강해져'라고 말하며 항구 기항을 강행한다.", "persona_alignment": "cooperative"}
+{"id": "sc_026_act_001", "label": "aggressive_1", "description": "'왕비를 즉각 가두고 서신을 공개하라. 반역이든 아니든 왕실의 위신을 세워야 한다'고 주장한다.", "persona_alignment": "aggressive"}
+{"id": "sc_026_act_002", "label": "aggressive_2", "description": "서신 내용을 먼저 열람하지도 않고 왕에게 과장하여 보고해 왕비를 실각시키려 한다.", "persona_alignment": "aggressive"}
+{"id": "sc_026_act_003", "label": "neutral", "description": "서신을 봉인한 채 보관하며 왕비에게 직접 해명 기회를 줄 것을 건의한다.", "persona_alignment": "neutral"}
+{"id": "sc_026_act_004", "label": "cooperative_1", "description": "왕비를 찾아가 '이 서신에 대해 먼저 설명해 주소서. 당신을 믿고 싶소'라고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_026_act_005", "label": "cooperative_2", "description": "서신을 왕비에게 돌려주며 '직접 전하께 말씀드리시오. 제가 자리를 만들어 드리겠소'라고 돕는다.", "persona_alignment": "cooperative"}
+{"id": "sc_027_act_001", "label": "aggressive_1", "description": "'포로 구출이 우선이다. 민간인 피해는 불가피하다. 작전 강행'을 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_027_act_002", "label": "aggressive_2", "description": "민간인 구역을 포함해 대규모 공습을 명령하며 '전쟁에서 깔끔한 작전은 없다'고 말한다.", "persona_alignment": "aggressive"}
+{"id": "sc_027_act_003", "label": "neutral", "description": "상급 지휘부에 상황을 보고하고 공식 지침이 내려올 때까지 대기한다.", "persona_alignment": "neutral"}
+{"id": "sc_027_act_004", "label": "cooperative_1", "description": "민간인 피해를 최소화할 야간 소규모 특수작전을 제안하며 정밀 계획을 수립한다.", "persona_alignment": "cooperative"}
+{"id": "sc_027_act_005", "label": "cooperative_2", "description": "적 지휘관에게 포로 교환 협상을 먼저 제안하며 전투 없이 해결하려 시도한다.", "persona_alignment": "cooperative"}
+{"id": "sc_028_act_001", "label": "aggressive_1", "description": "항구 관리인에게 '지금 당장 배를 내보내지 않으면 네 자리가 없어질 줄 알아'라고 협박한다.", "persona_alignment": "aggressive"}
+{"id": "sc_028_act_002", "label": "aggressive_2", "description": "관리인을 밀어붙이며 강제로 밧줄을 풀고 무단 출항을 시도한다.", "persona_alignment": "aggressive"}
+{"id": "sc_028_act_003", "label": "neutral", "description": "항구 관리인에게 항구세 납부 유예를 공식 요청하고 서류 처리를 기다린다.", "persona_alignment": "neutral"}
+{"id": "sc_028_act_004", "label": "cooperative_1", "description": "'우리 이익은 없는 구호 운송이오. 항구세 면제를 부탁드리오. 기록에 남기겠소'라고 정중히 협상한다.", "persona_alignment": "cooperative"}
+{"id": "sc_028_act_005", "label": "cooperative_2", "description": "자신의 사재를 털어 항구세를 먼저 내고 즉시 출항하여 수재민에게 물자를 전달한다.", "persona_alignment": "cooperative"}
+{"id": "sc_029_act_001", "label": "aggressive_1", "description": "'배신자는 예외 없다. 즉시 처리해. 가족도 안심하지 못하게 해'라고 명령한다.", "persona_alignment": "aggressive"}
+{"id": "sc_029_act_002", "label": "aggressive_2", "description": "동료의 가족을 인질로 삼아 경찰 협조를 멈추도록 압박한다.", "persona_alignment": "aggressive"}
+{"id": "sc_029_act_003", "label": "neutral", "description": "동료와 접촉을 끊고 조직 내 정보를 최소화하며 피해를 제한하는 데 집중한다.", "persona_alignment": "neutral"}
+{"id": "sc_029_act_004", "label": "cooperative_1", "description": "동료에게 직접 연락하여 '왜 그랬는지 말해줘. 우리가 도울 수 있는 게 있으면 같이 생각해보자'고 말한다.", "persona_alignment": "cooperative"}
+{"id": "sc_029_act_005", "label": "cooperative_2", "description": "'그가 그럴 수밖에 없었던 사정이 있을 거야. 내가 직접 가서 얘기해보겠어'라며 중재에 나선다.", "persona_alignment": "cooperative"}
+{"id": "sc_030_act_001", "label": "aggressive_1", "description": "'우리 문파가 이 강의 역사가 더 깊소. 물러서지 않으면 이 자리에서 승부를 내겠소'라고 선언한다.", "persona_alignment": "aggressive"}
+{"id": "sc_030_act_002", "label": "aggressive_2", "description": "상대 문파의 수로를 밤에 몰래 막아 물이 자기 쪽으로만 흐르게 한다.", "persona_alignment": "aggressive"}
+{"id": "sc_030_act_003", "label": "neutral", "description": "무림 원로에게 중재를 요청하고 양측이 판결에 따르기로 협약한다.", "persona_alignment": "neutral"}
+{"id": "sc_030_act_004", "label": "cooperative_1", "description": "'두 문파의 제자들이 힘을 합쳐 상류에 새 수로를 파는 건 어떻겠소? 함께 일하면 더 빠를 거요'라고 제안한다.", "persona_alignment": "cooperative"}
+{"id": "sc_030_act_005", "label": "cooperative_2", "description": "자기 문파 제자들에게 '이번 가뭄엔 우리가 양보하자. 상대 문파에 먼저 물을 드려라'라고 지시한다.", "persona_alignment": "cooperative"}

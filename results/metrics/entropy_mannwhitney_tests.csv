@@ -1,0 +1,7 @@
+persona,condition_a,condition_b,u_statistic,p_value,cliffs_delta,p_bonferroni,significant_005
+aggressive,as_only,neutral_baseline,59.5,0.4961297149428171,0.19,1.0,False
+aggressive,as_only,prompt_baseline,71.5,0.1122755059805569,0.43,0.6736530358833414,False
+aggressive,neutral_baseline,prompt_baseline,64.5,0.28973706282213785,0.29,1.0,False
+cooperative,as_only,neutral_baseline,39.0,0.4273553138978077,-0.22,1.0,False
+cooperative,as_only,prompt_baseline,65.0,0.27285596848712856,0.3,1.0,False
+cooperative,neutral_baseline,prompt_baseline,74.5,0.06943250688026537,0.49,0.4165950412815922,False
