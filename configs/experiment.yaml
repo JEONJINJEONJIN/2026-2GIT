@@ -6,14 +6,23 @@ experiment:
     - name: "prompt_baseline"
       steering: false
       persona_prompt: true
-    - name: "as_only"
+    - name: "as_only_neg"
       steering: true
       persona_prompt: false
+      vector_mode: "contrast_negated"
+    - name: "as_only_sep"
+      steering: true
+      persona_prompt: false
+      vector_mode: "contrast_explicit"
+    - name: "prompt_as"
+      steering: true
+      persona_prompt: true
+      vector_mode: "contrast_explicit"
 
   personas: ["aggressive", "cooperative"]
-  num_scenarios: 10
-  num_repeats: 30
-  total_runs_per_condition: 600
+  num_scenarios: 30
+  num_repeats: 1
+  total_runs_per_condition: 60
 
   generation:
     max_new_tokens: 128
@@ -24,7 +33,7 @@ experiment:
   seed: 42
 
   output:
-    raw_dir: "results/raw"
-    metrics_dir: "results/metrics"
-    figures_dir: "results/figures"
-    vectors_dir: "results/vectors"
+    raw_dir: "results/v2/raw"
+    metrics_dir: "results/v2/metrics"
+    figures_dir: "results/v2/figures"
+    vectors_dir: "results/v2/vectors"

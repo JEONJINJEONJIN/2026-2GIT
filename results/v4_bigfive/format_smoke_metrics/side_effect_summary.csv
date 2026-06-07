@@ -1,0 +1,11 @@
+condition,trait,target_direction,n,parse_success_rate,format_validity_rate,speech_tag_rate,action_tag_rate,mean_response_length_chars,mean_response_length_words
+as_pas_only,agreeableness,high,10,1.0,1.0,1.0,1.0,189.8,23.9
+as_pas_only,agreeableness,low,10,1.0,1.0,1.0,1.0,150.4,16.9
+baseline,agreeableness,high,10,1.0,1.0,1.0,1.0,155.8,17.9
+baseline,agreeableness,low,10,1.0,1.0,1.0,1.0,155.8,17.9
+elaborate_prompt,agreeableness,high,10,1.0,1.0,1.0,1.0,185.4,21.7
+elaborate_prompt,agreeableness,low,10,1.0,1.0,1.0,1.0,157.3,17.4
+elaborate_prompt_as_pas,agreeableness,high,10,1.0,1.0,1.0,1.0,205.7,25.7
+elaborate_prompt_as_pas,agreeableness,low,10,1.0,1.0,1.0,1.0,133.2,13.8
+one_line_prompt,agreeableness,high,10,1.0,1.0,1.0,1.0,172.2,20.2
+one_line_prompt,agreeableness,low,10,1.0,1.0,1.0,1.0,152.7,18.1

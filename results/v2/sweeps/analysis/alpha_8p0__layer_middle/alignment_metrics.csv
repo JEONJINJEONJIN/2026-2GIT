@@ -1,0 +1,3 @@
+condition,persona,n_total,n_valid,align_itt,align_itt_ci_low,align_itt_ci_high,align_itt_vs_chance,align_pp,align_pp_ci_low,align_pp_ci_high,align_pp_vs_chance,chance_alignment_rate,or_itt_vs_neutral,or_itt_ci_low,or_itt_ci_high,or_pp_vs_neutral,or_pp_ci_low,or_pp_ci_high,entropy,unique_actions
+as_only_sep,aggressive,50,50,0.8,0.6696289406777459,0.887562499842239,0.4,0.8,0.6696289406777459,0.887562499842239,0.4,0.4,1.0,1.0,1.0,1.0,1.0,1.0,1.6094379124341005,5
+as_only_sep,cooperative,50,50,0.6,0.4618143774758936,0.7239161026974346,0.19999999999999996,0.6,0.4618143774758936,0.7239161026974346,0.19999999999999996,0.4,1.0,1.0,1.0,1.0,1.0,1.0,1.6094379124341005,5

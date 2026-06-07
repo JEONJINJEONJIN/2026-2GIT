@@ -1,0 +1,55 @@
+{
+  "run_id": "v4_bigfive_final__seed_42",
+  "model_name": "Qwen/Qwen2.5-3B-Instruct",
+  "condition": "baseline,one_line_prompt,elaborate_prompt,as_pas_only,elaborate_prompt_as_pas",
+  "trait": "agreeableness,conscientiousness,neuroticism,openness,extraversion",
+  "target_direction": "high,low",
+  "prompt_style": "mixed",
+  "uses_as": true,
+  "uses_pas": true,
+  "data_split": "test",
+  "seed": 42,
+  "alpha": 4.0,
+  "layers": [
+    18,
+    21,
+    24
+  ],
+  "vector_hash": "303b7d09d44d0e9b3b904c634a5c61570e895d315f80e8e9ddd9b815627a1880",
+  "git_commit": "50098b5f7b94a96a25eb056f4176b7f518ac1ac4",
+  "timestamp": 1779724944.6535087,
+  "extra": {
+    "experiment_name": "v4_bigfive_final",
+    "selected_conditions": [
+      "baseline",
+      "one_line_prompt",
+      "elaborate_prompt",
+      "as_pas_only",
+      "elaborate_prompt_as_pas"
+    ],
+    "vector_modes": {
+      "baseline": null,
+      "one_line_prompt": null,
+      "elaborate_prompt": null,
+      "as_pas_only": "trait_contrast",
+      "elaborate_prompt_as_pas": "trait_contrast"
+    },
+    "config_path": "C:\\GIT\\configs\\experiments\\v4_bigfive_final.yaml",
+    "config_sha256": "6867add2a7f4b40f67a56c8653a7e4ce4cffafeb4bb1ef6de5019c1b9dd42746",
+    "model_config_path": "C:\\GIT\\configs\\model.yaml",
+    "model_config_sha256": "4a0ae79778b98a396e2d2da9515301538f1930441df6d04726c9ebe196beb547",
+    "vectors_path": "C:\\GIT\\results\\v4_bigfive\\vectors\\bigfive_trait_vectors_full_fp16.pt",
+    "input_metadata": {
+      "bfi_items_path": "C:\\GIT\\data\\bfi\\bfi44_scoring.csv",
+      "bfi_item_count": 44,
+      "bfi_file_sha256": "d9ac6eb1cdb027cd9c5e0d14d4187b9e3ebbcecf225400395551d475113e5c54",
+      "bfi_item_text_path": "C:\\GIT\\data\\bfi\\bfi44_item_text.local.csv",
+      "bfi_item_text_sha256": "aded3bc7394070a0978155205c86c7d3bb5efed0fbe1310e52bd676da2b57f1e",
+      "trait_scenarios_path": "C:\\GIT\\data\\trait_bigfive\\scenarios.jsonl",
+      "trait_scenario_count": 750,
+      "trait_file_sha256": "3503a3812aca732fbac9cdaf232c025f8419480b8a546d44ce464327ad238068"
+    },
+    "generate_responses": false,
+    "response_max_new_tokens": 96
+  }
+}

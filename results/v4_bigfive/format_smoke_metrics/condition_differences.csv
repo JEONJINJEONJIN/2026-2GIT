@@ -1,0 +1,9 @@
+condition,reference_condition,trait,target_direction,delta_consistency,delta_bfi_target_attainment,delta_trait_target_attainment
+as_pas_only,baseline,agreeableness,high,0.005235333626689265,0.0,0.03571867631337439
+as_pas_only,baseline,agreeableness,low,-0.05297437382468473,0.0,0.06805913817029922
+elaborate_prompt,baseline,agreeableness,high,-0.08990994888719495,0.19444444444444442,0.08944973121163508
+elaborate_prompt,baseline,agreeableness,low,0.019643231997934718,0.11111111111111116,0.07765797528674163
+elaborate_prompt_as_pas,baseline,agreeableness,high,-0.09311462502934098,0.19444444444444442,0.08624505506948901
+elaborate_prompt_as_pas,baseline,agreeableness,low,0.008828267374928256,0.11111111111111116,0.10058246788569926
+one_line_prompt,baseline,agreeableness,high,-0.0808620229662863,0.16666666666666669,0.07071987935476562
+one_line_prompt,baseline,agreeableness,low,-0.26368094230551986,0.4722222222222222,0.09125124883395551

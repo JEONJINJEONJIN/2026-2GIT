@@ -1,0 +1,60 @@
+experiment:
+  name: "v4_bigfive_final"
+  purpose: "Run the fixed v4 Big Five speech-action consistency evaluation on held-out test scenarios."
+  version: "v4_bigfive"
+  split: "test"
+
+  traits:
+    - "agreeableness"
+    - "conscientiousness"
+    - "neuroticism"
+    - "openness"
+    - "extraversion"
+  target_directions: ["high", "low"]
+  max_trait_scenarios: null
+
+  conditions:
+    - name: "baseline"
+      prompt_style: "none"
+      steering: false
+      pas: false
+    - name: "one_line_prompt"
+      prompt_style: "one_line"
+      steering: false
+      pas: false
+    - name: "elaborate_prompt"
+      prompt_style: "elaborate"
+      steering: false
+      pas: false
+    - name: "as_pas_only"
+      prompt_style: "none"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+    - name: "elaborate_prompt_as_pas"
+      prompt_style: "elaborate"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+
+  scoring:
+    primary_metric: "speech_action_consistency"
+    bfi_items_path: "data/bfi/bfi44_scoring.csv"
+    bfi_item_text_path: "data/bfi/bfi44_item_text.local.csv"
+    trait_scenarios_path: "data/trait_bigfive/scenarios.jsonl"
+    secondary_metrics:
+      - "bfi_target_attainment"
+      - "trait_target_attainment"
+      - "pas_loglik_agreement"
+      - "paraphrase_stability"
+      - "format_validity"
+
+  steering:
+    alpha: 4.0
+    layers: [18, 21, 24]
+    tune_on_this_split: false
+    note: "Fixed from Phase 2/dev results. Do not tune on test."
+
+  output:
+    run_root: "results/v4_bigfive/final_runs"
+    metrics_dir: "results/v4_bigfive/final_metrics"

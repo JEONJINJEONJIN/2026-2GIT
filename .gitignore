@@ -37,3 +37,6 @@ Thumbs.db
 # Secrets / API keys
 .env
 *.env
+
+# Local-only measurement item text
+data/bfi/*.local.csv

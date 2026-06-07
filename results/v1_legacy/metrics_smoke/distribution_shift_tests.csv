@@ -1,0 +1,7 @@
+persona,condition_a,condition_b,chi2,p_value,dof,cramers_v,p_bonferroni,significant_005
+aggressive,as_only,neutral_baseline,4.0,0.26146412994911117,3,1.0,1.0,False
+aggressive,as_only,prompt_baseline,2.0,0.36787944117144245,2,0.7071067811865476,1.0,False
+aggressive,neutral_baseline,prompt_baseline,4.0,0.26146412994911117,3,1.0,1.0,False
+cooperative,as_only,neutral_baseline,2.0,0.36787944117144245,2,0.7071067811865476,1.0,False
+cooperative,as_only,prompt_baseline,4.0,0.26146412994911117,3,1.0,1.0,False
+cooperative,neutral_baseline,prompt_baseline,4.0,0.26146412994911117,3,1.0,1.0,False

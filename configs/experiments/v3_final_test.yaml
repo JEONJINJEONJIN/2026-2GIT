@@ -1,0 +1,56 @@
+experiment:
+  name: "v3_final_test"
+  purpose: "Run the fixed V3 condition matrix on held-out test scenarios without additional tuning."
+  version: "v3"
+  split: "test"
+
+  personas: ["aggressive", "cooperative"]
+  conditions:
+    - name: "neutral_baseline"
+      persona_prompt: false
+      steering: false
+    - name: "zero_hook"
+      persona_prompt: false
+      steering: true
+      vector_mode: "zero"
+    - name: "random_vector"
+      persona_prompt: false
+      steering: true
+      vector_mode: "random_normalized"
+    - name: "wrong_persona_vector"
+      persona_prompt: false
+      steering: true
+      vector_mode: "wrong_persona"
+    - name: "as_only"
+      persona_prompt: false
+      steering: true
+      vector_mode: "contrast_explicit"
+    - name: "weak_prompt_baseline"
+      persona_prompt: "weak"
+      steering: false
+    - name: "weak_prompt_as"
+      persona_prompt: "weak"
+      steering: true
+      vector_mode: "contrast_explicit"
+
+  steering:
+    alpha: null
+    layer_group: null
+    tune_on_this_split: false
+    note: "Fill alpha and layer_group from v3_controls_dev before running final test. Do not tune on test."
+
+  scoring:
+    modes: ["loglik", "generate"]
+    primary_metric: "aligned_probability_mass"
+    secondary_metrics: ["top1_alignment", "aligned_mean_rank", "top1_margin", "freeform_alignment"]
+    use_action_paraphrases: true
+    aggregate_paraphrases: "mean"
+
+  data:
+    scenarios_path: "data/scenarios/team_a_scenarios.jsonl"
+    actions_path: "data/actions/team_a_action_definitions.jsonl"
+    require_split: true
+    allowed_splits: ["test"]
+
+  output:
+    run_root: "results/v3/runs"

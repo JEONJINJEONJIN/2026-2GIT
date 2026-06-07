@@ -1,0 +1,47 @@
+experiment:
+  name: "v4_bigfive_format_smoke"
+  purpose: "Quick response-format smoke test for Phase 2 side-effect checks."
+  version: "v4_bigfive"
+  split: "dev"
+
+  traits: ["agreeableness"]
+  target_directions: ["high", "low"]
+  max_trait_scenarios: 10
+
+  conditions:
+    - name: "baseline"
+      prompt_style: "none"
+      steering: false
+      pas: false
+    - name: "one_line_prompt"
+      prompt_style: "one_line"
+      steering: false
+      pas: false
+    - name: "elaborate_prompt"
+      prompt_style: "elaborate"
+      steering: false
+      pas: false
+    - name: "as_pas_only"
+      prompt_style: "none"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+    - name: "elaborate_prompt_as_pas"
+      prompt_style: "elaborate"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+
+  scoring:
+    primary_metric: "speech_action_consistency"
+    bfi_items_path: "data/bfi/bfi44_scoring.csv"
+    bfi_item_text_path: "data/bfi/bfi44_item_text.local.csv"
+    trait_scenarios_path: "data/trait_bigfive/scenarios.jsonl"
+    secondary_metrics:
+      - "bfi_target_attainment"
+      - "trait_target_attainment"
+      - "pas_loglik_agreement"
+
+  output:
+    run_root: "results/v4_bigfive/format_smoke_runs"
+    metrics_dir: "results/v4_bigfive/format_smoke_metrics"

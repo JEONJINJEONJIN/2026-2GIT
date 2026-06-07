@@ -177,6 +177,9 @@ def get_model_layers(model) -> "torch.nn.ModuleList":
     # Qwen / LLaMA style
     if hasattr(model, "model") and hasattr(model.model, "layers"):
         return model.model.layers
+    # Base decoder models loaded via AutoModel, e.g. Qwen2Model.
+    if hasattr(model, "layers"):
+        return model.layers
     # Gemma4 style: model.model.language_model.layers
     if (
         hasattr(model, "model")
@@ -193,5 +196,6 @@ def get_model_layers(model) -> "torch.nn.ModuleList":
         return model.language_model.model.layers
     raise AttributeError(
         f"Cannot locate transformer layers on {type(model).__name__}. "
-        "Expected model.model.layers or model.model.language_model.layers."
+        "Expected model.model.layers, model.layers, "
+        "model.model.language_model.layers, or model.language_model.model.layers."
     )

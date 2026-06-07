@@ -1,0 +1,50 @@
+experiment:
+  name: "v4_bigfive_controls"
+  purpose: "Run diagnostic controls for v4 Big Five AS+PAS effects."
+  version: "v4_bigfive"
+  split: "dev"
+
+  traits:
+    - "agreeableness"
+    - "conscientiousness"
+    - "neuroticism"
+    - "openness"
+    - "extraversion"
+  target_directions: ["high", "low"]
+  max_trait_scenarios: 50
+
+  conditions:
+    - name: "zero_hook"
+      prompt_style: "none"
+      steering: true
+      pas: false
+      vector_mode: "zero"
+    - name: "random_vector"
+      prompt_style: "none"
+      steering: true
+      pas: false
+      vector_mode: "random"
+    - name: "unrelated_trait_vector"
+      prompt_style: "none"
+      steering: true
+      pas: false
+      vector_mode: "unrelated_trait"
+    - name: "as_pas_only"
+      prompt_style: "none"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+
+  scoring:
+    primary_metric: "speech_action_consistency"
+    bfi_items_path: "data/bfi/bfi44_scoring.csv"
+    bfi_item_text_path: "data/bfi/bfi44_item_text.local.csv"
+    trait_scenarios_path: "data/trait_bigfive/scenarios.jsonl"
+    secondary_metrics:
+      - "bfi_target_attainment"
+      - "trait_target_attainment"
+      - "pas_loglik_agreement"
+
+  output:
+    run_root: "results/v4_bigfive/control_runs"
+    metrics_dir: "results/v4_bigfive/control_metrics"

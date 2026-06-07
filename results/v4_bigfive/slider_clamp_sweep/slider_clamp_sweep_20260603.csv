@@ -1,0 +1,241 @@
+profile,clamp_x,scenario_id,norm,closed_form_norm,rep_rate_3,rep_rate_4,len,parse_ok,format_failure,pas_score,pas_selected_action,raw_text,final_text
+social_explorer,none,trait_agreeableness_00851,2.1495718955993652,2.149606955164872,0.0,0.0,54,True,False,-0.02113451436161995,trait_agreeableness_00851_act_003,"[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_003</Action>"
+social_explorer,none,trait_agreeableness_00852,2.1495718955993652,2.149606955164872,0.0,0.0,41,True,False,-0.036490391939878464,trait_agreeableness_00852_act_004,"[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_004</Action>"
+social_explorer,none,trait_agreeableness_00853,2.1495718955993652,2.149606955164872,0.0,0.0,53,True,False,-0.07549700886011124,trait_agreeableness_00853_act_002,"[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_002</Action>"
+social_explorer,none,trait_agreeableness_00854,2.1495718955993652,2.149606955164872,0.0,0.0,44,True,False,-0.08027075231075287,trait_agreeableness_00854_act_004,"[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_003</Action>","[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_004</Action>"
+social_explorer,none,trait_agreeableness_00855,2.1495718955993652,2.149606955164872,0.0,0.0,46,True,False,-0.017537036910653114,trait_agreeableness_00855_act_001,"[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>","[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>"
+social_explorer,none,trait_agreeableness_00856,2.1495718955993652,2.149606955164872,0.0,0.0,50,True,False,-0.02044137567281723,trait_agreeableness_00856_act_003,"[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_001</Action>","[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_003</Action>"
+social_explorer,none,trait_agreeableness_00857,2.1495718955993652,2.149606955164872,0.0,0.0,56,True,False,-0.025784019380807877,trait_agreeableness_00857_act_002,"[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>"
+social_explorer,none,trait_agreeableness_00858,2.1495718955993652,2.149606955164872,0.0,0.0,45,True,False,-0.05831875652074814,trait_agreeableness_00858_act_004,"[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>","[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>"
+social_explorer,3.0,trait_agreeableness_00851,2.1495718955993652,2.149606955164872,0.0,0.0,54,True,False,-0.02113451436161995,trait_agreeableness_00851_act_003,"[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_003</Action>"
+social_explorer,3.0,trait_agreeableness_00852,2.1495718955993652,2.149606955164872,0.0,0.0,41,True,False,-0.036490391939878464,trait_agreeableness_00852_act_004,"[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_004</Action>"
+social_explorer,3.0,trait_agreeableness_00853,2.1495718955993652,2.149606955164872,0.0,0.0,53,True,False,-0.07549700886011124,trait_agreeableness_00853_act_002,"[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_002</Action>"
+social_explorer,3.0,trait_agreeableness_00854,2.1495718955993652,2.149606955164872,0.0,0.0,44,True,False,-0.08027075231075287,trait_agreeableness_00854_act_004,"[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_003</Action>","[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_004</Action>"
+social_explorer,3.0,trait_agreeableness_00855,2.1495718955993652,2.149606955164872,0.0,0.0,46,True,False,-0.017537036910653114,trait_agreeableness_00855_act_001,"[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>","[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>"
+social_explorer,3.0,trait_agreeableness_00856,2.1495718955993652,2.149606955164872,0.0,0.0,50,True,False,-0.02044137567281723,trait_agreeableness_00856_act_003,"[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_001</Action>","[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_003</Action>"
+social_explorer,3.0,trait_agreeableness_00857,2.1495718955993652,2.149606955164872,0.0,0.0,56,True,False,-0.025784019380807877,trait_agreeableness_00857_act_002,"[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>"
+social_explorer,3.0,trait_agreeableness_00858,2.1495718955993652,2.149606955164872,0.0,0.0,45,True,False,-0.05831875652074814,trait_agreeableness_00858_act_004,"[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>","[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>"
+social_explorer,2.5,trait_agreeableness_00851,2.1495718955993652,2.149606955164872,0.0,0.0,54,True,False,-0.02113451436161995,trait_agreeableness_00851_act_003,"[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_003</Action>"
+social_explorer,2.5,trait_agreeableness_00852,2.1495718955993652,2.149606955164872,0.0,0.0,41,True,False,-0.036490391939878464,trait_agreeableness_00852_act_004,"[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] Let's keep this light and positive! We can handle this together without hiding anything.
+<Action>trait_agreeableness_00852_act_004</Action>"
+social_explorer,2.5,trait_agreeableness_00853,2.1495718955993652,2.149606955164872,0.0,0.0,53,True,False,-0.07549700886011124,trait_agreeableness_00853_act_002,"[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_002</Action>"
+social_explorer,2.5,trait_agreeableness_00854,2.1495718955993652,2.149606955164872,0.0,0.0,44,True,False,-0.08027075231075287,trait_agreeableness_00854_act_004,"[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_003</Action>","[Speech] Let's focus on finding a solution that works for everyone! What do you think would be best?
+<Action>trait_agreeableness_00854_act_004</Action>"
+social_explorer,2.5,trait_agreeableness_00855,2.1495718955993652,2.149606955164872,0.0,0.0,46,True,False,-0.017537036910653114,trait_agreeableness_00855_act_001,"[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>","[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>"
+social_explorer,2.5,trait_agreeableness_00856,2.1495718955993652,2.149606955164872,0.0,0.0,50,True,False,-0.02044137567281723,trait_agreeableness_00856_act_003,"[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_001</Action>","[Speech] Let's explore our ideas together! How about we have a structured debate where everyone can present their thoughts and learn from each other?
+<Action>trait_agreeableness_00856_act_003</Action>"
+social_explorer,2.5,trait_agreeableness_00857,2.1495718955993652,2.149606955164872,0.0,0.0,56,True,False,-0.025784019380807877,trait_agreeableness_00857_act_002,"[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>"
+social_explorer,2.5,trait_agreeableness_00858,2.1495718955993652,2.149606955164872,0.0,0.0,45,True,False,-0.05831875652074814,trait_agreeableness_00858_act_004,"[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>","[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>"
+social_explorer,2.0,trait_agreeableness_00851,2.0000269412994385,2.149606955164872,0.0,0.0,54,True,False,-0.02109699882566929,trait_agreeableness_00851_act_003,"[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] ""Adajames, you look like you need a breather! Let's take a quick break and I'll watch your bags while you rest.""
+<Action>trait_agreeableness_00851_act_003</Action>"
+social_explorer,2.0,trait_agreeableness_00852,2.0000269412994385,2.149606955164872,0.0,0.0,41,True,False,-0.03645214065909386,trait_agreeableness_00852_act_004,"[Speech] Let's face this together! We can handle any fallout by being honest and proactive.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] Let's face this together! We can handle any fallout by being honest and proactive.
+<Action>trait_agreeableness_00852_act_004</Action>"
+social_explorer,2.0,trait_agreeableness_00853,2.0000269412994385,2.149606955164872,0.0,0.0,53,True,False,-0.07545938342809677,trait_agreeableness_00853_act_002,"[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] Hey Roniya, I noticed we've had some gaps in our discussions lately. What's been going on? It feels like something's off.
+<Action>trait_agreeableness_00853_act_002</Action>"
+social_explorer,2.0,trait_agreeableness_00854,2.0000269412994385,2.149606955164872,0.0,0.0,47,True,False,-0.08023244142532349,trait_agreeableness_00854_act_004,"[Speech] Let's focus on finding a solution that works for everyone, even if it means stepping out of our comfort zones!
+<Action>trait_agreeableness_00854_act_004</Action>","[Speech] Let's focus on finding a solution that works for everyone, even if it means stepping out of our comfort zones!
+<Action>trait_agreeableness_00854_act_004</Action>"
+social_explorer,2.0,trait_agreeableness_00855,2.0000269412994385,2.149606955164872,0.0,0.0,46,True,False,-0.017496002838015556,trait_agreeableness_00855_act_001,"[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>","[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>"
+social_explorer,2.0,trait_agreeableness_00856,2.0000269412994385,2.149606955164872,0.0,0.0,46,True,False,-0.02040177397429943,trait_agreeableness_00856_act_003,"[Speech] Let's explore this together! What if we structured a feedback session where everyone can share their thoughts and experiences?
+<Action>trait_agreeableness_00856_act_001</Action>","[Speech] Let's explore this together! What if we structured a feedback session where everyone can share their thoughts and experiences?
+<Action>trait_agreeableness_00856_act_003</Action>"
+social_explorer,2.0,trait_agreeableness_00857,2.0000269412994385,2.149606955164872,0.0,0.0,56,True,False,-0.025746343657374382,trait_agreeableness_00857_act_002,"[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] Let's take a stroll and talk about this! Your health is so important to me, and I want to hear all about your plans to kick that habit!
+<Action>trait_agreeableness_00857_act_002</Action>"
+social_explorer,2.0,trait_agreeableness_00858,2.0000269412994385,2.149606955164872,0.0,0.0,45,True,False,-0.05828358605504036,trait_agreeableness_00858_act_004,"[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>","[Speech] Let's make sure we both get what we need! How about you come over for a quick coffee?
+<Action>trait_agreeableness_00858_act_004</Action>"
+social_explorer,1.5,trait_agreeableness_00851,1.4999922513961792,2.149606955164872,0.0,0.0,38,True,False,-0.021110396832227707,trait_agreeableness_00851_act_003,"[Speech] Shorter yet impactful tasks might be more beneficial for both of us!
+<Action>trait_agreeableness_00851_act_003</Action>","[Speech] Shorter yet impactful tasks might be more beneficial for both of us!
+<Action>trait_agreeableness_00851_act_003</Action>"
+social_explorer,1.5,trait_agreeableness_00852,1.4999922513961792,2.149606955164872,0.0,0.0,42,True,False,-0.03646833449602127,trait_agreeableness_00852_act_004,"[Speech] Shorten the story and keep it light; hiding mistakes isn’t always the best approach!
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] Shorten the story and keep it light; hiding mistakes isn’t always the best approach!
+<Action>trait_agreeableness_00852_act_004</Action>"
+social_explorer,1.5,trait_agreeableness_00853,1.4999922513961792,2.149606955164872,0.0,0.0,53,True,False,-0.07547435909509659,trait_agreeableness_00853_act_002,"[Speech] ""Roniya, I've noticed you've been missing meetings lately. It's important we talk openly about this. What's going on?""
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] ""Roniya, I've noticed you've been missing meetings lately. It's important we talk openly about this. What's going on?""
+<Action>trait_agreeableness_00853_act_002</Action>"
+social_explorer,1.5,trait_agreeableness_00854,1.4999922513961792,2.149606955164872,0.0,0.0,52,True,False,-0.08025472611188889,trait_agreeableness_00854_act_004,"[Speech] Let's focus on finding a solution that works best for us, rather than second-guessing every decision to avoid hurting anyone's feelings.
+<Action>trait_agreeableness_00854_act_004</Action>","[Speech] Let's focus on finding a solution that works best for us, rather than second-guessing every decision to avoid hurting anyone's feelings.
+<Action>trait_agreeableness_00854_act_004</Action>"
+social_explorer,1.5,trait_agreeableness_00855,1.4999922513961792,2.149606955164872,0.0,0.0,46,True,False,-0.017511984333395958,trait_agreeableness_00855_act_001,"[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>","[Speech] Let's find a way to make this fun for everyone! What about trying out some team-building activities instead?
+<Action>trait_agreeableness_00855_act_001</Action>"
+social_explorer,1.5,trait_agreeableness_00856,1.4999922513961792,2.149606955164872,0.0,0.0,39,True,False,-0.020415719598531723,trait_agreeableness_00856_act_003,"[Speech] Short dialogue? Let's see this as an opportunity to blend our strengths!
+<Action>trait_agreeableness_00856_act_003</Action>","[Speech] Short dialogue? Let's see this as an opportunity to blend our strengths!
+<Action>trait_agreeableness_00856_act_003</Action>"
+social_explorer,1.5,trait_agreeableness_00857,1.4999922513961792,2.149606955164872,0.0,0.0,51,True,False,-0.025760948657989502,trait_agreeableness_00857_act_002,"[Speech] Let's take a stroll and talk about this. I care deeply about your health and want to hear more about what you're thinking.
+<Action>trait_agreeableness_00857_act_001</Action>","[Speech] Let's take a stroll and talk about this. I care deeply about your health and want to hear more about what you're thinking.
+<Action>trait_agreeableness_00857_act_002</Action>"
+social_explorer,1.5,trait_agreeableness_00858,1.4999922513961792,2.149606955164872,0.0,0.0,38,True,False,-0.058290284126996994,trait_agreeableness_00858_act_004,"[Speech] Short time spent together will be refreshing, but remember to recharge too!
+<Action>trait_agreeableness_00858_act_004</Action>","[Speech] Short time spent together will be refreshing, but remember to recharge too!
+<Action>trait_agreeableness_00858_act_004</Action>"
+reserved_conservative,none,trait_agreeableness_00851,2.1862359046936035,2.1861571831095854,0.0,0.0,49,True,False,0.15429525077342987,trait_agreeableness_00851_act_002,"[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_002</Action>"
+reserved_conservative,none,trait_agreeableness_00852,2.1862359046936035,2.1861571831095854,0.0,0.0,46,True,False,0.1630403846502304,trait_agreeableness_00852_act_003,"[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_003</Action>"
+reserved_conservative,none,trait_agreeableness_00853,2.1862359046936035,2.1861571831095854,0.0,0.0,55,True,False,0.18775859475135803,trait_agreeableness_00853_act_004,"[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_004</Action>"
+reserved_conservative,none,trait_agreeableness_00854,2.1862359046936035,2.1861571831095854,0.0,0.0,54,True,False,0.17446790635585785,trait_agreeableness_00854_act_001,"[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>","[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>"
+reserved_conservative,none,trait_agreeableness_00855,2.1862359046936035,2.1861571831095854,0.0,0.0,45,True,False,0.1401139795780182,trait_agreeableness_00855_act_002,"[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_004</Action>","[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_002</Action>"
+reserved_conservative,none,trait_agreeableness_00856,2.1862359046936035,2.1861571831095854,0.0,0.0,41,True,False,0.16617098450660706,trait_agreeableness_00856_act_002,"[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_004</Action>","[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_002</Action>"
+reserved_conservative,none,trait_agreeableness_00857,2.1862359046936035,2.1861571831095854,0.0,0.0,58,True,False,0.14820794761180878,trait_agreeableness_00857_act_003,"[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_003</Action>"
+reserved_conservative,none,trait_agreeableness_00858,2.1862359046936035,2.1861571831095854,0.0,0.0,44,True,False,0.10392457246780396,trait_agreeableness_00858_act_002,"[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_001</Action>","[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_002</Action>"
+reserved_conservative,3.0,trait_agreeableness_00851,2.1862359046936035,2.1861571831095854,0.0,0.0,49,True,False,0.15429525077342987,trait_agreeableness_00851_act_002,"[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_002</Action>"
+reserved_conservative,3.0,trait_agreeableness_00852,2.1862359046936035,2.1861571831095854,0.0,0.0,46,True,False,0.1630403846502304,trait_agreeableness_00852_act_003,"[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_003</Action>"
+reserved_conservative,3.0,trait_agreeableness_00853,2.1862359046936035,2.1861571831095854,0.0,0.0,55,True,False,0.18775859475135803,trait_agreeableness_00853_act_004,"[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_004</Action>"
+reserved_conservative,3.0,trait_agreeableness_00854,2.1862359046936035,2.1861571831095854,0.0,0.0,54,True,False,0.17446790635585785,trait_agreeableness_00854_act_001,"[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>","[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>"
+reserved_conservative,3.0,trait_agreeableness_00855,2.1862359046936035,2.1861571831095854,0.0,0.0,45,True,False,0.1401139795780182,trait_agreeableness_00855_act_002,"[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_004</Action>","[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_002</Action>"
+reserved_conservative,3.0,trait_agreeableness_00856,2.1862359046936035,2.1861571831095854,0.0,0.0,41,True,False,0.16617098450660706,trait_agreeableness_00856_act_002,"[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_004</Action>","[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_002</Action>"
+reserved_conservative,3.0,trait_agreeableness_00857,2.1862359046936035,2.1861571831095854,0.0,0.0,58,True,False,0.14820794761180878,trait_agreeableness_00857_act_003,"[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_003</Action>"
+reserved_conservative,3.0,trait_agreeableness_00858,2.1862359046936035,2.1861571831095854,0.0,0.0,44,True,False,0.10392457246780396,trait_agreeableness_00858_act_002,"[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_001</Action>","[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_002</Action>"
+reserved_conservative,2.5,trait_agreeableness_00851,2.1862359046936035,2.1861571831095854,0.0,0.0,49,True,False,0.15429525077342987,trait_agreeableness_00851_act_002,"[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_002</Action>"
+reserved_conservative,2.5,trait_agreeableness_00852,2.1862359046936035,2.1861571831095854,0.0,0.0,46,True,False,0.1630403846502304,trait_agreeableness_00852_act_003,"[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_003</Action>"
+reserved_conservative,2.5,trait_agreeableness_00853,2.1862359046936035,2.1861571831095854,0.0,0.0,55,True,False,0.18775859475135803,trait_agreeableness_00853_act_004,"[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_004</Action>"
+reserved_conservative,2.5,trait_agreeableness_00854,2.1862359046936035,2.1861571831095854,0.0,0.0,54,True,False,0.17446790635585785,trait_agreeableness_00854_act_001,"[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>","[Speech] I understand the importance of our communication and the need for precision. Let me ensure that such delays do not occur again by reviewing our protocols and procedures.
+<Action>trait_agreeableness_00854_act_001</Action>"
+reserved_conservative,2.5,trait_agreeableness_00855,2.1862359046936035,2.1861571831095854,0.0,0.0,45,True,False,0.1401139795780182,trait_agreeableness_00855_act_002,"[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_004</Action>","[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_002</Action>"
+reserved_conservative,2.5,trait_agreeableness_00856,2.1862359046936035,2.1861571831095854,0.0,0.0,41,True,False,0.16617098450660706,trait_agreeableness_00856_act_002,"[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_004</Action>","[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_002</Action>"
+reserved_conservative,2.5,trait_agreeableness_00857,2.1862359046936035,2.1861571831095854,0.0,0.0,58,True,False,0.14820794761180878,trait_agreeableness_00857_act_003,"[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_003</Action>"
+reserved_conservative,2.5,trait_agreeableness_00858,2.1862359046936035,2.1861571831095854,0.0,0.0,44,True,False,0.10392457246780396,trait_agreeableness_00858_act_002,"[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_001</Action>","[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_002</Action>"
+reserved_conservative,2.0,trait_agreeableness_00851,1.9999991655349731,2.1861571831095854,0.0,0.0,49,True,False,0.15428486466407776,trait_agreeableness_00851_act_002,"[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_001</Action>","[Speech] It seems you are already managing your tasks efficiently. If you feel the need to rest, I will gladly watch your bags.
+<Action>trait_agreeableness_00851_act_002</Action>"
+reserved_conservative,2.0,trait_agreeableness_00852,1.9999991655349731,2.1861571831095854,0.0,0.0,46,True,False,0.163030743598938,trait_agreeableness_00852_act_003,"[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] It would be best to address this matter directly with your coworker, ensuring clarity and minimizing any unnecessary complications.
+<Action>trait_agreeableness_00852_act_003</Action>"
+reserved_conservative,2.0,trait_agreeableness_00853,1.9999991655349731,2.1861571831095854,0.0,0.0,55,True,False,0.18774822354316711,trait_agreeableness_00853_act_004,"[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_003</Action>","[Speech] I must address this matter carefully to avoid further misunderstandings. Please provide me with your thoughts on how we might proceed without causing unnecessary stress to our team.
+<Action>trait_agreeableness_00853_act_004</Action>"
+reserved_conservative,2.0,trait_agreeableness_00854,1.9999991655349731,2.1861571831095854,0.0,0.0,48,True,False,0.17445224523544312,trait_agreeableness_00854_act_001,"[Speech] I understand your concern, and I will ensure that all future communications are handled promptly to avoid such delays in the future.
+<Action>trait_agreeableness_00854_act_001</Action>","[Speech] I understand your concern, and I will ensure that all future communications are handled promptly to avoid such delays in the future.
+<Action>trait_agreeableness_00854_act_001</Action>"
+reserved_conservative,2.0,trait_agreeableness_00855,1.9999991655349731,2.1861571831095854,0.0,0.0,45,True,False,0.14009921252727509,trait_agreeableness_00855_act_002,"[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_003</Action>","[Speech] I understand your concern, but I believe we should start with a more conservative activity to ensure our safety.
+<Action>trait_agreeableness_00855_act_002</Action>"
+reserved_conservative,2.0,trait_agreeableness_00856,1.9999991655349731,2.1861571831095854,0.0,0.0,41,True,False,0.16616173088550568,trait_agreeableness_00856_act_002,"[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_004</Action>","[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_002</Action>"
+reserved_conservative,2.0,trait_agreeableness_00857,1.9999991655349731,2.1861571831095854,0.0,0.0,58,True,False,0.14819344878196716,trait_agreeableness_00857_act_003,"[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important for your health, and I hope you find the strength to continue.  
+<Action>trait_agreeableness_00857_act_003</Action>"
+reserved_conservative,2.0,trait_agreeableness_00858,1.9999991655349731,2.1861571831095854,0.0,0.0,44,True,False,0.10390717536211014,trait_agreeableness_00858_act_002,"[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_001</Action>","[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_002</Action>"
+reserved_conservative,1.5,trait_agreeableness_00851,1.4999977350234985,2.1861571831095854,0.0,0.0,46,True,False,0.15430952608585358,trait_agreeableness_00851_act_002,"[Speech] It seems you are already managing quite a heavy load. Would you like me to assist you in any way?
+<Action>trait_agreeableness_00851_act_002</Action>","[Speech] It seems you are already managing quite a heavy load. Would you like me to assist you in any way?
+<Action>trait_agreeableness_00851_act_002</Action>"
+reserved_conservative,1.5,trait_agreeableness_00852,1.4999977350234985,2.1861571831095854,0.0,0.0,50,True,False,0.16305163502693176,trait_agreeableness_00852_act_003,"[Speech] It would be best to let your coworker know about the issue directly; hiding it will only cause more problems down the line.
+<Action>trait_agreeableness_00852_act_002</Action>","[Speech] It would be best to let your coworker know about the issue directly; hiding it will only cause more problems down the line.
+<Action>trait_agreeableness_00852_act_003</Action>"
+reserved_conservative,1.5,trait_agreeableness_00853,1.4999977350234985,2.1861571831095854,0.0,0.0,45,True,False,0.18776953220367432,trait_agreeableness_00853_act_004,"[Speech] I must address this matter carefully, ensuring my words reflect the seriousness of the issue without causing unnecessary distress.
+<Action>trait_agreeableness_00853_act_004</Action>","[Speech] I must address this matter carefully, ensuring my words reflect the seriousness of the issue without causing unnecessary distress.
+<Action>trait_agreeableness_00853_act_004</Action>"
+reserved_conservative,1.5,trait_agreeableness_00854,1.4999977350234985,2.1861571831095854,0.0,0.0,50,True,False,0.1744755208492279,trait_agreeableness_00854_act_001,"[Speech] It seems we've encountered a common issue where overthinking could be hindering our progress. Let's address the immediate concern first.
+<Action>trait_agreeableness_00854_act_001</Action>","[Speech] It seems we've encountered a common issue where overthinking could be hindering our progress. Let's address the immediate concern first.
+<Action>trait_agreeableness_00854_act_001</Action>"
+reserved_conservative,1.5,trait_agreeableness_00855,1.4999977350234985,2.1861571831095854,0.0,0.0,47,True,False,0.14012619853019714,trait_agreeableness_00855_act_002,"[Speech] I appreciate your concern, but I think we should start with a more conservative activity that we both feel comfortable with.
+<Action>trait_agreeableness_00855_act_003</Action>","[Speech] I appreciate your concern, but I think we should start with a more conservative activity that we both feel comfortable with.
+<Action>trait_agreeableness_00855_act_002</Action>"
+reserved_conservative,1.5,trait_agreeableness_00856,1.4999977350234985,2.1861571831095854,0.0,0.0,41,True,False,0.16618207097053528,trait_agreeableness_00856_act_002,"[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_004</Action>","[Speech] Short dialogue should be given to the team to ensure their satisfaction and prevent internal resentment.
+<Action>trait_agreeableness_00856_act_002</Action>"
+reserved_conservative,1.5,trait_agreeableness_00857,1.4999977350234985,2.1861571831095854,0.0,0.0,58,True,False,0.14821889996528625,trait_agreeableness_00857_act_003,"[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important to recognize the progress you've made and the sacrifices you've made.  
+<Action>trait_agreeableness_00857_act_002</Action>","[Speech] It seems you've been quite diligent in your efforts to quit smoking. I believe it's important to recognize the progress you've made and the sacrifices you've made.  
+<Action>trait_agreeableness_00857_act_003</Action>"
+reserved_conservative,1.5,trait_agreeableness_00858,1.4999977350234985,2.1861571831095854,0.0,0.0,44,True,False,0.10393766313791275,trait_agreeableness_00858_act_002,"[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_001</Action>","[Speech] It's crucial that I take some time for myself this weekend to ensure my mental health remains stable.
+<Action>trait_agreeableness_00858_act_002</Action>"

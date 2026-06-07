@@ -1,0 +1,13 @@
+condition,persona,scenario_id,entropy
+as_only,aggressive,sc_001,0.0
+as_only,aggressive,sc_002,0.0
+as_only,cooperative,sc_001,0.0
+as_only,cooperative,sc_002,0.0
+neutral_baseline,aggressive,sc_001,0.0
+neutral_baseline,aggressive,sc_002,0.0
+neutral_baseline,cooperative,sc_001,0.0
+neutral_baseline,cooperative,sc_002,0.0
+prompt_baseline,aggressive,sc_001,0.0
+prompt_baseline,aggressive,sc_002,0.0
+prompt_baseline,cooperative,sc_001,0.0
+prompt_baseline,cooperative,sc_002,0.0

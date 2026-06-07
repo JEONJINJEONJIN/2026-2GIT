@@ -1,0 +1,7 @@
+condition,persona,n,parse_ok_rate,persona_alignment_rate,neutral_action_rate,misaligned_action_rate,unknown_action_rate,speech_action_agreement_rate,action_entropy,unique_actions
+as_only,aggressive,2,0.5,0.5,0.5,0.0,0.0,0.5,0.6931471805599453,2
+as_only,cooperative,2,1.0,1.0,0.0,0.0,0.0,0.0,0.6931471805599453,2
+neutral_baseline,aggressive,2,1.0,0.5,0.0,0.5,0.0,0.0,0.6931471805599453,2
+neutral_baseline,cooperative,2,1.0,0.5,0.0,0.5,0.0,0.0,0.6931471805599453,2
+prompt_baseline,aggressive,2,0.5,1.0,0.0,0.0,0.0,0.0,0.6931471805599453,2
+prompt_baseline,cooperative,2,0.5,0.0,0.5,0.0,0.5,0.5,0.6931471805599453,1

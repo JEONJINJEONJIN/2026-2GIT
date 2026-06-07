@@ -1,0 +1,11 @@
+condition,persona,scenario_id,entropy
+as_only_sep,aggressive,sc_001,0.0
+as_only_sep,aggressive,sc_002,0.0
+as_only_sep,aggressive,sc_003,0.0
+as_only_sep,aggressive,sc_004,0.0
+as_only_sep,aggressive,sc_005,0.0
+as_only_sep,cooperative,sc_001,0.0
+as_only_sep,cooperative,sc_002,0.0
+as_only_sep,cooperative,sc_003,0.0
+as_only_sep,cooperative,sc_004,0.0
+as_only_sep,cooperative,sc_005,0.0

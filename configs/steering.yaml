@@ -3,13 +3,15 @@ steering:
   hook_target: "post_block_residual"
   token_aggregation: "last_input_token"
   normalize_vectors: true
-  default_alpha: 2.0
-  alpha_values: [0.5, 1.0, 2.0, 4.0]
-  vector_path: "results/vectors/steering_vectors_fp16.pt"
+  default_alpha: 4.0
+  alpha_values: [0.5, 1.0, 2.0, 4.0, 8.0]
+  vector_path: "results/v2/vectors/steering_vectors_separate_fp16.pt"
 
   layer_groups:
+    early: [6, 9]
     shallow: [6, 9, 12]
     middle: [18, 21, 24]
+    late: [30, 33, 35]
     deep: [30, 33, 35]
     all: [6, 9, 12, 18, 21, 24, 30, 33, 35]
 
@@ -17,6 +19,8 @@ steering:
     token_position: "last"
     representation: "post_block_residual"
     contrastive_pairs_path: "data/contrastive_pairs/aggressive_cooperative.jsonl"
+    aggressive_neutral_pairs_path: "data/contrastive_pairs/aggressive_neutral.jsonl"
+    cooperative_neutral_pairs_path: "data/contrastive_pairs/cooperative_neutral.jsonl"
 
   personas:
     aggressive:

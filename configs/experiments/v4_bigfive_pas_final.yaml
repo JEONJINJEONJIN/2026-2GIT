@@ -1,0 +1,71 @@
+experiment:
+  name: "v4_bigfive_pas_final"
+  purpose: "Evaluate PAS as the final action selector instead of only a loglik agreement diagnostic."
+  version: "v4_bigfive"
+  split: "test"
+
+  traits:
+    - "agreeableness"
+    - "conscientiousness"
+    - "neuroticism"
+    - "openness"
+    - "extraversion"
+  target_directions: ["high", "low"]
+  max_trait_scenarios: null
+
+  conditions:
+    - name: "baseline_loglik"
+      prompt_style: "none"
+      steering: false
+      pas: false
+      selection_policy: "loglik"
+    - name: "prompt_loglik"
+      prompt_style: "elaborate"
+      steering: false
+      pas: false
+      selection_policy: "loglik"
+    - name: "as_loglik"
+      prompt_style: "none"
+      steering: true
+      pas: false
+      vector_mode: "trait_contrast"
+      selection_policy: "loglik"
+    - name: "pas_final"
+      prompt_style: "none"
+      steering: false
+      pas: true
+      vector_mode: "trait_contrast"
+      selection_policy: "pas_final"
+    - name: "as_pas_final"
+      prompt_style: "none"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+      selection_policy: "pas_final"
+    - name: "prompt_as_pas_final"
+      prompt_style: "elaborate"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+      selection_policy: "pas_final"
+
+  scoring:
+    primary_metric: "separated_bfi_trait_movement"
+    bfi_items_path: "data/bfi/bfi44_scoring.csv"
+    bfi_item_text_path: "data/bfi/bfi44_item_text.local.csv"
+    trait_scenarios_path: "data/trait_bigfive/scenarios.jsonl"
+    secondary_metrics:
+      - "bfi_target_attainment"
+      - "trait_target_attainment"
+      - "pas_loglik_agreement"
+      - "selection_policy"
+
+  steering:
+    alpha: 4.0
+    layers: [18, 21, 24]
+    tune_on_this_split: false
+    note: "Use the same fixed AS settings as the v4 final rerun."
+
+  output:
+    run_root: "results/v4_bigfive/pas_final_runs"
+    metrics_dir: "results/v4_bigfive/pas_final_metrics"

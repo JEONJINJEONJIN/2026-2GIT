@@ -1,0 +1,11 @@
+condition,persona,action,count,proportion
+as_only_sep,aggressive,sc_001_act_001,10,0.2
+as_only_sep,aggressive,sc_002_act_002,10,0.2
+as_only_sep,aggressive,sc_003_act_001,10,0.2
+as_only_sep,aggressive,sc_004_act_002,10,0.2
+as_only_sep,aggressive,sc_005_act_002,10,0.2
+as_only_sep,cooperative,sc_001_act_004,10,0.2
+as_only_sep,cooperative,sc_002_act_002,10,0.2
+as_only_sep,cooperative,sc_003_act_004,10,0.2
+as_only_sep,cooperative,sc_004_act_004,10,0.2
+as_only_sep,cooperative,sc_005_act_002,10,0.2

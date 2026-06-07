@@ -25,11 +25,23 @@ DEFAULT_SCENARIOS_CSV = PROJECT_ROOT / "scenarios_actions.csv"
 DEFAULT_CONTRASTIVE_OUTPUT = (
     PROJECT_ROOT / "data" / "contrastive_pairs" / "team_a_aggressive_cooperative.jsonl"
 )
+DEFAULT_AGGRESSIVE_NEUTRAL_OUTPUT = (
+    PROJECT_ROOT / "data" / "contrastive_pairs" / "team_a_aggressive_neutral.jsonl"
+)
+DEFAULT_COOPERATIVE_NEUTRAL_OUTPUT = (
+    PROJECT_ROOT / "data" / "contrastive_pairs" / "team_a_cooperative_neutral.jsonl"
+)
 DEFAULT_SCENARIOS_OUTPUT = PROJECT_ROOT / "data" / "scenarios" / "team_a_scenarios.jsonl"
 DEFAULT_ACTIONS_OUTPUT = PROJECT_ROOT / "data" / "actions" / "team_a_action_definitions.jsonl"
 
 PIPELINE_CONTRASTIVE_OUTPUT = (
     PROJECT_ROOT / "data" / "contrastive_pairs" / "aggressive_cooperative.jsonl"
+)
+PIPELINE_AGGRESSIVE_NEUTRAL_OUTPUT = (
+    PROJECT_ROOT / "data" / "contrastive_pairs" / "aggressive_neutral.jsonl"
+)
+PIPELINE_COOPERATIVE_NEUTRAL_OUTPUT = (
+    PROJECT_ROOT / "data" / "contrastive_pairs" / "cooperative_neutral.jsonl"
 )
 PIPELINE_SCENARIOS_OUTPUT = PROJECT_ROOT / "data" / "scenarios" / "scenarios.jsonl"
 PIPELINE_ACTIONS_OUTPUT = PROJECT_ROOT / "data" / "actions" / "action_definitions.jsonl"
@@ -127,6 +139,53 @@ def build_contrastive_rows(csv_rows: list[dict[str, str]]) -> list[dict]:
     return output
 
 
+def build_action_contrastive_pairs(scenarios: list[dict]) -> list[dict]:
+    """Build all aggressive-vs-cooperative action pairs from scenario choices."""
+    rows = []
+    for scenario in scenarios:
+        aggressive_actions = [
+            action for action in scenario.get("actions", [])
+            if action.get("persona_alignment") == "aggressive"
+        ]
+        cooperative_actions = [
+            action for action in scenario.get("actions", [])
+            if action.get("persona_alignment") == "cooperative"
+        ]
+        if not aggressive_actions or not cooperative_actions:
+            raise ValueError(
+                f"Need aggressive and cooperative actions in scenario: {scenario.get('id')}"
+            )
+        for aggressive_index, aggressive in enumerate(aggressive_actions, start=1):
+            for cooperative_index, cooperative in enumerate(cooperative_actions, start=1):
+                pair_id = (
+                    f"{scenario['id']}_aggressive_cooperative_"
+                    f"{aggressive_index:02d}_{cooperative_index:02d}"
+                )
+                rows.append({
+                    "id": pair_id,
+                    "positive": CONTRASTIVE_PROMPT_TEMPLATE.format(
+                        article="an",
+                        persona="aggressive",
+                        situation=scenario["context"],
+                        response=aggressive["description"],
+                    ),
+                    "negative": CONTRASTIVE_PROMPT_TEMPLATE.format(
+                        article="a",
+                        persona="cooperative",
+                        situation=scenario["context"],
+                        response=cooperative["description"],
+                    ),
+                    "situation": scenario["context"],
+                    "positive_response": aggressive["description"],
+                    "negative_response": cooperative["description"],
+                    "positive_action_id": aggressive["id"],
+                    "negative_action_id": cooperative["id"],
+                    "source_template": scenario["id"],
+                    "strategy": "team_a_aggressive_vs_cooperative_action_grid",
+                })
+    return rows
+
+
 def build_scenario_rows(csv_rows: list[dict[str, str]]) -> tuple[list[dict], list[dict]]:
     required = [
         "scenario_id",
@@ -189,13 +248,78 @@ def build_scenario_rows(csv_rows: list[dict[str, str]]) -> tuple[list[dict], lis
     return scenarios, actions_flat
 
 
+def build_neutral_anchor_pairs(scenarios: list[dict], target_persona: str) -> list[dict]:
+    """Build target-vs-neutral contrastive pairs from scenario action choices."""
+    if target_persona not in {"aggressive", "cooperative"}:
+        raise ValueError(f"Unsupported target persona: {target_persona}")
+
+    rows = []
+    for scenario in scenarios:
+        neutral_actions = [
+            action for action in scenario.get("actions", [])
+            if action.get("persona_alignment") == "neutral"
+        ]
+        target_actions = [
+            action for action in scenario.get("actions", [])
+            if action.get("persona_alignment") == target_persona
+        ]
+        if not neutral_actions:
+            raise ValueError(f"No neutral action in scenario: {scenario.get('id')}")
+        neutral = neutral_actions[0]
+        for index, action in enumerate(target_actions, start=1):
+            pair_id = f"{scenario['id']}_{target_persona}_neutral_{index:02d}"
+            article = "an" if target_persona == "aggressive" else "a"
+            rows.append({
+                "id": pair_id,
+                "positive": CONTRASTIVE_PROMPT_TEMPLATE.format(
+                    article=article,
+                    persona=target_persona,
+                    situation=scenario["context"],
+                    response=action["description"],
+                ),
+                "negative": CONTRASTIVE_PROMPT_TEMPLATE.format(
+                    article="a",
+                    persona="neutral",
+                    situation=scenario["context"],
+                    response=neutral["description"],
+                ),
+                "situation": scenario["context"],
+                "positive_response": action["description"],
+                "negative_response": neutral["description"],
+                "positive_action_id": action["id"],
+                "negative_action_id": neutral["id"],
+                "source_template": scenario["id"],
+                "strategy": f"team_a_{target_persona}_vs_neutral_action",
+            })
+    return rows
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Convert Team A CSV files to project JSONL inputs."
     )
     parser.add_argument("--contrastive_csv", type=Path, default=DEFAULT_CONTRASTIVE_CSV)
     parser.add_argument("--scenarios_csv", type=Path, default=DEFAULT_SCENARIOS_CSV)
+    parser.add_argument(
+        "--contrastive_source",
+        choices=["actions", "csv"],
+        default="actions",
+        help=(
+            "Use all scenario action combinations (actions) or the legacy "
+            "contrastive CSV rows (csv)."
+        ),
+    )
     parser.add_argument("--contrastive_output", type=Path, default=DEFAULT_CONTRASTIVE_OUTPUT)
+    parser.add_argument(
+        "--aggressive_neutral_output",
+        type=Path,
+        default=DEFAULT_AGGRESSIVE_NEUTRAL_OUTPUT,
+    )
+    parser.add_argument(
+        "--cooperative_neutral_output",
+        type=Path,
+        default=DEFAULT_COOPERATIVE_NEUTRAL_OUTPUT,
+    )
     parser.add_argument("--scenarios_output", type=Path, default=DEFAULT_SCENARIOS_OUTPUT)
     parser.add_argument("--actions_output", type=Path, default=DEFAULT_ACTIONS_OUTPUT)
     parser.add_argument(
@@ -209,19 +333,42 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
 
-    contrastive_rows = build_contrastive_rows(load_csv(args.contrastive_csv))
     scenario_rows, action_rows = build_scenario_rows(load_csv(args.scenarios_csv))
+    if args.contrastive_source == "csv":
+        contrastive_rows = build_contrastive_rows(load_csv(args.contrastive_csv))
+    else:
+        contrastive_rows = build_action_contrastive_pairs(scenario_rows)
+    aggressive_neutral_rows = build_neutral_anchor_pairs(scenario_rows, "aggressive")
+    cooperative_neutral_rows = build_neutral_anchor_pairs(scenario_rows, "cooperative")
 
     contrastive_count = write_jsonl(contrastive_rows, args.contrastive_output)
+    aggressive_neutral_count = write_jsonl(
+        aggressive_neutral_rows,
+        args.aggressive_neutral_output,
+    )
+    cooperative_neutral_count = write_jsonl(
+        cooperative_neutral_rows,
+        args.cooperative_neutral_output,
+    )
     scenario_count = write_jsonl(scenario_rows, args.scenarios_output)
     action_count = write_jsonl(action_rows, args.actions_output)
 
     print(f"Wrote {contrastive_count} contrastive pairs: {args.contrastive_output}")
+    print(
+        f"Wrote {aggressive_neutral_count} aggressive-neutral pairs: "
+        f"{args.aggressive_neutral_output}"
+    )
+    print(
+        f"Wrote {cooperative_neutral_count} cooperative-neutral pairs: "
+        f"{args.cooperative_neutral_output}"
+    )
     print(f"Wrote {scenario_count} scenarios: {args.scenarios_output}")
     print(f"Wrote {action_count} action definitions: {args.actions_output}")
 
     if args.update_defaults:
         write_jsonl(contrastive_rows, PIPELINE_CONTRASTIVE_OUTPUT)
+        write_jsonl(aggressive_neutral_rows, PIPELINE_AGGRESSIVE_NEUTRAL_OUTPUT)
+        write_jsonl(cooperative_neutral_rows, PIPELINE_COOPERATIVE_NEUTRAL_OUTPUT)
         write_jsonl(scenario_rows, PIPELINE_SCENARIOS_OUTPUT)
         write_jsonl(action_rows, PIPELINE_ACTIONS_OUTPUT)
         print("Updated pipeline default JSONL files.")

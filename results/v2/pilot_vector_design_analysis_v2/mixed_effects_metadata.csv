@@ -1,0 +1,2 @@
+model,formula,n,n_scenarios,n_conditions,n_personas,fit_method
+BinomialBayesMixedGLM,aligned ~ condition * persona + (1 | scenario_id),180,3,6,2,variational_bayes

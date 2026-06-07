@@ -11,7 +11,10 @@ from src.evaluation.as_metrics import (
     action_alignment_category,
     action_entropy,
     annotate_entries,
+    build_alignment_metrics,
     build_action_alignment_map,
+    build_quality_metrics,
+    chance_alignment_rates,
     classify_speech_heuristic,
     speech_action_agreement,
     summarize_group,
@@ -89,6 +92,41 @@ class TestASMetrics(unittest.TestCase):
         self.assertEqual(summary["n"], 2)
         self.assertEqual(summary["parse_ok_rate"], 1.0)
         self.assertEqual(summary["persona_alignment_rate"], 0.5)
+        self.assertNotIn("speech_action_agreement_rate", summary)
+
+    def test_quality_and_alignment_metrics(self):
+        entries = [
+            {
+                "condition": "neutral_baseline",
+                "persona": "aggressive",
+                "scenario_id": "sc_001",
+                "final_action": "act_001",
+                "parse_ok": True,
+            },
+            {
+                "condition": "neutral_baseline",
+                "persona": "aggressive",
+                "scenario_id": "sc_001",
+                "final_action": None,
+                "parse_ok": False,
+            },
+        ]
+        annotated = annotate_entries(entries, self.mapping)
+        by_condition = {"neutral_baseline": annotated}
+
+        quality = build_quality_metrics(by_condition)
+        self.assertEqual(quality[0]["n"], 2)
+        self.assertEqual(quality[0]["parse_ok_rate"], 0.5)
+        self.assertEqual(quality[0]["unknown_rate"], 0.5)
+
+        chance = chance_alignment_rates(self.scenarios)
+        alignment = build_alignment_metrics(by_condition, chance)
+        self.assertEqual(alignment[0]["n_total"], 2)
+        self.assertEqual(alignment[0]["n_valid"], 1)
+        self.assertEqual(alignment[0]["align_itt"], 0.5)
+        self.assertEqual(alignment[0]["align_pp"], 1.0)
+        self.assertIn("align_itt_ci_low", alignment[0])
+        self.assertIn("or_itt_vs_neutral", alignment[0])
 
 
 if __name__ == "__main__":

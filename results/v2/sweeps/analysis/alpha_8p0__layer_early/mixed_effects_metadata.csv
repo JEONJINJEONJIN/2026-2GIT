@@ -1,0 +1,2 @@
+model,status,error
+BinomialBayesMixedGLM,failed,specified level 'neutral_baseline' not found

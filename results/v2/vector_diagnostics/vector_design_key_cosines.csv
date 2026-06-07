@@ -1,0 +1,6 @@
+vector_a,vector_b,cosine_mean
+sep_neutral_anchor.aggressive,sep_neutral_anchor.cooperative,0.717225001917945
+neg.aggressive,neg.cooperative,-1.0000000132454767
+sep_orthogonalized.aggressive,sep_orthogonalized.cooperative,-0.9999991059303284
+neg.aggressive,sep_orthogonalized.aggressive,0.9539810617764791
+neg.cooperative,sep_orthogonalized.cooperative,0.9539914396074083

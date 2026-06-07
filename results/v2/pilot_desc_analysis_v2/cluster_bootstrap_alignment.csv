@@ -1,0 +1,13 @@
+condition,persona,estimand,estimate,ci_low,ci_high,n_bootstrap,n_clusters,cluster_col
+as_only,aggressive,itt,1.0,1.0,1.0,200,3,scenario_id
+as_only,aggressive,pp,1.0,1.0,1.0,200,3,scenario_id
+as_only,cooperative,itt,0.6666666666666666,0.3333333333333333,1.0,200,3,scenario_id
+as_only,cooperative,pp,0.6666666666666666,0.3333333333333333,1.0,200,3,scenario_id
+neutral_baseline,aggressive,itt,1.0,1.0,1.0,200,3,scenario_id
+neutral_baseline,aggressive,pp,1.0,1.0,1.0,200,3,scenario_id
+neutral_baseline,cooperative,itt,0.0,0.0,0.0,200,3,scenario_id
+neutral_baseline,cooperative,pp,0.0,0.0,0.0,200,3,scenario_id
+prompt_baseline,aggressive,itt,1.0,1.0,1.0,200,3,scenario_id
+prompt_baseline,aggressive,pp,1.0,1.0,1.0,200,3,scenario_id
+prompt_baseline,cooperative,itt,0.6666666666666666,0.3250000000000002,1.0,200,3,scenario_id
+prompt_baseline,cooperative,pp,0.6666666666666666,0.3250000000000002,1.0,200,3,scenario_id

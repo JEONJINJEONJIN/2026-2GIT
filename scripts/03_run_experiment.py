@@ -21,6 +21,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from tqdm import tqdm
 
+from src.evaluation.loglik_selector import select_action_by_loglik
 from src.generation.generator import TextGenerator
 from src.generation.parser import ActionParser
 from src.generation.prompt_builder import PromptBuilder
@@ -66,6 +67,37 @@ def signed_vectors(vectors: dict[int, object], persona: str) -> dict:
     return {layer: sign * vector for layer, vector in vectors.items()}
 
 
+def resolve_persona_vectors(vectors: dict, persona: str, vector_mode: str) -> dict:
+    """Resolve condition/persona-specific vectors from flat or nested bundles."""
+    if vector_mode == "separate":
+        if persona not in vectors:
+            raise ValueError(
+                f"Separate vector bundle has no vector set for persona: {persona}"
+            )
+        return vectors[persona]
+    if vector_mode in {"contrast_explicit", "orthogonalized"}:
+        if vector_mode not in vectors or persona not in vectors[vector_mode]:
+            raise ValueError(
+                f"Vector bundle has no {vector_mode} set for persona: {persona}"
+            )
+        return vectors[vector_mode][persona]
+
+    if "contrast" in vectors and isinstance(vectors["contrast"], dict):
+        return signed_vectors(vectors["contrast"], persona)
+    return signed_vectors(vectors, persona)
+
+
+def collect_available_layers(vectors: dict) -> set[int]:
+    """Collect all layer indices from a flat or nested vector bundle."""
+    layers = set()
+    for key, value in vectors.items():
+        if isinstance(key, int):
+            layers.add(key)
+        elif isinstance(value, dict):
+            layers.update(collect_available_layers(value))
+    return layers
+
+
 def main():
     parser = argparse.ArgumentParser(description="Run AS-only NPC experiments.")
     parser.add_argument("--config_dir", type=str, default=None)
@@ -75,6 +107,12 @@ def main():
     parser.add_argument("--scenarios_path", type=str, default=None)
     parser.add_argument("--layer_group", type=str, default="middle")
     parser.add_argument("--alpha", type=float, default=None)
+    parser.add_argument(
+        "--selection_mode",
+        choices=["generate", "loglik"],
+        default="loglik",
+        help="Use free-form generation or log-likelihood action selection.",
+    )
     parser.add_argument(
         "--num_scenarios",
         type=int,
@@ -90,7 +128,7 @@ def main():
     args = parser.parse_args()
 
     config_dir = Path(args.config_dir) if args.config_dir else PROJECT_ROOT / "configs"
-    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "results" / "raw"
+    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "results" / "v2" / "raw"
     scenarios_path = Path(args.scenarios_path) if args.scenarios_path else (
         PROJECT_ROOT / "data" / "scenarios" / "scenarios.jsonl"
     )
@@ -140,7 +178,8 @@ def main():
         bundle = SteeringVectorComputer().load_bundle(vectors_path)
         vectors = bundle["vectors"]
         vector_metadata = bundle.get("metadata", {})
-        missing = sorted(set(layer_indices) - set(vectors.keys()))
+        available_layers = collect_available_layers(vectors)
+        missing = sorted(set(layer_indices) - available_layers)
         if missing:
             raise ValueError(f"Steering vector file is missing layers: {missing}")
 
@@ -161,6 +200,7 @@ def main():
         else exp_cfg.get("num_repeats", 30)
     )
     gen_config = exp_cfg.get("generation", {})
+    selection_mode = args.selection_mode
 
     prompt_builder = PromptBuilder()
     parser_obj = ActionParser()
@@ -173,14 +213,16 @@ def main():
         condition = all_conditions[condition_name]
         use_steering = bool(condition.get("steering", False))
         include_persona = bool(condition.get("persona_prompt", False))
+        vector_mode = condition.get("vector_mode", "contrast_negated")
         output_file = output_dir / f"{condition_name}.jsonl"
 
         total_runs = len(personas) * len(scenarios) * num_repeats
         logger.info(
-            "Running %s (steering=%s, persona_prompt=%s, n=%d)",
+            "Running %s (steering=%s, persona_prompt=%s, selection=%s, n=%d)",
             condition_name,
             use_steering,
             include_persona,
+            selection_mode,
             total_runs,
         )
 
@@ -188,18 +230,35 @@ def main():
             with tqdm(total=total_runs, desc=condition_name) as pbar:
                 for persona in personas:
                     persona_vectors = (
-                        signed_vectors(vectors, persona) if use_steering and vectors else None
+                        resolve_persona_vectors(vectors, persona, vector_mode)
+                        if use_steering and vectors
+                        else None
                     )
 
                     for scenario in scenarios:
-                        valid_actions = [a["id"] for a in scenario.get("actions", [])]
-                        messages = prompt_builder.build_chat_messages(
+                        scenario_actions = scenario.get("actions", [])
+                        valid_actions = [a["id"] for a in scenario_actions]
+                        action_texts = [
+                            prompt_builder.action_scoring_text(action)
+                            for action in scenario_actions
+                        ]
+                        generate_messages = prompt_builder.build_chat_messages(
+                            scenario,
+                            persona=persona,
+                            include_persona=include_persona,
+                        )
+                        loglik_messages = prompt_builder.build_action_choice_messages(
                             scenario,
                             persona=persona,
                             include_persona=include_persona,
                         )
 
                         for repeat_idx in range(num_repeats):
+                            if selection_mode == "loglik" and not action_texts:
+                                raise ValueError(
+                                    f"Scenario {scenario.get('id')} has no valid actions."
+                                )
+
                             injector = None
                             if persona_vectors is not None:
                                 injector = SteeringInjector(
@@ -210,16 +269,41 @@ def main():
                                 injector.inject(layer_indices, alpha=alpha)
 
                             try:
-                                generated_text = generator.generate(messages)
+                                if selection_mode == "loglik":
+                                    selection = select_action_by_loglik(
+                                        model,
+                                        tokenizer,
+                                        loglik_messages,
+                                        action_texts,
+                                        length_normalize=True,
+                                    )
+                                    selected_idx = selection["selected_idx"]
+                                    action = valid_actions[selected_idx]
+                                    selected_text = action_texts[selected_idx]
+                                    generated_text = (
+                                        f"{selected_text}\n<Action>{action}</Action>"
+                                    )
+                                    parsed = {
+                                        "speech": selected_text,
+                                        "action": action,
+                                        "parse_success": True,
+                                        "tag_found": True,
+                                    }
+                                else:
+                                    generated_text = generator.generate(generate_messages)
+                                    parsed = parser_obj.parse(
+                                        generated_text,
+                                        valid_actions=valid_actions,
+                                    )
+                                    action = parsed["action"]
+                                    selection = {
+                                        "logliks": None,
+                                        "normalized_logliks": None,
+                                        "softmax_probs": None,
+                                    }
                             finally:
                                 if injector is not None:
                                     injector.clear()
-
-                            parsed = parser_obj.parse(
-                                generated_text,
-                                valid_actions=valid_actions,
-                            )
-                            action = parsed["action"]
 
                             result = {
                                 "condition": condition_name,
@@ -235,7 +319,16 @@ def main():
                                 "token_aggregation": token_aggregation,
                                 "vector_normalized": normalize_vectors if use_steering else None,
                                 "vector_metadata": vector_metadata if use_steering else {},
+                                "vector_mode": vector_mode if use_steering else None,
                                 "gen_config": gen_config,
+                                "selection_mode": selection_mode,
+                                "action_candidates": valid_actions,
+                                "action_candidate_texts": action_texts,
+                                "action_logliks": selection["logliks"],
+                                "action_normalized_logliks": selection[
+                                    "normalized_logliks"
+                                ],
+                                "action_softmax_probs": selection["softmax_probs"],
                                 "generated_text": generated_text,
                                 "speech": parsed["speech"],
                                 "parsed_action": action,

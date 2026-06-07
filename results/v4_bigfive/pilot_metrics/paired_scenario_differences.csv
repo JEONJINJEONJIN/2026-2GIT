@@ -1,0 +1,9 @@
+condition,reference_condition,trait,target_direction,n_paired_scenarios,mean_paired_delta_consistency
+as_pas_only,baseline,agreeableness,high,50,0.018455547532055465
+as_pas_only,baseline,agreeableness,low,50,-0.039993616843201976
+elaborate_prompt,baseline,agreeableness,high,50,-0.12524941363244374
+elaborate_prompt,baseline,agreeableness,low,50,0.02373052355910791
+elaborate_prompt_as_pas,baseline,agreeableness,high,50,-0.11356640989483104
+elaborate_prompt_as_pas,baseline,agreeableness,low,50,0.019817496717910804
+one_line_prompt,baseline,agreeableness,high,50,-0.10770671533146751
+one_line_prompt,baseline,agreeableness,low,50,-0.28793987649678715

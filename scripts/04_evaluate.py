@@ -18,10 +18,15 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
+from analysis.cluster_bootstrap import cluster_bootstrap_alignment
+from analysis.mixed_effects import fit_mixed_effects_logit
 from src.evaluation.as_metrics import (
     annotate_entries,
     bonferroni,
+    build_alignment_metrics,
     build_action_alignment_map,
+    build_quality_metrics,
+    chance_alignment_rates,
     classify_speech_heuristic,
     cliffs_delta,
     cramers_v,
@@ -285,15 +290,18 @@ def scenario_entropy_tests(annotated_by_condition: dict[str, list[dict]]) -> tup
     return pd.DataFrame(entropy_rows), pd.DataFrame(test_rows)
 
 
-def save_alignment_chart(summary_df: pd.DataFrame, figures_dir: Path) -> None:
-    if summary_df.empty:
+def save_alignment_chart(alignment_df: pd.DataFrame, figures_dir: Path) -> None:
+    if alignment_df.empty:
         return
     figures_dir.mkdir(parents=True, exist_ok=True)
-    for persona, group in summary_df.groupby("persona"):
+    for persona, group in alignment_df.groupby("persona"):
         fig, ax = plt.subplots(figsize=(7, 4))
-        ax.bar(group["condition"], group["persona_alignment_rate"], color="#4c78a8")
+        ax.bar(group["condition"], group["align_itt"], color="#4c78a8")
+        if "chance_alignment_rate" in group:
+            chance = float(group["chance_alignment_rate"].iloc[0])
+            ax.axhline(chance, color="#d62728", linestyle="--", linewidth=1)
         ax.set_ylim(0, 1)
-        ax.set_ylabel("Persona alignment rate")
+        ax.set_ylabel("ITT action alignment rate")
         ax.set_title(f"Action alignment by condition ({persona})")
         ax.tick_params(axis="x", rotation=20)
         fig.tight_layout()
@@ -307,21 +315,12 @@ def main():
     parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--figures_dir", type=str, default=None)
     parser.add_argument("--scenarios_path", type=str, default=None)
-    parser.add_argument(
-        "--speech_judge",
-        choices=["heuristic", "llm"],
-        default="heuristic",
-    )
-    parser.add_argument(
-        "--judge_model",
-        type=str,
-        default="google/gemma-4-E4B-it",
-    )
+    parser.add_argument("--bootstrap_iters", type=int, default=1000)
     args = parser.parse_args()
 
-    input_dir = Path(args.input_dir) if args.input_dir else PROJECT_ROOT / "results" / "raw"
-    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "results" / "metrics"
-    figures_dir = Path(args.figures_dir) if args.figures_dir else PROJECT_ROOT / "results" / "figures"
+    input_dir = Path(args.input_dir) if args.input_dir else PROJECT_ROOT / "results" / "v2" / "raw"
+    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "results" / "v2" / "metrics"
+    figures_dir = Path(args.figures_dir) if args.figures_dir else PROJECT_ROOT / "results" / "v2" / "figures"
     scenarios_path = Path(args.scenarios_path) if args.scenarios_path else (
         PROJECT_ROOT / "data" / "scenarios" / "scenarios.jsonl"
     )
@@ -335,13 +334,8 @@ def main():
         logger.error("No JSONL result files found in %s", input_dir)
         return
 
-    speech_classifier = classify_speech_heuristic
-    if args.speech_judge == "llm":
-        logger.info("Loading LLM speech judge: %s", args.judge_model)
-        speech_classifier = LLMSpeechJudge(args.judge_model)
-
     annotated_by_condition = {
-        condition: annotate_entries(entries, action_alignment_map, speech_classifier)
+        condition: annotate_entries(entries, action_alignment_map)
         for condition, entries in raw_results.items()
     }
 
@@ -350,28 +344,71 @@ def main():
         for entries in annotated_by_condition.values()
         for row in entries
     ]
-    pd.DataFrame(annotated_rows).to_csv(
+    annotated_df = pd.DataFrame(annotated_rows)
+    annotated_df.to_csv(
         output_dir / "annotated_results.csv",
         index=False,
     )
 
-    summary_df = build_summaries(annotated_by_condition)
-    summary_df.to_csv(output_dir / "as_summary.csv", index=False)
+    used_scenario_ids = {
+        row.get("scenario_id")
+        for row in annotated_rows
+        if row.get("scenario_id")
+    }
+    chance_rates = chance_alignment_rates(scenarios, used_scenario_ids)
+
+    quality_df = pd.DataFrame(build_quality_metrics(annotated_by_condition))
+    quality_df.to_csv(output_dir / "quality_metrics.csv", index=False)
+
+    alignment_df = pd.DataFrame(
+        build_alignment_metrics(annotated_by_condition, chance_rates)
+    )
+    alignment_df.to_csv(output_dir / "alignment_metrics.csv", index=False)
+
+    bootstrap_df = cluster_bootstrap_alignment(
+        annotated_df,
+        n_bootstrap=args.bootstrap_iters,
+    )
+    bootstrap_df.to_csv(output_dir / "cluster_bootstrap_alignment.csv", index=False)
+
+    conditions = set(annotated_df["condition"].dropna())
+    if "neutral_baseline" not in conditions or len(conditions) < 2:
+        pd.DataFrame([{
+            "model": "BinomialBayesMixedGLM",
+            "status": "skipped",
+            "reason": "requires neutral_baseline and at least two conditions",
+        }]).to_csv(output_dir / "mixed_effects_metadata.csv", index=False)
+    else:
+        try:
+            mixed_effects = fit_mixed_effects_logit(annotated_df)
+        except Exception as exc:
+            logger.exception("Mixed-effects model failed")
+            pd.DataFrame([{
+                "model": "BinomialBayesMixedGLM",
+                "status": "failed",
+                "error": str(exc),
+            }]).to_csv(output_dir / "mixed_effects_metadata.csv", index=False)
+        else:
+            mixed_effects["fixed_effects"].to_csv(
+                output_dir / "mixed_effects_fixed_effects.csv",
+                index=False,
+            )
+            mixed_effects["random_effects"].to_csv(
+                output_dir / "mixed_effects_random_effects.csv",
+                index=False,
+            )
+            mixed_effects["metadata"].to_csv(
+                output_dir / "mixed_effects_metadata.csv",
+                index=False,
+            )
 
     distribution_df = build_action_distribution(annotated_by_condition)
     distribution_df.to_csv(output_dir / "action_distribution.csv", index=False)
 
-    dist_tests_df = distribution_shift_tests(annotated_by_condition)
-    dist_tests_df.to_csv(output_dir / "distribution_shift_tests.csv", index=False)
-
-    alignment_tests_df = alignment_rate_tests(annotated_by_condition)
-    alignment_tests_df.to_csv(output_dir / "persona_alignment_tests.csv", index=False)
-
-    entropy_df, entropy_tests_df = scenario_entropy_tests(annotated_by_condition)
+    entropy_df, _ = scenario_entropy_tests(annotated_by_condition)
     entropy_df.to_csv(output_dir / "scenario_entropy.csv", index=False)
-    entropy_tests_df.to_csv(output_dir / "entropy_mannwhitney_tests.csv", index=False)
 
-    save_alignment_chart(summary_df, figures_dir)
+    save_alignment_chart(alignment_df, figures_dir)
 
     logger.info("Saved AS metrics to: %s", output_dir)
     logger.info("Saved figures to: %s", figures_dir)

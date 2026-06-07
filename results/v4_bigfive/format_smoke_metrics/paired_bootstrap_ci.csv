@@ -1,0 +1,9 @@
+condition,reference_condition,trait,target_direction,metric,n_paired_scenarios,mean_delta,ci,ci_lower,ci_upper,n_bootstrap,seed
+as_pas_only,baseline,agreeableness,high,consistency,10,0.005235333626689309,0.95,-0.01900817521678113,0.0244151808123244,200,42
+as_pas_only,baseline,agreeableness,low,consistency,10,-0.052974373824684604,0.95,-0.07328600465631002,-0.031269612764929865,200,42
+elaborate_prompt,baseline,agreeableness,high,consistency,10,-0.08990994888719472,0.95,-0.12292424561936427,-0.05660062960005201,200,42
+elaborate_prompt,baseline,agreeableness,low,consistency,10,0.01964323199793485,0.95,-0.009086382604166682,0.053338946517800113,200,42
+elaborate_prompt_as_pas,baseline,agreeableness,high,consistency,10,-0.09311462502934079,0.95,-0.12315195163616759,-0.06930280394929375,200,42
+elaborate_prompt_as_pas,baseline,agreeableness,low,consistency,10,0.008828267374928356,0.95,-0.012034688842161032,0.03937746948350604,200,42
+one_line_prompt,baseline,agreeableness,high,consistency,10,-0.08086202296628639,0.95,-0.11377533937091436,-0.043041896911874114,200,42
+one_line_prompt,baseline,agreeableness,low,consistency,10,-0.26368094230551986,0.95,-0.30875827233334013,-0.2230698409823443,200,42

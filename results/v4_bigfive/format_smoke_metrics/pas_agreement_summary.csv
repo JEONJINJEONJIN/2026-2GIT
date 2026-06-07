@@ -1,0 +1,5 @@
+condition,trait,target_direction,n,pas_loglik_agreement_rate
+as_pas_only,agreeableness,high,10,0.3
+as_pas_only,agreeableness,low,10,0.5
+elaborate_prompt_as_pas,agreeableness,high,10,0.4
+elaborate_prompt_as_pas,agreeableness,low,10,0.6

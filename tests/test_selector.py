@@ -67,6 +67,15 @@ class TestCosineSimilarity(unittest.TestCase):
         sim = cosine_similarity(v1, v2)
         self.assertAlmostEqual(sim, 1.0, places=5)
 
+    def test_mixed_device_vectors_when_cuda_available(self):
+        """Cosine similarity should handle CPU action vectors with CUDA persona vectors."""
+        if not torch.cuda.is_available():
+            self.skipTest("CUDA is not available")
+        v1 = torch.tensor([1.0, 0.0, 0.0], device="cuda")
+        v2 = torch.tensor([1.0, 0.0, 0.0])
+        sim = cosine_similarity(v1, v2)
+        self.assertAlmostEqual(sim, 1.0, places=5)
+
     def test_negative_scaled_vectors(self):
         """Negative scaling should give -1.0 similarity."""
         v1 = torch.tensor([1.0, 2.0, 3.0])

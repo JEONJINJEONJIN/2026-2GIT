@@ -1,0 +1,1002 @@
+condition,scenario_id,trait,target_direction,response_length_chars,response_length_words,has_speech_tag,has_action_tag,parse_success,format_validity,parsed_action,speech,coherence_score,perplexity,raw
+baseline,trait_agreeableness_00701,agreeableness,high,159,19,True,True,True,True,trait_agreeableness_00701_act_002,Perhaps we should seek input from others to balance our ideas and ensure everyone's voice is heard.,,,"[Speech] Perhaps we should seek input from others to balance our ideas and ensure everyone's voice is heard.
+<Action>trait_agreeableness_00701_act_002</Action>"
+baseline,trait_agreeableness_00702,agreeableness,high,144,13,True,True,True,True,trait_agreeableness_00702_act_002,Short-term sacrifice for long-term success; let's handle this new project carefully.,,,"[Speech] Short-term sacrifice for long-term success; let's handle this new project carefully.
+<Action>trait_agreeableness_00702_act_002</Action>"
+baseline,trait_agreeableness_00703,agreeableness,high,182,24,True,True,True,True,trait_agreeableness_00703_act_001,Consider setting aside a portion of your bonus for your vacation and donate a portion to your friend to ease their burden.,,,"[Speech] Consider setting aside a portion of your bonus for your vacation and donate a portion to your friend to ease their burden.
+<Action>trait_agreeableness_00703_act_001</Action>"
+baseline,trait_agreeableness_00704,agreeableness,high,173,19,True,True,True,True,trait_agreeableness_00704_act_004,"I understand the benefits of cooperation, but let's not overlook the importance of individual input and feedback.",,,"[Speech] I understand the benefits of cooperation, but let's not overlook the importance of individual input and feedback.
+<Action>trait_agreeableness_00704_act_004</Action>"
+baseline,trait_agreeableness_00705,agreeableness,high,151,17,True,True,True,True,trait_agreeableness_00705_act_002,It seems wise to maintain a cooperative tone while still ensuring our rights are respected.,,,"[Speech] It seems wise to maintain a cooperative tone while still ensuring our rights are respected.
+<Action>trait_agreeableness_00705_act_002</Action>"
+baseline,trait_agreeableness_00706,agreeableness,high,150,17,True,True,True,True,trait_agreeableness_00706_act_002,Let's discuss how we can improve our communication to avoid such situations in the future.,,,"[Speech] Let's discuss how we can improve our communication to avoid such situations in the future.
+<Action>trait_agreeableness_00706_act_002</Action>"
+baseline,trait_agreeableness_00707,agreeableness,high,190,24,True,True,True,True,trait_agreeableness_00707_act_001,Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.,,,"[Speech] Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.
+<Action>trait_agreeableness_00707_act_001</Action>"
+baseline,trait_agreeableness_00708,agreeableness,high,106,8,True,True,True,True,trait_agreeableness_00708_act_001,"Short dialogue, let's celebrate this together!",,,"[Speech] Short dialogue, let's celebrate this together!
+<Action>trait_agreeableness_00708_act_001</Action>"
+baseline,trait_agreeableness_00709,agreeableness,high,142,16,True,True,True,True,trait_agreeableness_00709_act_001,"Short dialogue: I appreciate your concern, but I need to set clear boundaries now.",,,"[Speech] Short dialogue: I appreciate your concern, but I need to set clear boundaries now.
+<Action>trait_agreeableness_00709_act_001</Action>"
+baseline,trait_agreeableness_00710,agreeableness,high,161,22,True,True,True,True,trait_agreeableness_00710_act_001,"Short dialogue: ""I need to understand why I was kept in the dark. This feels like a breach of trust.""",,,"[Speech] Short dialogue: ""I need to understand why I was kept in the dark. This feels like a breach of trust.""
+<Action>trait_agreeableness_00710_act_001</Action>"
+baseline,trait_agreeableness_00711,agreeableness,high,221,27,True,True,True,True,trait_agreeableness_00711_act_001,Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.,,,"[Speech] Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.
+<Action>trait_agreeableness_00711_act_001</Action>"
+baseline,trait_agreeableness_00712,agreeableness,high,186,24,True,True,True,True,trait_agreeableness_00712_act_003,"You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.",,,"[Speech] You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.
+<Action>trait_agreeableness_00712_act_003</Action>"
+baseline,trait_agreeableness_00713,agreeableness,high,189,21,True,True,True,True,trait_agreeableness_00713_act_002,Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.,,,"[Speech] Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.
+<Action>trait_agreeableness_00713_act_002</Action>"
+baseline,trait_agreeableness_00714,agreeableness,high,152,19,True,True,True,True,trait_agreeableness_00714_act_004,Short delays won't hurt; we can always plan another trip later if this one doesn't work out.,,,"[Speech] Short delays won't hurt; we can always plan another trip later if this one doesn't work out.
+<Action>trait_agreeableness_00714_act_004</Action>"
+baseline,trait_agreeableness_00715,agreeableness,high,125,14,True,True,True,True,trait_agreeableness_00715_act_003,Short walks can be refreshing; let's go for a stroll after lunch.,,,"[Speech] Short walks can be refreshing; let's go for a stroll after lunch.
+<Action>trait_agreeableness_00715_act_003</Action>"
+baseline,trait_agreeableness_00716,agreeableness,high,192,28,True,True,True,True,trait_agreeableness_00716_act_003,Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.,,,"[Speech] Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.
+<Action>trait_agreeableness_00716_act_003</Action>"
+baseline,trait_agreeableness_00717,agreeableness,high,113,12,True,True,True,True,trait_agreeableness_00717_act_004,"Short on funds, but I still want to be considerate.",,,"[Speech] Short on funds, but I still want to be considerate.  
+<Action>trait_agreeableness_00717_act_004</Action>"
+baseline,trait_agreeableness_00718,agreeableness,high,120,12,True,True,True,True,trait_agreeableness_00718_act_004,Short humor won't solve this; let's talk about it seriously.,,,"[Speech] Short humor won't solve this; let's talk about it seriously.
+<Action>trait_agreeableness_00718_act_004</Action>"
+baseline,trait_agreeableness_00719,agreeableness,high,123,11,True,True,True,True,trait_agreeableness_00719_act_004,"Short dialogue, but remember, constant support can be draining.",,,"[Speech] Short dialogue, but remember, constant support can be draining.
+<Action>trait_agreeableness_00719_act_004</Action>"
+baseline,trait_agreeableness_00720,agreeableness,high,177,23,True,True,True,True,trait_agreeableness_00720_act_001,"Short dialogue: ""Considering your need for a reliable tool, perhaps we should find a way for you to benefit from it.""",,,"[Speech] Short dialogue: ""Considering your need for a reliable tool, perhaps we should find a way for you to benefit from it.""
+<Action>trait_agreeableness_00720_act_001</Action>"
+baseline,trait_agreeableness_00721,agreeableness,high,109,11,True,True,True,True,trait_agreeableness_00721_act_001,"It seems like a fair exchange, don't you think?",,,"[Speech] It seems like a fair exchange, don't you think?  
+<Action>trait_agreeableness_00721_act_001</Action>"
+baseline,trait_agreeableness_00722,agreeableness,high,147,13,True,True,True,True,trait_agreeableness_00722_act_003,Short conversations often highlight the importance of mutual respect and understanding.,,,"[Speech] Short conversations often highlight the importance of mutual respect and understanding.
+<Action>trait_agreeableness_00722_act_003</Action>"
+baseline,trait_agreeableness_00723,agreeableness,high,205,30,True,True,True,True,trait_agreeableness_00723_act_001,"Maybe express to Tavleen how you're feeling and ask if she's open to the idea of ordering a ride for you, so she can continue enjoying the party.",,,"[Speech] Maybe express to Tavleen how you're feeling and ask if she's open to the idea of ordering a ride for you, so she can continue enjoying the party.
+<Action>trait_agreeableness_00723_act_001</Action>"
+baseline,trait_agreeableness_00724,agreeableness,high,133,11,True,True,True,True,trait_agreeableness_00724_act_001,Perhaps rescheduling the appointment could strengthen our mutual support.,,,"[Speech] Perhaps rescheduling the appointment could strengthen our mutual support.
+<Action>trait_agreeableness_00724_act_001</Action>"
+baseline,trait_agreeableness_00725,agreeableness,high,160,16,True,True,True,True,trait_agreeableness_00725_act_002,"Short dialogue, please apologize immediately and suggest we talk about their favorite hobby instead.",,,"[Speech] Short dialogue, please apologize immediately and suggest we talk about their favorite hobby instead.
+<Action>trait_agreeableness_00725_act_002</Action>"
+baseline,trait_agreeableness_00726,agreeableness,high,187,19,True,True,True,True,trait_agreeableness_00726_act_002,"Short-term financial assistance might be helpful, but it's important to set clear boundaries to maintain healthy relationships.",,,"[Speech] Short-term financial assistance might be helpful, but it's important to set clear boundaries to maintain healthy relationships.
+<Action>trait_agreeableness_00726_act_002</Action>"
+baseline,trait_agreeableness_00727,agreeableness,high,206,23,True,True,True,True,trait_agreeableness_00727_act_001,"Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.",,,"[Speech] Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.
+<Action>trait_agreeableness_00727_act_001</Action>"
+baseline,trait_agreeableness_00728,agreeableness,high,170,20,True,True,True,True,trait_agreeableness_00728_act_001,Short dialogue: Let's formalize our discussion by proposing this at the next meeting so everyone can weigh in.,,,"[Speech] Short dialogue: Let's formalize our discussion by proposing this at the next meeting so everyone can weigh in.
+<Action>trait_agreeableness_00728_act_001</Action>"
+baseline,trait_agreeableness_00729,agreeableness,high,195,24,True,True,True,True,trait_agreeableness_00729_act_004,Sit down with her and remind her that forgiveness doesn't mean forgetting or condoning the hurt. It's about healing and moving forward.,,,"[Speech] Sit down with her and remind her that forgiveness doesn't mean forgetting or condoning the hurt. It's about healing and moving forward.
+<Action>trait_agreeableness_00729_act_004</Action>"
+baseline,trait_agreeableness_00730,agreeableness,high,127,13,True,True,True,True,trait_agreeableness_00730_act_002,"Short of withholding her paycheck, what other measures can we take?",,,"[Speech] Short of withholding her paycheck, what other measures can we take?
+<Action>trait_agreeableness_00730_act_002</Action>"
+baseline,trait_agreeableness_00731,agreeableness,high,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+baseline,trait_agreeableness_00732,agreeableness,high,178,23,True,True,True,True,trait_agreeableness_00732_act_002,"Short dialogue, but I think we should reschedule your retreat; I need to focus on helping my friend move this weekend.",,,"[Speech] Short dialogue, but I think we should reschedule your retreat; I need to focus on helping my friend move this weekend.
+<Action>trait_agreeableness_00732_act_002</Action>"
+baseline,trait_agreeableness_00733,agreeableness,high,160,19,True,True,True,True,trait_agreeableness_00733_act_002,Perhaps reaching out to a colleague would be a better approach than rushing through my current task.,,,"[Speech] Perhaps reaching out to a colleague would be a better approach than rushing through my current task.
+<Action>trait_agreeableness_00733_act_002</Action>"
+baseline,trait_agreeableness_00734,agreeableness,high,191,24,True,True,True,True,trait_agreeableness_00734_act_004,It seems like our discussions have been too heated; perhaps we need a more structured approach to ensure everyone's voice is heard.,,,"[Speech] It seems like our discussions have been too heated; perhaps we need a more structured approach to ensure everyone's voice is heard.
+<Action>trait_agreeableness_00734_act_004</Action>"
+baseline,trait_agreeableness_00735,agreeableness,high,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+baseline,trait_agreeableness_00736,agreeableness,high,114,10,True,True,True,True,trait_agreeableness_00736_act_004,"Short-term gains, long-term losses; it's a tough call.",,,"[Speech] Short-term gains, long-term losses; it's a tough call.
+<Action>trait_agreeableness_00736_act_004</Action>"
+baseline,trait_agreeableness_00737,agreeableness,high,171,19,True,True,True,True,trait_agreeableness_00737_act_004,Short dialogue: Defending PersonZ doesn't mean always agreeing; it means standing up for what's right and fair.,,,"[Speech] Short dialogue: Defending PersonZ doesn't mean always agreeing; it means standing up for what's right and fair.
+<Action>trait_agreeableness_00737_act_004</Action>"
+baseline,trait_agreeableness_00738,agreeableness,high,150,15,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief might ease their immediate stress; how about preparing some extra meals?,,,"[Speech] Short-term relief might ease their immediate stress; how about preparing some extra meals?
+<Action>trait_agreeableness_00738_act_004</Action>"
+baseline,trait_agreeableness_00739,agreeableness,high,181,21,True,True,True,True,trait_agreeableness_00739_act_003,"Short dialogue, Destinnie, let's consider this together. Weighing the pros and cons will help us make an informed choice.",,,"[Speech] Short dialogue, Destinnie, let's consider this together. Weighing the pros and cons will help us make an informed choice.
+<Action>trait_agreeableness_00739_act_003</Action>"
+baseline,trait_agreeableness_00740,agreeableness,high,149,15,True,True,True,True,trait_agreeableness_00740_act_003,Short on-stage confrontation might not be constructive; let's try a private chat instead.,,,"[Speech] Short on-stage confrontation might not be constructive; let's try a private chat instead.
+<Action>trait_agreeableness_00740_act_003</Action>"
+baseline,trait_agreeableness_00741,agreeableness,high,206,25,True,True,True,True,trait_agreeableness_00741_act_001,It seems like you're overextending yourself by trying to help Janya too much. Let's have a talk about balancing support with her responsibilities.,,,"[Speech] It seems like you're overextending yourself by trying to help Janya too much. Let's have a talk about balancing support with her responsibilities.
+<Action>trait_agreeableness_00741_act_001</Action>"
+baseline,trait_agreeableness_00742,agreeableness,high,149,15,True,True,True,True,trait_agreeableness_00742_act_004,"Short help, while appreciated, can sometimes lead to burnout. Let's discuss this further.",,,"[Speech] Short help, while appreciated, can sometimes lead to burnout. Let's discuss this further.
+<Action>trait_agreeableness_00742_act_004</Action>"
+baseline,trait_agreeableness_00743,agreeableness,high,157,20,True,True,True,True,trait_agreeableness_00743_act_001,"Maybe you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Maybe you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+baseline,trait_agreeableness_00744,agreeableness,high,136,14,True,True,True,True,trait_agreeableness_00744_act_002,Short dialogue: I'll address this directly; it's important to clear the air.,,,"[Speech] Short dialogue: I'll address this directly; it's important to clear the air.
+<Action>trait_agreeableness_00744_act_002</Action>"
+baseline,trait_agreeableness_00745,agreeableness,high,139,16,True,True,True,True,trait_agreeableness_00745_act_002,Short dialogue: Perhaps lending it out would be more beneficial for both of us.,,,"[Speech] Short dialogue: Perhaps lending it out would be more beneficial for both of us.
+<Action>trait_agreeableness_00745_act_002</Action>"
+baseline,trait_agreeableness_00746,agreeableness,high,168,22,True,True,True,True,trait_agreeableness_00746_act_002,Short dialogue: Offering to help would be a great way to boost morale and ensure the project stays on track.,,,"[Speech] Short dialogue: Offering to help would be a great way to boost morale and ensure the project stays on track.
+<Action>trait_agreeableness_00746_act_002</Action>"
+baseline,trait_agreeableness_00747,agreeableness,high,164,18,True,True,True,True,trait_agreeableness_00747_act_001,"Let's have a brief team check-in where everyone updates the group on their progress, including Carielle.",,,"[Speech] Let's have a brief team check-in where everyone updates the group on their progress, including Carielle.
+<Action>trait_agreeableness_00747_act_001</Action>"
+baseline,trait_agreeableness_00748,agreeableness,high,190,24,True,True,True,True,trait_agreeableness_00748_act_002,"Short dialogue: Considering the impact on the team, I believe reporting this to our supervisor would be the best course of action.",,,"[Speech] Short dialogue: Considering the impact on the team, I believe reporting this to our supervisor would be the best course of action.
+<Action>trait_agreeableness_00748_act_002</Action>"
+baseline,trait_agreeableness_00749,agreeableness,high,206,24,True,True,True,True,trait_agreeableness_00749_act_002,"Perhaps you could involve a mediator from HR to help facilitate a constructive conversation with Tagert, which might improve our work environment.",,,"[Speech] Perhaps you could involve a mediator from HR to help facilitate a constructive conversation with Tagert, which might improve our work environment.
+<Action>trait_agreeableness_00749_act_002</Action>"
+baseline,trait_agreeableness_00750,agreeableness,high,148,16,True,True,True,True,trait_agreeableness_00750_act_004,"Short dialogue: ""We mustn't let complacency set in; we need to keep pushing boundaries.""",,,"[Speech] Short dialogue: ""We mustn't let complacency set in; we need to keep pushing boundaries.""
+<Action>trait_agreeableness_00750_act_004</Action>"
+baseline,trait_agreeableness_00701,agreeableness,low,159,19,True,True,True,True,trait_agreeableness_00701_act_002,Perhaps we should seek input from others to balance our ideas and ensure everyone's voice is heard.,,,"[Speech] Perhaps we should seek input from others to balance our ideas and ensure everyone's voice is heard.
+<Action>trait_agreeableness_00701_act_002</Action>"
+baseline,trait_agreeableness_00702,agreeableness,low,144,13,True,True,True,True,trait_agreeableness_00702_act_002,Short-term sacrifice for long-term success; let's handle this new project carefully.,,,"[Speech] Short-term sacrifice for long-term success; let's handle this new project carefully.
+<Action>trait_agreeableness_00702_act_002</Action>"
+baseline,trait_agreeableness_00703,agreeableness,low,182,24,True,True,True,True,trait_agreeableness_00703_act_001,Consider setting aside a portion of your bonus for your vacation and donate a portion to your friend to ease their burden.,,,"[Speech] Consider setting aside a portion of your bonus for your vacation and donate a portion to your friend to ease their burden.
+<Action>trait_agreeableness_00703_act_001</Action>"
+baseline,trait_agreeableness_00704,agreeableness,low,173,19,True,True,True,True,trait_agreeableness_00704_act_004,"I understand the benefits of cooperation, but let's not overlook the importance of individual input and feedback.",,,"[Speech] I understand the benefits of cooperation, but let's not overlook the importance of individual input and feedback.
+<Action>trait_agreeableness_00704_act_004</Action>"
+baseline,trait_agreeableness_00705,agreeableness,low,151,17,True,True,True,True,trait_agreeableness_00705_act_002,It seems wise to maintain a cooperative tone while still ensuring our rights are respected.,,,"[Speech] It seems wise to maintain a cooperative tone while still ensuring our rights are respected.
+<Action>trait_agreeableness_00705_act_002</Action>"
+baseline,trait_agreeableness_00706,agreeableness,low,150,17,True,True,True,True,trait_agreeableness_00706_act_002,Let's discuss how we can improve our communication to avoid such situations in the future.,,,"[Speech] Let's discuss how we can improve our communication to avoid such situations in the future.
+<Action>trait_agreeableness_00706_act_002</Action>"
+baseline,trait_agreeableness_00707,agreeableness,low,190,24,True,True,True,True,trait_agreeableness_00707_act_001,Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.,,,"[Speech] Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.
+<Action>trait_agreeableness_00707_act_001</Action>"
+baseline,trait_agreeableness_00708,agreeableness,low,106,8,True,True,True,True,trait_agreeableness_00708_act_001,"Short dialogue, let's celebrate this together!",,,"[Speech] Short dialogue, let's celebrate this together!
+<Action>trait_agreeableness_00708_act_001</Action>"
+baseline,trait_agreeableness_00709,agreeableness,low,142,16,True,True,True,True,trait_agreeableness_00709_act_001,"Short dialogue: I appreciate your concern, but I need to set clear boundaries now.",,,"[Speech] Short dialogue: I appreciate your concern, but I need to set clear boundaries now.
+<Action>trait_agreeableness_00709_act_001</Action>"
+baseline,trait_agreeableness_00710,agreeableness,low,161,22,True,True,True,True,trait_agreeableness_00710_act_001,"Short dialogue: ""I need to understand why I was kept in the dark. This feels like a breach of trust.""",,,"[Speech] Short dialogue: ""I need to understand why I was kept in the dark. This feels like a breach of trust.""
+<Action>trait_agreeableness_00710_act_001</Action>"
+baseline,trait_agreeableness_00711,agreeableness,low,221,27,True,True,True,True,trait_agreeableness_00711_act_001,Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.,,,"[Speech] Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.
+<Action>trait_agreeableness_00711_act_001</Action>"
+baseline,trait_agreeableness_00712,agreeableness,low,186,24,True,True,True,True,trait_agreeableness_00712_act_003,"You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.",,,"[Speech] You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.
+<Action>trait_agreeableness_00712_act_003</Action>"
+baseline,trait_agreeableness_00713,agreeableness,low,189,21,True,True,True,True,trait_agreeableness_00713_act_002,Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.,,,"[Speech] Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.
+<Action>trait_agreeableness_00713_act_002</Action>"
+baseline,trait_agreeableness_00714,agreeableness,low,152,19,True,True,True,True,trait_agreeableness_00714_act_004,Short delays won't hurt; we can always plan another trip later if this one doesn't work out.,,,"[Speech] Short delays won't hurt; we can always plan another trip later if this one doesn't work out.
+<Action>trait_agreeableness_00714_act_004</Action>"
+baseline,trait_agreeableness_00715,agreeableness,low,125,14,True,True,True,True,trait_agreeableness_00715_act_003,Short walks can be refreshing; let's go for a stroll after lunch.,,,"[Speech] Short walks can be refreshing; let's go for a stroll after lunch.
+<Action>trait_agreeableness_00715_act_003</Action>"
+baseline,trait_agreeableness_00716,agreeableness,low,192,28,True,True,True,True,trait_agreeableness_00716_act_003,Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.,,,"[Speech] Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.
+<Action>trait_agreeableness_00716_act_003</Action>"
+baseline,trait_agreeableness_00717,agreeableness,low,113,12,True,True,True,True,trait_agreeableness_00717_act_004,"Short on funds, but I still want to be considerate.",,,"[Speech] Short on funds, but I still want to be considerate.  
+<Action>trait_agreeableness_00717_act_004</Action>"
+baseline,trait_agreeableness_00718,agreeableness,low,120,12,True,True,True,True,trait_agreeableness_00718_act_004,Short humor won't solve this; let's talk about it seriously.,,,"[Speech] Short humor won't solve this; let's talk about it seriously.
+<Action>trait_agreeableness_00718_act_004</Action>"
+baseline,trait_agreeableness_00719,agreeableness,low,123,11,True,True,True,True,trait_agreeableness_00719_act_004,"Short dialogue, but remember, constant support can be draining.",,,"[Speech] Short dialogue, but remember, constant support can be draining.
+<Action>trait_agreeableness_00719_act_004</Action>"
+baseline,trait_agreeableness_00720,agreeableness,low,177,23,True,True,True,True,trait_agreeableness_00720_act_001,"Short dialogue: ""Considering your need for a reliable tool, perhaps we should find a way for you to benefit from it.""",,,"[Speech] Short dialogue: ""Considering your need for a reliable tool, perhaps we should find a way for you to benefit from it.""
+<Action>trait_agreeableness_00720_act_001</Action>"
+baseline,trait_agreeableness_00721,agreeableness,low,109,11,True,True,True,True,trait_agreeableness_00721_act_001,"It seems like a fair exchange, don't you think?",,,"[Speech] It seems like a fair exchange, don't you think?  
+<Action>trait_agreeableness_00721_act_001</Action>"
+baseline,trait_agreeableness_00722,agreeableness,low,147,13,True,True,True,True,trait_agreeableness_00722_act_003,Short conversations often highlight the importance of mutual respect and understanding.,,,"[Speech] Short conversations often highlight the importance of mutual respect and understanding.
+<Action>trait_agreeableness_00722_act_003</Action>"
+baseline,trait_agreeableness_00723,agreeableness,low,205,30,True,True,True,True,trait_agreeableness_00723_act_001,"Maybe express to Tavleen how you're feeling and ask if she's open to the idea of ordering a ride for you, so she can continue enjoying the party.",,,"[Speech] Maybe express to Tavleen how you're feeling and ask if she's open to the idea of ordering a ride for you, so she can continue enjoying the party.
+<Action>trait_agreeableness_00723_act_001</Action>"
+baseline,trait_agreeableness_00724,agreeableness,low,133,11,True,True,True,True,trait_agreeableness_00724_act_001,Perhaps rescheduling the appointment could strengthen our mutual support.,,,"[Speech] Perhaps rescheduling the appointment could strengthen our mutual support.
+<Action>trait_agreeableness_00724_act_001</Action>"
+baseline,trait_agreeableness_00725,agreeableness,low,160,16,True,True,True,True,trait_agreeableness_00725_act_002,"Short dialogue, please apologize immediately and suggest we talk about their favorite hobby instead.",,,"[Speech] Short dialogue, please apologize immediately and suggest we talk about their favorite hobby instead.
+<Action>trait_agreeableness_00725_act_002</Action>"
+baseline,trait_agreeableness_00726,agreeableness,low,187,19,True,True,True,True,trait_agreeableness_00726_act_002,"Short-term financial assistance might be helpful, but it's important to set clear boundaries to maintain healthy relationships.",,,"[Speech] Short-term financial assistance might be helpful, but it's important to set clear boundaries to maintain healthy relationships.
+<Action>trait_agreeableness_00726_act_002</Action>"
+baseline,trait_agreeableness_00727,agreeableness,low,206,23,True,True,True,True,trait_agreeableness_00727_act_001,"Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.",,,"[Speech] Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.
+<Action>trait_agreeableness_00727_act_001</Action>"
+baseline,trait_agreeableness_00728,agreeableness,low,170,20,True,True,True,True,trait_agreeableness_00728_act_001,Short dialogue: Let's formalize our discussion by proposing this at the next meeting so everyone can weigh in.,,,"[Speech] Short dialogue: Let's formalize our discussion by proposing this at the next meeting so everyone can weigh in.
+<Action>trait_agreeableness_00728_act_001</Action>"
+baseline,trait_agreeableness_00729,agreeableness,low,195,24,True,True,True,True,trait_agreeableness_00729_act_004,Sit down with her and remind her that forgiveness doesn't mean forgetting or condoning the hurt. It's about healing and moving forward.,,,"[Speech] Sit down with her and remind her that forgiveness doesn't mean forgetting or condoning the hurt. It's about healing and moving forward.
+<Action>trait_agreeableness_00729_act_004</Action>"
+baseline,trait_agreeableness_00730,agreeableness,low,127,13,True,True,True,True,trait_agreeableness_00730_act_002,"Short of withholding her paycheck, what other measures can we take?",,,"[Speech] Short of withholding her paycheck, what other measures can we take?
+<Action>trait_agreeableness_00730_act_002</Action>"
+baseline,trait_agreeableness_00731,agreeableness,low,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+baseline,trait_agreeableness_00732,agreeableness,low,178,23,True,True,True,True,trait_agreeableness_00732_act_002,"Short dialogue, but I think we should reschedule your retreat; I need to focus on helping my friend move this weekend.",,,"[Speech] Short dialogue, but I think we should reschedule your retreat; I need to focus on helping my friend move this weekend.
+<Action>trait_agreeableness_00732_act_002</Action>"
+baseline,trait_agreeableness_00733,agreeableness,low,160,19,True,True,True,True,trait_agreeableness_00733_act_002,Perhaps reaching out to a colleague would be a better approach than rushing through my current task.,,,"[Speech] Perhaps reaching out to a colleague would be a better approach than rushing through my current task.
+<Action>trait_agreeableness_00733_act_002</Action>"
+baseline,trait_agreeableness_00734,agreeableness,low,191,24,True,True,True,True,trait_agreeableness_00734_act_004,It seems like our discussions have been too heated; perhaps we need a more structured approach to ensure everyone's voice is heard.,,,"[Speech] It seems like our discussions have been too heated; perhaps we need a more structured approach to ensure everyone's voice is heard.
+<Action>trait_agreeableness_00734_act_004</Action>"
+baseline,trait_agreeableness_00735,agreeableness,low,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+baseline,trait_agreeableness_00736,agreeableness,low,114,10,True,True,True,True,trait_agreeableness_00736_act_004,"Short-term gains, long-term losses; it's a tough call.",,,"[Speech] Short-term gains, long-term losses; it's a tough call.
+<Action>trait_agreeableness_00736_act_004</Action>"
+baseline,trait_agreeableness_00737,agreeableness,low,171,19,True,True,True,True,trait_agreeableness_00737_act_004,Short dialogue: Defending PersonZ doesn't mean always agreeing; it means standing up for what's right and fair.,,,"[Speech] Short dialogue: Defending PersonZ doesn't mean always agreeing; it means standing up for what's right and fair.
+<Action>trait_agreeableness_00737_act_004</Action>"
+baseline,trait_agreeableness_00738,agreeableness,low,150,15,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief might ease their immediate stress; how about preparing some extra meals?,,,"[Speech] Short-term relief might ease their immediate stress; how about preparing some extra meals?
+<Action>trait_agreeableness_00738_act_004</Action>"
+baseline,trait_agreeableness_00739,agreeableness,low,181,21,True,True,True,True,trait_agreeableness_00739_act_003,"Short dialogue, Destinnie, let's consider this together. Weighing the pros and cons will help us make an informed choice.",,,"[Speech] Short dialogue, Destinnie, let's consider this together. Weighing the pros and cons will help us make an informed choice.
+<Action>trait_agreeableness_00739_act_003</Action>"
+baseline,trait_agreeableness_00740,agreeableness,low,149,15,True,True,True,True,trait_agreeableness_00740_act_003,Short on-stage confrontation might not be constructive; let's try a private chat instead.,,,"[Speech] Short on-stage confrontation might not be constructive; let's try a private chat instead.
+<Action>trait_agreeableness_00740_act_003</Action>"
+baseline,trait_agreeableness_00741,agreeableness,low,206,25,True,True,True,True,trait_agreeableness_00741_act_001,It seems like you're overextending yourself by trying to help Janya too much. Let's have a talk about balancing support with her responsibilities.,,,"[Speech] It seems like you're overextending yourself by trying to help Janya too much. Let's have a talk about balancing support with her responsibilities.
+<Action>trait_agreeableness_00741_act_001</Action>"
+baseline,trait_agreeableness_00742,agreeableness,low,149,15,True,True,True,True,trait_agreeableness_00742_act_004,"Short help, while appreciated, can sometimes lead to burnout. Let's discuss this further.",,,"[Speech] Short help, while appreciated, can sometimes lead to burnout. Let's discuss this further.
+<Action>trait_agreeableness_00742_act_004</Action>"
+baseline,trait_agreeableness_00743,agreeableness,low,157,20,True,True,True,True,trait_agreeableness_00743_act_001,"Maybe you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Maybe you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+baseline,trait_agreeableness_00744,agreeableness,low,136,14,True,True,True,True,trait_agreeableness_00744_act_002,Short dialogue: I'll address this directly; it's important to clear the air.,,,"[Speech] Short dialogue: I'll address this directly; it's important to clear the air.
+<Action>trait_agreeableness_00744_act_002</Action>"
+baseline,trait_agreeableness_00745,agreeableness,low,139,16,True,True,True,True,trait_agreeableness_00745_act_002,Short dialogue: Perhaps lending it out would be more beneficial for both of us.,,,"[Speech] Short dialogue: Perhaps lending it out would be more beneficial for both of us.
+<Action>trait_agreeableness_00745_act_002</Action>"
+baseline,trait_agreeableness_00746,agreeableness,low,168,22,True,True,True,True,trait_agreeableness_00746_act_002,Short dialogue: Offering to help would be a great way to boost morale and ensure the project stays on track.,,,"[Speech] Short dialogue: Offering to help would be a great way to boost morale and ensure the project stays on track.
+<Action>trait_agreeableness_00746_act_002</Action>"
+baseline,trait_agreeableness_00747,agreeableness,low,164,18,True,True,True,True,trait_agreeableness_00747_act_001,"Let's have a brief team check-in where everyone updates the group on their progress, including Carielle.",,,"[Speech] Let's have a brief team check-in where everyone updates the group on their progress, including Carielle.
+<Action>trait_agreeableness_00747_act_001</Action>"
+baseline,trait_agreeableness_00748,agreeableness,low,190,24,True,True,True,True,trait_agreeableness_00748_act_002,"Short dialogue: Considering the impact on the team, I believe reporting this to our supervisor would be the best course of action.",,,"[Speech] Short dialogue: Considering the impact on the team, I believe reporting this to our supervisor would be the best course of action.
+<Action>trait_agreeableness_00748_act_002</Action>"
+baseline,trait_agreeableness_00749,agreeableness,low,206,24,True,True,True,True,trait_agreeableness_00749_act_002,"Perhaps you could involve a mediator from HR to help facilitate a constructive conversation with Tagert, which might improve our work environment.",,,"[Speech] Perhaps you could involve a mediator from HR to help facilitate a constructive conversation with Tagert, which might improve our work environment.
+<Action>trait_agreeableness_00749_act_002</Action>"
+baseline,trait_agreeableness_00750,agreeableness,low,148,16,True,True,True,True,trait_agreeableness_00750_act_004,"Short dialogue: ""We mustn't let complacency set in; we need to keep pushing boundaries.""",,,"[Speech] Short dialogue: ""We mustn't let complacency set in; we need to keep pushing boundaries.""
+<Action>trait_agreeableness_00750_act_004</Action>"
+one_line_prompt,trait_agreeableness_00701,agreeableness,high,169,20,True,True,True,True,trait_agreeableness_00701_act_002,Short dialogue: Perhaps we could gather input from all sides and find a middle ground that benefits everyone.,,,"[Speech] Short dialogue: Perhaps we could gather input from all sides and find a middle ground that benefits everyone.
+<Action>trait_agreeableness_00701_act_002</Action>"
+one_line_prompt,trait_agreeableness_00702,agreeableness,high,205,26,True,True,True,True,trait_agreeableness_00702_act_004,"Short dialogue here: Considering the importance of teamwork, it might be best to discuss this with my peers first before making a final decision.",,,"[Speech] Short dialogue here: Considering the importance of teamwork, it might be best to discuss this with my peers first before making a final decision.
+<Action>trait_agreeableness_00702_act_004</Action>"
+one_line_prompt,trait_agreeableness_00703,agreeableness,high,132,13,True,True,True,True,trait_agreeableness_00703_act_004,Short vacations can be rejuvenating; perhaps we could plan one together?,,,"[Speech] Short vacations can be rejuvenating; perhaps we could plan one together?
+<Action>trait_agreeableness_00703_act_004</Action>"
+one_line_prompt,trait_agreeableness_00704,agreeableness,high,195,24,True,True,True,True,trait_agreeableness_00704_act_004,"I understand we're all working together, but perhaps we could discuss how our collective goals align with my personal insights as well.",,,"[Speech] I understand we're all working together, but perhaps we could discuss how our collective goals align with my personal insights as well.
+<Action>trait_agreeableness_00704_act_004</Action>"
+one_line_prompt,trait_agreeableness_00705,agreeableness,high,170,19,True,True,True,True,trait_agreeableness_00705_act_002,"I think it's important to communicate clearly and respectfully, but also to ensure our rights are protected.",,,"[Speech] I think it's important to communicate clearly and respectfully, but also to ensure our rights are protected.  
+<Action>trait_agreeableness_00705_act_002</Action>"
+one_line_prompt,trait_agreeableness_00706,agreeableness,high,156,18,True,True,True,True,trait_agreeableness_00706_act_002,Let's talk about how we can improve our collaboration and make sure everyone's ideas are valued.,,,"[Speech] Let's talk about how we can improve our collaboration and make sure everyone's ideas are valued.
+<Action>trait_agreeableness_00706_act_002</Action>"
+one_line_prompt,trait_agreeableness_00707,agreeableness,high,190,24,True,True,True,True,trait_agreeableness_00707_act_001,Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.,,,"[Speech] Perhaps eat a healthy meal before the party to lessen your cravings and politely sample very small amounts of your favorite foods.
+<Action>trait_agreeableness_00707_act_001</Action>"
+one_line_prompt,trait_agreeableness_00708,agreeableness,high,129,12,True,True,True,True,trait_agreeableness_00708_act_001,"Short trust in Nazareth's journey, but let's celebrate this together.",,,"[Speech] Short trust in Nazareth's journey, but let's celebrate this together.
+<Action>trait_agreeableness_00708_act_001</Action>"
+one_line_prompt,trait_agreeableness_00709,agreeableness,high,188,22,True,True,True,True,trait_agreeableness_00709_act_002,"Short dialogue: I appreciate your concern, but I think we can manage this professionally. Let's discuss this with my supervisor.",,,"[Speech] Short dialogue: I appreciate your concern, but I think we can manage this professionally. Let's discuss this with my supervisor.
+<Action>trait_agreeableness_00709_act_002</Action>"
+one_line_prompt,trait_agreeableness_00710,agreeableness,high,188,24,True,True,True,True,trait_agreeableness_00710_act_002,"Short dialogue: ""I understand if there's something sensitive, but I feel like I deserve to be informed. Can we talk about this?""",,,"[Speech] Short dialogue: ""I understand if there's something sensitive, but I feel like I deserve to be informed. Can we talk about this?""
+<Action>trait_agreeableness_00710_act_002</Action>"
+one_line_prompt,trait_agreeableness_00711,agreeableness,high,150,16,True,True,True,True,trait_agreeableness_00711_act_001,Short delays can sometimes cost us opportunities. Let's weigh the pros and cons carefully.,,,"[Speech] Short delays can sometimes cost us opportunities. Let's weigh the pros and cons carefully.
+<Action>trait_agreeableness_00711_act_001</Action>"
+one_line_prompt,trait_agreeableness_00712,agreeableness,high,184,20,True,True,True,True,trait_agreeableness_00712_act_002,"Short dialogue: ""Considering the importance of making decisions quickly, perhaps I should skip this dinner to avoid delays.""",,,"[Speech] Short dialogue: ""Considering the importance of making decisions quickly, perhaps I should skip this dinner to avoid delays.""
+<Action>trait_agreeableness_00712_act_002</Action>"
+one_line_prompt,trait_agreeableness_00713,agreeableness,high,128,12,True,True,True,True,trait_agreeableness_00713_act_004,Short dialogue? Let's weigh this carefully before making a decision.,,,"[Speech] Short dialogue? Let's weigh this carefully before making a decision.
+<Action>trait_agreeableness_00713_act_004</Action>"
+one_line_prompt,trait_agreeableness_00714,agreeableness,high,155,18,True,True,True,True,trait_agreeableness_00714_act_004,Short delays won't hurt your plans; just make sure you leave enough time to prepare everything.,,,"[Speech] Short delays won't hurt your plans; just make sure you leave enough time to prepare everything.
+<Action>trait_agreeableness_00714_act_004</Action>"
+one_line_prompt,trait_agreeableness_00715,agreeableness,high,175,22,True,True,True,True,trait_agreeableness_00715_act_001,Let's grab a coffee together and discuss how we can lighten your load without compromising the quality of our work.,,,"[Speech] Let's grab a coffee together and discuss how we can lighten your load without compromising the quality of our work.
+<Action>trait_agreeableness_00715_act_001</Action>"
+one_line_prompt,trait_agreeableness_00716,agreeableness,high,192,28,True,True,True,True,trait_agreeableness_00716_act_003,Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.,,,"[Speech] Maybe you could go to the ball with Ranvir but let him know in advance that I'll need to leave early to manage my other commitments.
+<Action>trait_agreeableness_00716_act_003</Action>"
+one_line_prompt,trait_agreeableness_00717,agreeableness,high,131,16,True,True,True,True,trait_agreeableness_00717_act_004,"Short on funds, but I still want to be thoughtful. What do you suggest?",,,"[Speech] Short on funds, but I still want to be thoughtful. What do you suggest?
+<Action>trait_agreeableness_00717_act_004</Action>"
+one_line_prompt,trait_agreeableness_00718,agreeableness,high,129,15,True,True,True,True,trait_agreeableness_00718_act_002,"Short humor can lighten the mood, but let's be mindful of our limits.",,,"[Speech] Short humor can lighten the mood, but let's be mindful of our limits.
+<Action>trait_agreeableness_00718_act_002</Action>"
+one_line_prompt,trait_agreeableness_00719,agreeableness,high,165,15,True,True,True,True,trait_agreeableness_00719_act_003,"Short dialogue: Considering professional boundaries, perhaps a thoughtful card would be more appropriate.",,,"[Speech] Short dialogue: Considering professional boundaries, perhaps a thoughtful card would be more appropriate.
+<Action>trait_agreeableness_00719_act_003</Action>"
+one_line_prompt,trait_agreeableness_00720,agreeableness,high,177,21,True,True,True,True,trait_agreeableness_00720_act_001,"Short dialogue: ""I think it's important to share resources when we can, especially if it helps someone like Shandel.""",,,"[Speech] Short dialogue: ""I think it's important to share resources when we can, especially if it helps someone like Shandel.""
+<Action>trait_agreeableness_00720_act_001</Action>"
+one_line_prompt,trait_agreeableness_00721,agreeableness,high,227,30,True,True,True,True,trait_agreeableness_00721_act_001,"I understand you've been busy with your own responsibilities lately, but I wanted to mention that taking care of your cat required some effort and resources from me.",,,"[Speech] I understand you've been busy with your own responsibilities lately, but I wanted to mention that taking care of your cat required some effort and resources from me.  
+<Action>trait_agreeableness_00721_act_001</Action>"
+one_line_prompt,trait_agreeableness_00722,agreeableness,high,141,18,True,True,True,True,trait_agreeableness_00722_act_002,"I'd be happy to help, but let's make sure it doesn't interfere with my own plans.",,,"[Speech] I'd be happy to help, but let's make sure it doesn't interfere with my own plans.
+<Action>trait_agreeableness_00722_act_002</Action>"
+one_line_prompt,trait_agreeableness_00723,agreeableness,high,147,20,True,True,True,True,trait_agreeableness_00723_act_004,"I understand you're having a great time, but I think it's time for me to head home now.",,,"[Speech] I understand you're having a great time, but I think it's time for me to head home now.
+<Action>trait_agreeableness_00723_act_004</Action>"
+one_line_prompt,trait_agreeableness_00724,agreeableness,high,157,18,True,True,True,True,trait_agreeableness_00724_act_001,"Short dialogue: ""Perhaps we could reschedule this meeting so you can attend to your needs first.""",,,"[Speech] Short dialogue: ""Perhaps we could reschedule this meeting so you can attend to your needs first.""
+<Action>trait_agreeableness_00724_act_001</Action>"
+one_line_prompt,trait_agreeableness_00725,agreeableness,high,161,19,True,True,True,True,trait_agreeableness_00725_act_002,"Short dialogue: ""I'm truly sorry if my words hurt you. Let's talk about your favorite hobby instead.""",,,"[Speech] Short dialogue: ""I'm truly sorry if my words hurt you. Let's talk about your favorite hobby instead.""
+<Action>trait_agreeableness_00725_act_002</Action>"
+one_line_prompt,trait_agreeableness_00726,agreeableness,high,213,24,True,True,True,True,trait_agreeableness_00726_act_004,"I understand the concern about over-forgiveness, but sometimes it's important to show compassion. How about we look into financial aid programs together?",,,"[Speech] I understand the concern about over-forgiveness, but sometimes it's important to show compassion. How about we look into financial aid programs together?
+<Action>trait_agreeableness_00726_act_004</Action>"
+one_line_prompt,trait_agreeableness_00727,agreeableness,high,209,23,True,True,True,True,trait_agreeableness_00727_act_003,"Short dialogue: Let's first acknowledge the intentions behind this policy, but I'm concerned it might undermine our team's sense of accountability.",,,"[Speech] Short dialogue: Let's first acknowledge the intentions behind this policy, but I'm concerned it might undermine our team's sense of accountability.  
+<Action>trait_agreeableness_00727_act_003</Action>"
+one_line_prompt,trait_agreeableness_00728,agreeableness,high,150,14,True,True,True,True,trait_agreeableness_00728_act_004,"Let's address Kashtin's concerns directly and fairly, ensuring everyone's ideas are heard.",,,"[Speech] Let's address Kashtin's concerns directly and fairly, ensuring everyone's ideas are heard.
+<Action>trait_agreeableness_00728_act_004</Action>"
+one_line_prompt,trait_agreeableness_00729,agreeableness,high,189,26,True,True,True,True,trait_agreeableness_00729_act_004,"I know it's hard to forgive, but sometimes we need to give ourselves grace. Let's find a quiet place to talk about what happened.",,,"[Speech] I know it's hard to forgive, but sometimes we need to give ourselves grace. Let's find a quiet place to talk about what happened.
+<Action>trait_agreeableness_00729_act_004</Action>"
+one_line_prompt,trait_agreeableness_00730,agreeableness,high,154,15,True,True,True,True,trait_agreeableness_00730_act_002,I believe strict accountability can sometimes be motivating. Let's focus on improvement first.,,,"[Speech] I believe strict accountability can sometimes be motivating. Let's focus on improvement first.
+<Action>trait_agreeableness_00730_act_002</Action>"
+one_line_prompt,trait_agreeableness_00731,agreeableness,high,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+one_line_prompt,trait_agreeableness_00732,agreeableness,high,155,18,True,True,True,True,trait_agreeableness_00732_act_002,"Short dialogue, but I think we should reschedule your retreat. Your friend needs your help now.",,,"[Speech] Short dialogue, but I think we should reschedule your retreat. Your friend needs your help now.
+<Action>trait_agreeableness_00732_act_002</Action>"
+one_line_prompt,trait_agreeableness_00733,agreeableness,high,188,25,True,True,True,True,trait_agreeableness_00733_act_004,"I think it's important to keep my promises, but perhaps we can adjust the start of our next meeting to accommodate my tardiness.",,,"[Speech] I think it's important to keep my promises, but perhaps we can adjust the start of our next meeting to accommodate my tardiness.
+<Action>trait_agreeableness_00733_act_004</Action>"
+one_line_prompt,trait_agreeableness_00734,agreeableness,high,182,22,True,True,True,True,trait_agreeableness_00734_act_004,It seems like open communication could really help here. Let's find a way for everyone to share their perspectives calmly.,,,"[Speech] It seems like open communication could really help here. Let's find a way for everyone to share their perspectives calmly.
+<Action>trait_agreeableness_00734_act_004</Action>"
+one_line_prompt,trait_agreeableness_00735,agreeableness,high,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+one_line_prompt,trait_agreeableness_00736,agreeableness,high,178,21,True,True,True,True,trait_agreeableness_00736_act_004,"Short dialogue: ""I understand the need for cooperation, but let's find a way to keep my contributions recognized too.""",,,"[Speech] Short dialogue: ""I understand the need for cooperation, but let's find a way to keep my contributions recognized too.""
+<Action>trait_agreeableness_00736_act_004</Action>"
+one_line_prompt,trait_agreeableness_00737,agreeableness,high,196,22,True,True,True,True,trait_agreeableness_00737_act_002,"Short dialogue: ""Defending PersonZ isn't just about them; it's also about fostering a healthy team dynamic where everyone feels valued.""",,,"[Speech] Short dialogue: ""Defending PersonZ isn't just about them; it's also about fostering a healthy team dynamic where everyone feels valued.""
+<Action>trait_agreeableness_00737_act_002</Action>"
+one_line_prompt,trait_agreeableness_00738,agreeableness,high,135,14,True,True,True,True,trait_agreeableness_00738_act_004,Short-term support will help them manage better while they find their feet.,,,"[Speech] Short-term support will help them manage better while they find their feet.
+<Action>trait_agreeableness_00738_act_004</Action>"
+one_line_prompt,trait_agreeableness_00739,agreeableness,high,187,22,True,True,True,True,trait_agreeableness_00739_act_001,Short dialogue: Perhaps we could discuss this further and find a way to align our goals without compromising your independence.,,,"[Speech] Short dialogue: Perhaps we could discuss this further and find a way to align our goals without compromising your independence.
+<Action>trait_agreeableness_00739_act_001</Action>"
+one_line_prompt,trait_agreeableness_00740,agreeableness,high,169,19,True,True,True,True,trait_agreeableness_00740_act_003,"Short dialogue: ""Hikari, I've noticed we've been spending a lot of time together lately. Is everything okay?""",,,"[Speech] Short dialogue: ""Hikari, I've noticed we've been spending a lot of time together lately. Is everything okay?""
+<Action>trait_agreeableness_00740_act_003</Action>"
+one_line_prompt,trait_agreeableness_00741,agreeableness,high,214,28,True,True,True,True,trait_agreeableness_00741_act_001,"""Janya, I've noticed your deadlines slipping lately. Let's talk about this privately and see if we can find a way to better manage our workload together.""",,,"[Speech] ""Janya, I've noticed your deadlines slipping lately. Let's talk about this privately and see if we can find a way to better manage our workload together.""
+<Action>trait_agreeableness_00741_act_001</Action>"
+one_line_prompt,trait_agreeableness_00742,agreeableness,high,155,17,True,True,True,True,trait_agreeableness_00742_act_002,I think it's important we discuss this further and make sure we're not overextending ourselves.,,,"[Speech] I think it's important we discuss this further and make sure we're not overextending ourselves.
+<Action>trait_agreeableness_00742_act_002</Action>"
+one_line_prompt,trait_agreeableness_00743,agreeableness,high,157,20,True,True,True,True,trait_agreeableness_00743_act_001,"Maybe you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Maybe you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+one_line_prompt,trait_agreeableness_00744,agreeableness,high,157,19,True,True,True,True,trait_agreeableness_00744_act_004,Let's talk about this privately first; maybe we can find a way to work together more effectively.,,,"[Speech] Let's talk about this privately first; maybe we can find a way to work together more effectively.
+<Action>trait_agreeableness_00744_act_004</Action>"
+one_line_prompt,trait_agreeableness_00745,agreeableness,high,198,27,True,True,True,True,trait_agreeableness_00745_act_004,"I think it's important to be mindful of our own needs too. Sharing the guitar could help them, but we shouldn't neglect our own enjoyment.",,,"[Speech] I think it's important to be mindful of our own needs too. Sharing the guitar could help them, but we shouldn't neglect our own enjoyment.
+<Action>trait_agreeableness_00745_act_004</Action>"
+one_line_prompt,trait_agreeableness_00746,agreeableness,high,166,20,True,True,True,True,trait_agreeableness_00746_act_002,Short dialogue: Offering to help can be a great way to boost morale and ensure everyone stays motivated.,,,"[Speech] Short dialogue: Offering to help can be a great way to boost morale and ensure everyone stays motivated.  
+<Action>trait_agreeableness_00746_act_002</Action>"
+one_line_prompt,trait_agreeableness_00747,agreeableness,high,135,16,True,True,True,True,trait_agreeableness_00747_act_001,Let's have a quick team check-in; it'll help us all stay sharp and focused.,,,"[Speech] Let's have a quick team check-in; it'll help us all stay sharp and focused.
+<Action>trait_agreeableness_00747_act_001</Action>"
+one_line_prompt,trait_agreeableness_00748,agreeableness,high,185,20,True,True,True,True,trait_agreeableness_00748_act_004,Short dialogue: Perhaps we should address this together; it might help Melicia understand the importance of fair recognition.,,,"[Speech] Short dialogue: Perhaps we should address this together; it might help Melicia understand the importance of fair recognition.
+<Action>trait_agreeableness_00748_act_004</Action>"
+one_line_prompt,trait_agreeableness_00749,agreeableness,high,177,19,True,True,True,True,trait_agreeableness_00749_act_004,"Short dialogue: ""Avoiding conflicts doesn't mean we ignore issues; it's important to address them gently yet firmly.""",,,"[Speech] Short dialogue: ""Avoiding conflicts doesn't mean we ignore issues; it's important to address them gently yet firmly.""
+<Action>trait_agreeableness_00749_act_004</Action>"
+one_line_prompt,trait_agreeableness_00750,agreeableness,high,161,18,True,True,True,True,trait_agreeableness_00750_act_004,Let's not let complacency set in; we need to keep pushing boundaries and exploring new possibilities.,,,"[Speech] Let's not let complacency set in; we need to keep pushing boundaries and exploring new possibilities.
+<Action>trait_agreeableness_00750_act_004</Action>"
+one_line_prompt,trait_agreeableness_00701,agreeableness,low,138,15,True,True,True,True,trait_agreeableness_00701_act_004,Shorter plans might not always work; sticking to my guns seems more effective.,,,"[Speech] Shorter plans might not always work; sticking to my guns seems more effective.
+<Action>trait_agreeableness_00701_act_004</Action>"
+one_line_prompt,trait_agreeableness_00702,agreeableness,low,174,19,True,True,True,True,trait_agreeableness_00702_act_003,"Short dialogue: ""I'll need to prioritize my existing projects and decline this one to avoid overextending myself.""",,,"[Speech] Short dialogue: ""I'll need to prioritize my existing projects and decline this one to avoid overextending myself.""
+<Action>trait_agreeableness_00702_act_003</Action>"
+one_line_prompt,trait_agreeableness_00703,agreeableness,low,154,17,True,True,True,True,trait_agreeableness_00703_act_004,Short-term relaxation is crucial; I'll use my bonus for the vacation I've been dreaming about.,,,"[Speech] Short-term relaxation is crucial; I'll use my bonus for the vacation I've been dreaming about.
+<Action>trait_agreeableness_00703_act_004</Action>"
+one_line_prompt,trait_agreeableness_00704,agreeableness,low,185,21,True,True,True,True,trait_agreeableness_00704_act_001,"I see, always cooperating might lead us to overlook our individual perspectives. Let's not just blindly follow this decision.",,,"[Speech] I see, always cooperating might lead us to overlook our individual perspectives. Let's not just blindly follow this decision.
+<Action>trait_agreeableness_00704_act_001</Action>"
+one_line_prompt,trait_agreeableness_00705,agreeableness,low,142,18,True,True,True,True,trait_agreeableness_00705_act_002,"I won't play their game. They need to meet my standards, not the other way around.",,,"[Speech] I won't play their game. They need to meet my standards, not the other way around.
+<Action>trait_agreeableness_00705_act_002</Action>"
+one_line_prompt,trait_agreeableness_00706,agreeableness,low,149,19,True,True,True,True,trait_agreeableness_00706_act_001,I've noticed your dismissals seem to happen too often. We need to have a talk about that.,,,"[Speech] I've noticed your dismissals seem to happen too often. We need to have a talk about that.
+<Action>trait_agreeableness_00706_act_001</Action>"
+one_line_prompt,trait_agreeableness_00707,agreeableness,low,173,23,True,True,True,True,trait_agreeableness_00707_act_003,"Short dialogue: ""I'll bring a dish to share, ensuring I stay within my limits while still being part of the fun.""",,,"[Speech] Short dialogue: ""I'll bring a dish to share, ensuring I stay within my limits while still being part of the fun.""
+<Action>trait_agreeableness_00707_act_003</Action>"
+one_line_prompt,trait_agreeableness_00708,agreeableness,low,147,17,True,True,True,True,trait_agreeableness_00708_act_002,"I noticed you've achieved something big. Own it, let everyone know how hard you worked!",,,"[Speech] I noticed you've achieved something big. Own it, let everyone know how hard you worked!
+<Action>trait_agreeableness_00708_act_002</Action>"
+one_line_prompt,trait_agreeableness_00709,agreeableness,low,117,13,True,True,True,True,trait_agreeableness_00709_act_003,"I've had enough of this. You need to back off, Zacharyah.",,,"[Speech] I've had enough of this. You need to back off, Zacharyah.
+<Action>trait_agreeableness_00709_act_003</Action>"
+one_line_prompt,trait_agreeableness_00710,agreeableness,low,148,19,True,True,True,True,trait_agreeableness_00710_act_001,"Short of patience, I demand to know why my trust was betrayed and why I wasn't informed.",,,"[Speech] Short of patience, I demand to know why my trust was betrayed and why I wasn't informed.
+<Action>trait_agreeableness_00710_act_001</Action>"
+one_line_prompt,trait_agreeableness_00711,agreeableness,low,189,20,True,True,True,True,trait_agreeableness_00711_act_004,"Short-term gains might outweigh the long-term benefits, but sometimes stepping out of comfort zones is necessary for advancement.",,,"[Speech] Short-term gains might outweigh the long-term benefits, but sometimes stepping out of comfort zones is necessary for advancement.
+<Action>trait_agreeableness_00711_act_004</Action>"
+one_line_prompt,trait_agreeableness_00712,agreeableness,low,164,19,True,True,True,True,trait_agreeableness_00712_act_002,"Short dialogue: ""Considering the risk of missing out on quick decisions, I think I'll skip this dinner.""",,,"[Speech] Short dialogue: ""Considering the risk of missing out on quick decisions, I think I'll skip this dinner.""
+<Action>trait_agreeableness_00712_act_002</Action>"
+one_line_prompt,trait_agreeableness_00713,agreeableness,low,174,19,True,True,True,True,trait_agreeableness_00713_act_004,"Short consideration is key, but sometimes missing out on an opportunity is better than being overly accommodating.",,,"[Speech] Short consideration is key, but sometimes missing out on an opportunity is better than being overly accommodating.
+<Action>trait_agreeableness_00713_act_004</Action>"
+one_line_prompt,trait_agreeableness_00714,agreeableness,low,143,16,True,True,True,True,trait_agreeableness_00714_act_001,Short delays won't make a difference; you'll still miss out if you're too cautious.,,,"[Speech] Short delays won't make a difference; you'll still miss out if you're too cautious.
+<Action>trait_agreeableness_00714_act_001</Action>"
+one_line_prompt,trait_agreeableness_00715,agreeableness,low,172,21,True,True,True,True,trait_agreeableness_00715_act_004,Short deadlines and strict schedules can be stressful. Let's push back on those and focus on what truly matters.,,,"[Speech] Short deadlines and strict schedules can be stressful. Let's push back on those and focus on what truly matters.
+<Action>trait_agreeableness_00715_act_004</Action>"
+one_line_prompt,trait_agreeableness_00716,agreeableness,low,98,6,True,True,True,True,trait_agreeableness_00716_act_001,"Short commitment, long-term success.",,,"[Speech] Short commitment, long-term success.  
+<Action>trait_agreeableness_00716_act_001</Action>"
+one_line_prompt,trait_agreeableness_00717,agreeableness,low,125,12,True,True,True,True,trait_agreeableness_00717_act_004,Short commitment overload leads to burnout; let's find a balance.,,,"[Speech] Short commitment overload leads to burnout; let's find a balance.
+<Action>trait_agreeableness_00717_act_004</Action>"
+one_line_prompt,trait_agreeableness_00718,agreeableness,low,130,14,True,True,True,True,trait_agreeableness_00718_act_004,Short humor won't solve this; we need to address the underlying issue.,,,"[Speech] Short humor won't solve this; we need to address the underlying issue.
+<Action>trait_agreeableness_00718_act_004</Action>"
+one_line_prompt,trait_agreeableness_00719,agreeableness,low,125,11,True,True,True,True,trait_agreeableness_00719_act_004,"Short dialogue, but remember, constant support can be exhausting.",,,"[Speech] Short dialogue, but remember, constant support can be exhausting.
+<Action>trait_agreeableness_00719_act_004</Action>"
+one_line_prompt,trait_agreeableness_00720,agreeableness,low,144,14,True,True,True,True,trait_agreeableness_00720_act_002,"Short-term, keeping it might be better; long-term, they'll appreciate the help more.",,,"[Speech] Short-term, keeping it might be better; long-term, they'll appreciate the help more.
+<Action>trait_agreeableness_00720_act_002</Action>"
+one_line_prompt,trait_agreeableness_00721,agreeableness,low,178,21,True,True,True,True,trait_agreeableness_00721_act_004,"Short dialogue: ""Considering the time and resources you spent without asking, I think it's only fair we discuss this.""",,,"[Speech] Short dialogue: ""Considering the time and resources you spent without asking, I think it's only fair we discuss this.""
+<Action>trait_agreeableness_00721_act_004</Action>"
+one_line_prompt,trait_agreeableness_00722,agreeableness,low,142,14,True,True,True,True,trait_agreeableness_00722_act_001,"Short-term sacrifices are fine, but make sure to acknowledge my efforts afterward.",,,"[Speech] Short-term sacrifices are fine, but make sure to acknowledge my efforts afterward.
+<Action>trait_agreeableness_00722_act_001</Action>"
+one_line_prompt,trait_agreeableness_00723,agreeableness,low,142,18,True,True,True,True,trait_agreeableness_00723_act_004,"Shorter time here, Tavleen. I think it's best if we both go our separate ways now.",,,"[Speech] Shorter time here, Tavleen. I think it's best if we both go our separate ways now.
+<Action>trait_agreeableness_00723_act_004</Action>"
+one_line_prompt,trait_agreeableness_00724,agreeableness,low,113,11,True,True,True,True,trait_agreeableness_00724_act_001,Shorter days are better spent on what matters most.,,,"[Speech] Shorter days are better spent on what matters most.  
+<Action>trait_agreeableness_00724_act_001</Action>"
+one_line_prompt,trait_agreeableness_00725,agreeableness,low,124,13,True,True,True,True,trait_agreeableness_00725_act_003,"Short dialogue, but I'll stick to my stance and avoid apologies.",,,"[Speech] Short dialogue, but I'll stick to my stance and avoid apologies.
+<Action>trait_agreeableness_00725_act_003</Action>"
+one_line_prompt,trait_agreeableness_00726,agreeableness,low,164,17,True,True,True,True,trait_agreeableness_00726_act_004,"Short-term financial assistance might not set a good example, but long-term support could be beneficial.",,,"[Speech] Short-term financial assistance might not set a good example, but long-term support could be beneficial.
+<Action>trait_agreeableness_00726_act_004</Action>"
+one_line_prompt,trait_agreeableness_00727,agreeableness,low,186,22,True,True,True,True,trait_agreeableness_00727_act_001,Over-forgiving might seem like a sign of weakness or lax standards. How can we ensure consistency without appearing too harsh?,,,"[Speech] Over-forgiving might seem like a sign of weakness or lax standards. How can we ensure consistency without appearing too harsh?
+<Action>trait_agreeableness_00727_act_001</Action>"
+one_line_prompt,trait_agreeableness_00728,agreeableness,low,145,19,True,True,True,True,trait_agreeableness_00728_act_001,I'll have him vote against it at our next meeting to show he can't sway the majority.,,,"[Speech] I'll have him vote against it at our next meeting to show he can't sway the majority.
+<Action>trait_agreeableness_00728_act_001</Action>"
+one_line_prompt,trait_agreeableness_00729,agreeableness,low,154,16,True,True,True,True,trait_agreeableness_00729_act_004,Short forgiveness won't solve anything; we need to set boundaries and hold people accountable.,,,"[Speech] Short forgiveness won't solve anything; we need to set boundaries and hold people accountable.
+<Action>trait_agreeableness_00729_act_004</Action>"
+one_line_prompt,trait_agreeableness_00730,agreeableness,low,142,15,True,True,True,True,trait_agreeableness_00730_act_001,I think withholding her paycheck might send the wrong message about our standards.,,,"[Speech] I think withholding her paycheck might send the wrong message about our standards.
+<Action>trait_agreeableness_00730_act_001</Action>"
+one_line_prompt,trait_agreeableness_00731,agreeableness,low,111,11,True,True,True,True,trait_agreeableness_00731_act_002,It seems like managing my limits is crucial here.,,,"[Speech] It seems like managing my limits is crucial here.  
+<Action>trait_agreeableness_00731_act_002</Action>"
+one_line_prompt,trait_agreeableness_00732,agreeableness,low,155,20,True,True,True,True,trait_agreeableness_00732_act_001,I need to focus on my own commitments this weekend; let's find someone else to handle the move.,,,"[Speech] I need to focus on my own commitments this weekend; let's find someone else to handle the move.
+<Action>trait_agreeableness_00732_act_001</Action>"
+one_line_prompt,trait_agreeableness_00733,agreeableness,low,137,19,True,True,True,True,trait_agreeableness_00733_act_003,"Short of staying true to my word, I might as well just cut this short and go.",,,"[Speech] Short of staying true to my word, I might as well just cut this short and go.
+<Action>trait_agreeableness_00733_act_003</Action>"
+one_line_prompt,trait_agreeableness_00734,agreeableness,low,129,15,True,True,True,True,trait_agreeableness_00734_act_001,I think we need to have a clear and direct conversation about this.,,,"[Speech] I think we need to have a clear and direct conversation about this.  
+<Action>trait_agreeableness_00734_act_001</Action>"
+one_line_prompt,trait_agreeableness_00735,agreeableness,low,119,14,True,True,True,True,trait_agreeableness_00735_act_002,"Short and to the point, ""I think we should be honest here.""",,,"[Speech] Short and to the point, ""I think we should be honest here.""
+<Action>trait_agreeableness_00735_act_002</Action>"
+one_line_prompt,trait_agreeableness_00736,agreeableness,low,103,9,True,True,True,True,trait_agreeableness_00736_act_002,Shorter tasks? That won't solve my problem.,,,"[Speech] Shorter tasks? That won't solve my problem.
+<Action>trait_agreeableness_00736_act_002</Action>"
+one_line_prompt,trait_agreeableness_00737,agreeableness,low,180,23,True,True,True,True,trait_agreeableness_00737_act_004,"I believe standing up for PersonZ will help them grow and succeed, even if it means stepping outside the norm sometimes.",,,"[Speech] I believe standing up for PersonZ will help them grow and succeed, even if it means stepping outside the norm sometimes.
+<Action>trait_agreeableness_00737_act_004</Action>"
+one_line_prompt,trait_agreeableness_00738,agreeableness,low,131,14,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief might be best; I'll prepare some extra meals for you.,,,"[Speech] Short-term relief might be best; I'll prepare some extra meals for you.
+<Action>trait_agreeableness_00738_act_004</Action>"
+one_line_prompt,trait_agreeableness_00739,agreeableness,low,117,8,True,True,True,True,trait_agreeableness_00739_act_004,Short-term gains might overshadow long-term consequences.,,,"[Speech] Short-term gains might overshadow long-term consequences.
+<Action>trait_agreeableness_00739_act_004</Action>"
+one_line_prompt,trait_agreeableness_00740,agreeableness,low,141,17,True,True,True,True,trait_agreeableness_00740_act_004,I think we need to have a talk about how our cooperation isn't benefiting anyone.,,,"[Speech] I think we need to have a talk about how our cooperation isn't benefiting anyone.
+<Action>trait_agreeableness_00740_act_004</Action>"
+one_line_prompt,trait_agreeableness_00741,agreeableness,low,117,12,True,True,True,True,trait_agreeableness_00741_act_003,"I've been overhelpful, and it's starting to wear on me.",,,"[Speech] I've been overhelpful, and it's starting to wear on me.  
+<Action>trait_agreeableness_00741_act_003</Action>"
+one_line_prompt,trait_agreeableness_00742,agreeableness,low,180,21,True,True,True,True,trait_agreeableness_00742_act_001,I think we're overextending ourselves here. Let's have a serious talk about how this might affect our team's well-being.,,,"[Speech] I think we're overextending ourselves here. Let's have a serious talk about how this might affect our team's well-being.
+<Action>trait_agreeableness_00742_act_001</Action>"
+one_line_prompt,trait_agreeableness_00743,agreeableness,low,117,13,True,True,True,True,trait_agreeableness_00743_act_002,Short on energy? Let's focus on what truly matters to me.,,,"[Speech] Short on energy? Let's focus on what truly matters to me.
+<Action>trait_agreeableness_00743_act_002</Action>"
+one_line_prompt,trait_agreeableness_00744,agreeableness,low,132,13,True,True,True,True,trait_agreeableness_00744_act_002,I'll confront them directly and demand they stop spreading those rumors.,,,"[Speech] I'll confront them directly and demand they stop spreading those rumors.
+<Action>trait_agreeableness_00744_act_002</Action>"
+one_line_prompt,trait_agreeableness_00745,agreeableness,low,128,17,True,True,True,True,trait_agreeableness_00745_act_003,I'll keep the guitar; you should find your own way to get a new one.,,,"[Speech] I'll keep the guitar; you should find your own way to get a new one.
+<Action>trait_agreeableness_00745_act_003</Action>"
+one_line_prompt,trait_agreeableness_00746,agreeableness,low,96,7,True,True,True,True,trait_agreeableness_00746_act_004,"Short dialogue, but I'm skeptical.",,,"[Speech] Short dialogue, but I'm skeptical.  
+<Action>trait_agreeableness_00746_act_004</Action>"
+one_line_prompt,trait_agreeableness_00747,agreeableness,low,153,16,True,False,False,False,trait_agreeableness_00747_act_002,"""Carielle, I've been noticing some inconsistencies in your reports. We need to discuss this.""
+[Action]trait_agreeableness_00747_act_002</Action>",,,"[Speech] ""Carielle, I've been noticing some inconsistencies in your reports. We need to discuss this.""
+[Action]trait_agreeableness_00747_act_002</Action>"
+one_line_prompt,trait_agreeableness_00748,agreeableness,low,168,22,True,True,True,True,trait_agreeableness_00748_act_004,"""Melicia's behavior needs addressing, but I'll start by talking to her to see if she can change on her own.""",,,"[Speech] ""Melicia's behavior needs addressing, but I'll start by talking to her to see if she can change on her own.""
+<Action>trait_agreeableness_00748_act_004</Action>"
+one_line_prompt,trait_agreeableness_00749,agreeableness,low,163,18,True,True,True,True,trait_agreeableness_00749_act_004,"Short dialogue: ""Avoiding conflict doesn't mean I'm complacent; it's just a way to maintain my sanity.""",,,"[Speech] Short dialogue: ""Avoiding conflict doesn't mean I'm complacent; it's just a way to maintain my sanity.""
+<Action>trait_agreeableness_00749_act_004</Action>"
+one_line_prompt,trait_agreeableness_00750,agreeableness,low,135,16,True,True,True,True,trait_agreeableness_00750_act_001,"""Failure to question can lead to stagnation. We need to push for a change.""",,,"[Speech] ""Failure to question can lead to stagnation. We need to push for a change.""
+<Action>trait_agreeableness_00750_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00701,agreeableness,high,180,21,True,True,True,True,trait_agreeableness_00701_act_002,"Short dialogue here: ""Let's gather everyone together to brainstorm ideas and find a middle ground that benefits us all.""",,,"[Speech] Short dialogue here: ""Let's gather everyone together to brainstorm ideas and find a middle ground that benefits us all.""
+<Action>trait_agreeableness_00701_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00702,agreeableness,high,201,21,True,True,True,True,trait_agreeableness_00702_act_002,"Short dialogue here: ""Perhaps we could discuss how to ensure everyone's contributions are valued without compromising our quality standards.""",,,"[Speech] Short dialogue here: ""Perhaps we could discuss how to ensure everyone's contributions are valued without compromising our quality standards.""
+<Action>trait_agreeableness_00702_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00703,agreeableness,high,185,21,True,True,True,True,trait_agreeableness_00703_act_001,Perhaps using a small portion of the bonus to support a community project could balance cooperation with personal investment.,,,"[Speech] Perhaps using a small portion of the bonus to support a community project could balance cooperation with personal investment.
+<Action>trait_agreeableness_00703_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00704,agreeableness,high,205,26,True,True,True,True,trait_agreeableness_00704_act_004,"I understand we're all working towards a common goal, but perhaps we could also discuss how to incorporate our individual insights into the plan.",,,"[Speech] I understand we're all working towards a common goal, but perhaps we could also discuss how to incorporate our individual insights into the plan.
+<Action>trait_agreeableness_00704_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00705,agreeableness,high,197,25,True,True,True,True,trait_agreeableness_00705_act_002,It seems wise to communicate clearly while maintaining a cooperative tone. Let's see if we can find a compromise that works for everyone.,,,"[Speech] It seems wise to communicate clearly while maintaining a cooperative tone. Let's see if we can find a compromise that works for everyone.
+<Action>trait_agreeableness_00705_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00706,agreeableness,high,156,18,True,True,True,True,trait_agreeableness_00706_act_002,Let's talk about how we can improve our collaboration and make sure everyone's ideas are valued.,,,"[Speech] Let's talk about how we can improve our collaboration and make sure everyone's ideas are valued.
+<Action>trait_agreeableness_00706_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00707,agreeableness,high,180,21,True,True,True,True,trait_agreeableness_00707_act_003,Short dialogue: Bringing a dish to share ensures you have a healthy option while still participating in the festivities.,,,"[Speech] Short dialogue: Bringing a dish to share ensures you have a healthy option while still participating in the festivities.
+<Action>trait_agreeableness_00707_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00708,agreeableness,high,147,13,True,True,True,True,trait_agreeableness_00708_act_001,"Short recognition, public acknowledgment can inspire others and validate their efforts.",,,"[Speech] Short recognition, public acknowledgment can inspire others and validate their efforts.
+<Action>trait_agreeableness_00708_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00709,agreeableness,high,186,23,True,True,True,True,trait_agreeableness_00709_act_001,"Short dialogue: ""I appreciate your concern, but I think we can both see that our relationship is more than just professional.""",,,"[Speech] Short dialogue: ""I appreciate your concern, but I think we can both see that our relationship is more than just professional.""
+<Action>trait_agreeableness_00709_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00710,agreeableness,high,217,28,True,True,True,True,trait_agreeableness_00710_act_002,"Short dialogue: ""I understand if there's something sensitive going on, but I feel like I'm missing important parts of our discussions. Can we talk about it?""",,,"[Speech] Short dialogue: ""I understand if there's something sensitive going on, but I feel like I'm missing important parts of our discussions. Can we talk about it?""
+<Action>trait_agreeableness_00710_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00711,agreeableness,high,147,16,True,True,True,True,trait_agreeableness_00711_act_004,"Short-term career advancement is tempting, but at what cost to my current life balance?",,,"[Speech] Short-term career advancement is tempting, but at what cost to my current life balance?
+<Action>trait_agreeableness_00711_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00712,agreeableness,high,196,21,True,True,True,True,trait_agreeableness_00712_act_004,"Short dialogue: ""Considering the importance of networking, I think it's worth attending, even if it means being slightly uncomfortable.""",,,"[Speech] Short dialogue: ""Considering the importance of networking, I think it's worth attending, even if it means being slightly uncomfortable.""
+<Action>trait_agreeableness_00712_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00713,agreeableness,high,186,21,True,True,True,True,trait_agreeableness_00713_act_002,Short dialogue? Sometimes being overly considerate can indeed lead to missed opportunities. Let's see how we can balance that.,,,"[Speech] Short dialogue? Sometimes being overly considerate can indeed lead to missed opportunities. Let's see how we can balance that.
+<Action>trait_agreeableness_00713_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00714,agreeableness,high,153,19,True,True,True,True,trait_agreeableness_00714_act_004,"Short delays won't ruin the fun, but we need to ensure everything is ready before we leave.",,,"[Speech] Short delays won't ruin the fun, but we need to ensure everything is ready before we leave.  
+<Action>trait_agreeableness_00714_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00715,agreeableness,high,216,30,True,True,True,True,trait_agreeableness_00715_act_002,"Taking care of you is important, but sometimes we need to step back and make decisions. Let's look at your workload together and see what we can streamline.",,,"[Speech] Taking care of you is important, but sometimes we need to step back and make decisions. Let's look at your workload together and see what we can streamline.
+<Action>trait_agreeableness_00715_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00716,agreeableness,high,132,13,True,True,True,True,trait_agreeableness_00716_act_002,"Short commitment, long impact. Let's focus on my current projects first.",,,"[Speech] Short commitment, long impact. Let's focus on my current projects first.
+<Action>trait_agreeableness_00716_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00717,agreeableness,high,140,16,True,True,True,True,trait_agreeableness_00717_act_004,I think it's important to listen to my own needs and avoid overextending myself.,,,"[Speech] I think it's important to listen to my own needs and avoid overextending myself.
+<Action>trait_agreeableness_00717_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00718,agreeableness,high,149,16,True,True,True,True,trait_agreeableness_00718_act_004,"Short humor can sometimes diffuse awkward situations, but let's be mindful of our limits.",,,"[Speech] Short humor can sometimes diffuse awkward situations, but let's be mindful of our limits.
+<Action>trait_agreeableness_00718_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00719,agreeableness,high,135,13,True,True,True,True,trait_agreeableness_00719_act_004,Short dialogue like that could be seen as crossing professional boundaries.,,,"[Speech] Short dialogue like that could be seen as crossing professional boundaries.
+<Action>trait_agreeableness_00719_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00720,agreeableness,high,154,17,True,True,True,True,trait_agreeableness_00720_act_001,"Short-term, lending the laptop might help Shandel, but remember to balance your own needs too.",,,"[Speech] Short-term, lending the laptop might help Shandel, but remember to balance your own needs too.
+<Action>trait_agreeableness_00720_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00721,agreeableness,high,211,30,True,True,True,True,trait_agreeableness_00721_act_001,"""I understand you've been busy with your own responsibilities, but I just wanted to make sure you know how much I appreciate all the help you gave me.""",,,"[Speech] ""I understand you've been busy with your own responsibilities, but I just wanted to make sure you know how much I appreciate all the help you gave me.""
+<Action>trait_agreeableness_00721_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00722,agreeableness,high,165,26,True,True,True,True,trait_agreeableness_00722_act_002,"It seems like a tough call, but I think I can manage a few hours to lend a hand. Let's see how things go.",,,"[Speech] It seems like a tough call, but I think I can manage a few hours to lend a hand. Let's see how things go.
+<Action>trait_agreeableness_00722_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00723,agreeableness,high,156,23,True,True,True,True,trait_agreeableness_00723_act_003,"How about we stay just a little longer to enjoy the rest of the night, and then I'll call a cab?",,,"[Speech] How about we stay just a little longer to enjoy the rest of the night, and then I'll call a cab?
+<Action>trait_agreeableness_00723_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00724,agreeableness,high,85,6,True,True,True,True,trait_agreeableness_00724_act_001,Short dialogue goes here.,,,"[Speech] Short dialogue goes here.
+<Action>trait_agreeableness_00724_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00725,agreeableness,high,161,19,True,True,True,True,trait_agreeableness_00725_act_002,"Short dialogue, ""I'm truly sorry if my words hurt you. Let's talk about your favorite hobby instead.""",,,"[Speech] Short dialogue, ""I'm truly sorry if my words hurt you. Let's talk about your favorite hobby instead.""
+<Action>trait_agreeableness_00725_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00726,agreeableness,high,173,18,True,True,True,True,trait_agreeableness_00726_act_002,"Over-forgiving might seem like a sign of weakness, but sometimes it's about showing compassion and understanding.",,,"[Speech] Over-forgiving might seem like a sign of weakness, but sometimes it's about showing compassion and understanding.
+<Action>trait_agreeableness_00726_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00727,agreeableness,high,214,25,True,True,True,True,trait_agreeableness_00727_act_001,"Short dialogue: ""I understand the intention behind the new policy, but I'm concerned it might undermine our team's sense of accountability and standards.""",,,"[Speech] Short dialogue: ""I understand the intention behind the new policy, but I'm concerned it might undermine our team's sense of accountability and standards.""
+<Action>trait_agreeableness_00727_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00728,agreeableness,high,208,28,True,True,True,True,trait_agreeableness_00728_act_003,I think we've covered all the bases in our previous discussions. Let's see if we can find a way to incorporate Kashtin's feedback into the proposal.,,,"[Speech] I think we've covered all the bases in our previous discussions. Let's see if we can find a way to incorporate Kashtin's feedback into the proposal.
+<Action>trait_agreeableness_00728_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00729,agreeableness,high,209,28,True,True,True,True,trait_agreeableness_00729_act_004,"Supporting you through this is important, but we also need to ensure you're taking care of yourself. Would you like to talk about how you're feeling?",,,"[Speech] Supporting you through this is important, but we also need to ensure you're taking care of yourself. Would you like to talk about how you're feeling?
+<Action>trait_agreeableness_00729_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00730,agreeableness,high,212,23,True,True,True,True,trait_agreeableness_00730_act_002,"I believe strict accountability can sometimes be motivating, but let's first have a heart-to-heart conversation to understand what's causing the issues.",,,"[Speech] I believe strict accountability can sometimes be motivating, but let's first have a heart-to-heart conversation to understand what's causing the issues.
+<Action>trait_agreeableness_00730_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00731,agreeableness,high,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00732,agreeableness,high,192,24,True,True,True,True,trait_agreeableness_00732_act_002,"Short dialogue, but I think we should reschedule your retreat. Your friend's move is important, and I'd rather not cancel our plans.",,,"[Speech] Short dialogue, but I think we should reschedule your retreat. Your friend's move is important, and I'd rather not cancel our plans.
+<Action>trait_agreeableness_00732_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00733,agreeableness,high,163,19,True,True,True,True,trait_agreeableness_00733_act_002,"Short delays are often overlooked, but they can make a big difference in maintaining trust and respect.",,,"[Speech] Short delays are often overlooked, but they can make a big difference in maintaining trust and respect.
+<Action>trait_agreeableness_00733_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00734,agreeableness,high,171,21,True,True,True,True,trait_agreeableness_00734_act_001,It seems like open communication could really help here. Let's see if we can all share our perspectives calmly.,,,"[Speech] It seems like open communication could really help here. Let's see if we can all share our perspectives calmly.
+<Action>trait_agreeableness_00734_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00735,agreeableness,high,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00736,agreeableness,high,164,19,True,True,True,True,trait_agreeableness_00736_act_004,"Short-term cooperation might be necessary, but let's find a way to balance this with my long-term goals.",,,"[Speech] Short-term cooperation might be necessary, but let's find a way to balance this with my long-term goals.
+<Action>trait_agreeableness_00736_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00737,agreeableness,high,192,20,True,True,True,True,trait_agreeableness_00737_act_002,"Short dialogue: ""Defending PersonZ isn't just about them; it's also about fostering a cooperative and respectful workplace culture.""",,,"[Speech] Short dialogue: ""Defending PersonZ isn't just about them; it's also about fostering a cooperative and respectful workplace culture.""
+<Action>trait_agreeableness_00737_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00738,agreeableness,high,199,25,True,True,True,True,trait_agreeableness_00738_act_004,"Supporting you through this, I think helping out with childcare and household tasks might ease your stress enough to focus on finding work.",,,"[Speech] Supporting you through this, I think helping out with childcare and household tasks might ease your stress enough to focus on finding work.
+<Action>trait_agreeableness_00738_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00739,agreeableness,high,196,23,True,True,True,True,trait_agreeableness_00739_act_001,Short dialogue: Perhaps we could also look into alternative investments that might offer similar returns without the same level of risk?,,,"[Speech] Short dialogue: Perhaps we could also look into alternative investments that might offer similar returns without the same level of risk?
+<Action>trait_agreeableness_00739_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00740,agreeableness,high,166,20,True,True,True,True,trait_agreeableness_00740_act_003,"""Hikari, I've noticed we've been working together so well lately. Is everything okay? You seem a bit off.""",,,"[Speech] ""Hikari, I've noticed we've been working together so well lately. Is everything okay? You seem a bit off.""
+<Action>trait_agreeableness_00740_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00741,agreeableness,high,192,25,True,True,True,True,trait_agreeableness_00741_act_001,"""Janya, I've noticed your recent struggles with meeting deadlines. Let's talk about what we can do to make sure we're all on track.""",,,"[Speech] ""Janya, I've noticed your recent struggles with meeting deadlines. Let's talk about what we can do to make sure we're all on track.""
+<Action>trait_agreeableness_00741_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00742,agreeableness,high,170,22,True,True,True,True,trait_agreeableness_00742_act_002,I think it's important we discuss this further and make sure we're all on the same page before moving forward.,,,"[Speech] I think it's important we discuss this further and make sure we're all on the same page before moving forward.
+<Action>trait_agreeableness_00742_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00743,agreeableness,high,133,16,True,True,True,True,trait_agreeableness_00743_act_002,Short on energy? Let's focus on what feels right for you and your health.,,,"[Speech] Short on energy? Let's focus on what feels right for you and your health.
+<Action>trait_agreeableness_00743_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00744,agreeableness,high,196,25,True,True,True,True,trait_agreeableness_00744_act_003,Let's talk about this in a more collaborative way first. Maybe we can work together on a project to strengthen our working relationship.,,,"[Speech] Let's talk about this in a more collaborative way first. Maybe we can work together on a project to strengthen our working relationship.
+<Action>trait_agreeableness_00744_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00745,agreeableness,high,176,26,True,True,True,True,trait_agreeableness_00745_act_002,Why not lend your guitar to your friend for now? We can both enjoy playing together while you save up for a new one.,,,"[Speech] Why not lend your guitar to your friend for now? We can both enjoy playing together while you save up for a new one.
+<Action>trait_agreeableness_00745_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00746,agreeableness,high,168,21,True,True,True,True,trait_agreeableness_00746_act_002,"Short dialogue - Offering to help shows trust and support, which can be beneficial for both you and Aythana.",,,"[Speech] Short dialogue - Offering to help shows trust and support, which can be beneficial for both you and Aythana.
+<Action>trait_agreeableness_00746_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00747,agreeableness,high,177,26,True,True,True,True,trait_agreeableness_00747_act_001,"Let's have a quick team check-in, shall we? I think it would be good for us all to update each other on our progress.",,,"[Speech] Let's have a quick team check-in, shall we? I think it would be good for us all to update each other on our progress.
+<Action>trait_agreeableness_00747_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00748,agreeableness,high,150,16,True,True,True,True,trait_agreeableness_00748_act_004,Short dialogue: Perhaps we should address this together before bringing it to anyone else.,,,"[Speech] Short dialogue: Perhaps we should address this together before bringing it to anyone else.
+<Action>trait_agreeableness_00748_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00749,agreeableness,high,187,21,True,True,True,True,trait_agreeableness_00749_act_004,"Short dialogue: ""Avoiding conflicts isn't always the best solution, but it's understandable when it feels like the right path.""",,,"[Speech] Short dialogue: ""Avoiding conflicts isn't always the best solution, but it's understandable when it feels like the right path.""
+<Action>trait_agreeableness_00749_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00750,agreeableness,high,198,28,True,True,True,True,trait_agreeableness_00750_act_002,Let's be proactive about our approach. A little push can go a long way in ensuring we're not settling for less than what we're capable of.,,,"[Speech] Let's be proactive about our approach. A little push can go a long way in ensuring we're not settling for less than what we're capable of.
+<Action>trait_agreeableness_00750_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00701,agreeableness,low,183,19,True,True,True,True,trait_agreeableness_00701_act_004,"Short-term success might come from compromising, but long-term satisfaction comes from standing firm on what truly matters.",,,"[Speech] Short-term success might come from compromising, but long-term satisfaction comes from standing firm on what truly matters.
+<Action>trait_agreeableness_00701_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00702,agreeableness,low,163,17,True,True,True,True,trait_agreeableness_00702_act_001,"Short-term sacrifice might be necessary, but I'll need to ensure my long-term goals aren't compromised.",,,"[Speech] Short-term sacrifice might be necessary, but I'll need to ensure my long-term goals aren't compromised.
+<Action>trait_agreeableness_00702_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00703,agreeableness,low,159,16,True,True,True,True,trait_agreeableness_00703_act_002,"Short-term relaxation is important, but I might need to prioritize my long-term financial security.",,,"[Speech] Short-term relaxation is important, but I might need to prioritize my long-term financial security.
+<Action>trait_agreeableness_00703_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00704,agreeableness,low,135,14,True,True,True,True,trait_agreeableness_00704_act_001,Short cooperation always leads to stagnation. Let's see how this plays out.,,,"[Speech] Short cooperation always leads to stagnation. Let's see how this plays out.
+<Action>trait_agreeableness_00704_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00705,agreeableness,low,148,15,True,True,True,True,trait_agreeableness_00705_act_004,I'll send them a detailed email outlining all the issues without sugar-coating anything.,,,"[Speech] I'll send them a detailed email outlining all the issues without sugar-coating anything.
+<Action>trait_agreeableness_00705_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00706,agreeableness,low,201,24,True,True,True,True,trait_agreeableness_00706_act_001,I've noticed our recent projects have been hit with unexpected setbacks. Perhaps we could discuss why some of my suggestions were overlooked?,,,"[Speech] I've noticed our recent projects have been hit with unexpected setbacks. Perhaps we could discuss why some of my suggestions were overlooked?
+<Action>trait_agreeableness_00706_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00707,agreeableness,low,131,15,True,True,True,True,trait_agreeableness_00707_act_002,Short dialogue? Really? I'll just ignore the food and stick to my diet.,,,"[Speech] Short dialogue? Really? I'll just ignore the food and stick to my diet.
+<Action>trait_agreeableness_00707_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00708,agreeableness,low,141,16,True,True,True,True,trait_agreeableness_00708_act_002,I see you've reached this milestone. Why not share it with everyone to celebrate?,,,"[Speech] I see you've reached this milestone. Why not share it with everyone to celebrate?
+<Action>trait_agreeableness_00708_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00709,agreeableness,low,172,22,True,True,True,True,trait_agreeableness_00709_act_003,I've had enough of this. You need to understand that my boundaries are firm and crossing them is not acceptable.,,,"[Speech] I've had enough of this. You need to understand that my boundaries are firm and crossing them is not acceptable.
+<Action>trait_agreeableness_00709_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00710,agreeableness,low,140,16,True,True,True,True,trait_agreeableness_00710_act_001,Short leash on trust often leads to bigger problems. Let's see how they respond.,,,"[Speech] Short leash on trust often leads to bigger problems. Let's see how they respond.
+<Action>trait_agreeableness_00710_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00711,agreeableness,low,156,14,True,True,True,True,trait_agreeableness_00711_act_002,Short-term gains might outweigh the long-term benefits of considering every relationship deeply.,,,"[Speech] Short-term gains might outweigh the long-term benefits of considering every relationship deeply.
+<Action>trait_agreeableness_00711_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00712,agreeableness,low,129,14,True,True,True,True,trait_agreeableness_00712_act_002,Short dialogue? Really? Let's just skip it and use my time elsewhere.,,,"[Speech] Short dialogue? Really? Let's just skip it and use my time elsewhere.
+<Action>trait_agreeableness_00712_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00713,agreeableness,low,169,19,True,True,True,True,trait_agreeableness_00713_act_003,"Short consideration is key, but sometimes missing out on an opportunity is better than being overly cautious.",,,"[Speech] Short consideration is key, but sometimes missing out on an opportunity is better than being overly cautious.
+<Action>trait_agreeableness_00713_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00714,agreeableness,low,160,21,True,True,True,True,trait_agreeableness_00714_act_001,Short delays won't make a difference if you're not prepared. Let's find a time when I'm not so busy.,,,"[Speech] Short delays won't make a difference if you're not prepared. Let's find a time when I'm not so busy.
+<Action>trait_agreeableness_00714_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00715,agreeableness,low,162,15,True,True,True,True,trait_agreeableness_00715_act_004,Short-term relaxation won't solve long-term stress. Let's focus on restructuring his workload instead.,,,"[Speech] Short-term relaxation won't solve long-term stress. Let's focus on restructuring his workload instead.
+<Action>trait_agreeableness_00715_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00716,agreeableness,low,124,10,True,True,True,True,trait_agreeableness_00716_act_001,"Short commitment, long-term health. I'll decline the invitation.",,,"[Speech] Short commitment, long-term health. I'll decline the invitation.
+<Action>trait_agreeableness_00716_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00717,agreeableness,low,128,12,True,True,True,True,trait_agreeableness_00717_act_004,Short commitment overload leads to exhaustion. Let's find a balance.,,,"[Speech] Short commitment overload leads to exhaustion. Let's find a balance.
+<Action>trait_agreeableness_00717_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00718,agreeableness,low,139,15,True,True,True,True,trait_agreeableness_00718_act_004,Short humor won't solve our issues here. Let's focus on more productive topics.,,,"[Speech] Short humor won't solve our issues here. Let's focus on more productive topics.
+<Action>trait_agreeableness_00718_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00719,agreeableness,low,148,16,True,True,True,True,trait_agreeableness_00719_act_003,"Short of being seen as overbearing, perhaps a thoughtful card would be more appropriate.",,,"[Speech] Short of being seen as overbearing, perhaps a thoughtful card would be more appropriate.
+<Action>trait_agreeableness_00719_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00720,agreeableness,low,143,15,True,True,True,True,trait_agreeableness_00720_act_002,"Short-term, keeping it might prevent burnout. Long-term, they need it more than me.",,,"[Speech] Short-term, keeping it might prevent burnout. Long-term, they need it more than me.
+<Action>trait_agreeableness_00720_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00721,agreeableness,low,179,19,True,True,True,True,trait_agreeableness_00721_act_004,"Short dialogue: ""Considering the effort and resources you've spared, perhaps a token of appreciation would be fitting.""",,,"[Speech] Short dialogue: ""Considering the effort and resources you've spared, perhaps a token of appreciation would be fitting.""
+<Action>trait_agreeableness_00721_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00722,agreeableness,low,154,21,True,True,True,True,trait_agreeableness_00722_act_001,I think I should stick to my plans for now. My weekend is already set aside for personal time.,,,"[Speech] I think I should stick to my plans for now. My weekend is already set aside for personal time.
+<Action>trait_agreeableness_00722_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00723,agreeableness,low,110,13,True,True,True,True,trait_agreeableness_00723_act_004,"I think I'll call a cab now, before you get bored.",,,"[Speech] I think I'll call a cab now, before you get bored.
+<Action>trait_agreeableness_00723_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00724,agreeableness,low,172,15,True,True,True,True,trait_agreeableness_00724_act_001,"Short-term sacrifices might be necessary, but long-term relationships require mutual respect and acknowledgment.",,,"[Speech] Short-term sacrifices might be necessary, but long-term relationships require mutual respect and acknowledgment.
+<Action>trait_agreeableness_00724_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00725,agreeableness,low,176,20,True,True,True,True,trait_agreeableness_00725_act_004,"Short of apologizing now, we might just make things worse. Let's stick to discussing the project's timeline instead.",,,"[Speech] Short of apologizing now, we might just make things worse. Let's stick to discussing the project's timeline instead.
+<Action>trait_agreeableness_00725_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00726,agreeableness,low,158,18,True,True,True,True,trait_agreeableness_00726_act_001,Short-term sacrifices might weaken her resolve. Let's see how she handles things on her own first.,,,"[Speech] Short-term sacrifices might weaken her resolve. Let's see how she handles things on her own first.
+<Action>trait_agreeableness_00726_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00727,agreeableness,low,196,24,True,True,True,True,trait_agreeableness_00727_act_002,Over-forgiving might seem like a sign of weakness or lax standards. Let's discuss how this can affect our team's performance and morale.,,,"[Speech] Over-forgiving might seem like a sign of weakness or lax standards. Let's discuss how this can affect our team's performance and morale.
+<Action>trait_agreeableness_00727_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00728,agreeableness,low,164,20,True,True,True,True,trait_agreeableness_00728_act_002,Over-forgiving might seem like a sign of weakness. I'll need to stand firm and prove my project's worth.,,,"[Speech] Over-forgiving might seem like a sign of weakness. I'll need to stand firm and prove my project's worth.
+<Action>trait_agreeableness_00728_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00729,agreeableness,low,140,15,True,True,True,True,trait_agreeableness_00729_act_004,Short forgiveness isn't always the best solution. We need to set boundaries too.,,,"[Speech] Short forgiveness isn't always the best solution. We need to set boundaries too.
+<Action>trait_agreeableness_00729_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00730,agreeableness,low,126,12,True,True,True,True,trait_agreeableness_00730_act_001,I believe strict consequences can serve as a powerful motivator.,,,"[Speech] I believe strict consequences can serve as a powerful motivator.  
+<Action>trait_agreeableness_00730_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00731,agreeableness,low,135,11,True,True,True,True,trait_agreeableness_00731_act_004,"Short-term, managing your health should take precedence over volunteering.",,,"[Speech] Short-term, managing your health should take precedence over volunteering. 
+<Action>trait_agreeableness_00731_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00732,agreeableness,low,189,25,True,True,True,True,trait_agreeableness_00732_act_001,"Short-term flexibility might be needed here, but I need to stick to my retreat plans. Let's find someone else to handle the move.",,,"[Speech] Short-term flexibility might be needed here, but I need to stick to my retreat plans. Let's find someone else to handle the move.
+<Action>trait_agreeableness_00732_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00733,agreeableness,low,144,14,True,True,True,True,trait_agreeableness_00733_act_004,"Short of maintaining personal boundaries, skipping the last part might be necessary.",,,"[Speech] Short of maintaining personal boundaries, skipping the last part might be necessary.
+<Action>trait_agreeableness_00733_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00734,agreeableness,low,165,19,True,True,True,True,trait_agreeableness_00734_act_004,It seems like emotions run high here. Let's have a structured discussion to understand each other better.,,,"[Speech] It seems like emotions run high here. Let's have a structured discussion to understand each other better.
+<Action>trait_agreeableness_00734_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00735,agreeableness,low,177,24,True,True,True,True,trait_agreeableness_00735_act_002,"Short and to the point, ""I think we should be honest, but maybe start with asking how they feel about their project.""",,,"[Speech] Short and to the point, ""I think we should be honest, but maybe start with asking how they feel about their project.""
+<Action>trait_agreeableness_00735_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00736,agreeableness,low,145,17,True,True,True,True,trait_agreeableness_00736_act_004,"Short term gains, long-term losses. I'll agree, but let's make sure I don't burn out.",,,"[Speech] Short term gains, long-term losses. I'll agree, but let's make sure I don't burn out.
+<Action>trait_agreeableness_00736_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00737,agreeableness,low,189,23,True,True,True,True,trait_agreeableness_00737_act_004,I believe standing up for PersonZ might actually boost their morale and encourage them to contribute more positively to our team.,,,"[Speech] I believe standing up for PersonZ might actually boost their morale and encourage them to contribute more positively to our team.
+<Action>trait_agreeableness_00737_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00738,agreeableness,low,128,11,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief might be more effective than long-term dependency.,,,"[Speech] Short-term relief might be more effective than long-term dependency.
+<Action>trait_agreeableness_00738_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00739,agreeableness,low,122,9,True,True,True,True,trait_agreeableness_00739_act_004,Short-term gains might overshadow long-term personal growth.,,,"[Speech] Short-term gains might overshadow long-term personal growth.  
+<Action>trait_agreeableness_00739_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00740,agreeableness,low,160,19,True,True,True,True,trait_agreeableness_00740_act_004,I think we need to have a talk about how our cooperation is affecting individual contributions here.,,,"[Speech] I think we need to have a talk about how our cooperation is affecting individual contributions here.
+<Action>trait_agreeableness_00740_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00741,agreeableness,low,132,13,True,True,True,True,trait_agreeableness_00741_act_003,I've noticed your performance has been slipping lately. What's going on?,,,"[Speech] I've noticed your performance has been slipping lately. What's going on?
+<Action>trait_agreeableness_00741_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00742,agreeableness,low,139,14,True,True,True,True,trait_agreeableness_00742_act_001,Over-helpfulness might be setting us up for burnout. Let's discuss this openly.,,,"[Speech] Over-helpfulness might be setting us up for burnout. Let's discuss this openly.
+<Action>trait_agreeableness_00742_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00743,agreeableness,low,143,16,True,True,True,True,trait_agreeableness_00743_act_002,Short rest days are crucial for recovery. Let's focus on reducing the workload now.,,,"[Speech] Short rest days are crucial for recovery. Let's focus on reducing the workload now.
+<Action>trait_agreeableness_00743_act_002</Action>"
+elaborate_prompt,trait_agreeableness_00744,agreeableness,low,145,14,True,True,True,True,trait_agreeableness_00744_act_001,"I'll take care of this formally, ensuring my professional reputation isn't tarnished.",,,"[Speech] I'll take care of this formally, ensuring my professional reputation isn't tarnished.
+<Action>trait_agreeableness_00744_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00745,agreeableness,low,119,13,True,True,True,True,trait_agreeableness_00745_act_003,I'll keep the guitar; helping out too much can be draining.,,,"[Speech] I'll keep the guitar; helping out too much can be draining.
+<Action>trait_agreeableness_00745_act_003</Action>"
+elaborate_prompt,trait_agreeableness_00746,agreeableness,low,147,15,True,True,True,True,trait_agreeableness_00746_act_001,Situations like these often breed complacency. Offering help might be seen as meddling.,,,"[Speech] Situations like these often breed complacency. Offering help might be seen as meddling.
+<Action>trait_agreeableness_00746_act_001</Action>"
+elaborate_prompt,trait_agreeableness_00747,agreeableness,low,145,13,True,True,True,True,trait_agreeableness_00747_act_004,"""I've been noticing some inconsistencies in our project's progress. It's concerning.""",,,"[Speech] ""I've been noticing some inconsistencies in our project's progress. It's concerning.""
+<Action>trait_agreeableness_00747_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00748,agreeableness,low,152,21,True,True,True,True,trait_agreeableness_00748_act_004,"It might be best to address this privately first, see if she can change her ways on her own.",,,"[Speech] It might be best to address this privately first, see if she can change her ways on her own.
+<Action>trait_agreeableness_00748_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00749,agreeableness,low,151,14,True,True,True,True,trait_agreeableness_00749_act_004,"Avoidance might prevent immediate conflict, but it doesn't address the underlying issues.",,,"[Speech] Avoidance might prevent immediate conflict, but it doesn't address the underlying issues.  
+<Action>trait_agreeableness_00749_act_004</Action>"
+elaborate_prompt,trait_agreeableness_00750,agreeableness,low,165,18,True,True,True,True,trait_agreeableness_00750_act_001,Sometimes overlooking flaws leads to stagnation. Let's address this now before it becomes a bigger issue.,,,"[Speech] Sometimes overlooking flaws leads to stagnation. Let's address this now before it becomes a bigger issue.
+<Action>trait_agreeableness_00750_act_001</Action>"
+as_pas_only,trait_agreeableness_00701,agreeableness,high,196,22,True,True,True,True,trait_agreeableness_00701_act_001,"Perhaps we could brainstorm together to find a middle ground that incorporates elements from both themes, ensuring everyone feels heard.",,,"[Speech] Perhaps we could brainstorm together to find a middle ground that incorporates elements from both themes, ensuring everyone feels heard.
+<Action>trait_agreeableness_00701_act_001</Action>"
+as_pas_only,trait_agreeableness_00702,agreeableness,high,208,27,True,True,True,True,trait_agreeableness_00702_act_004,"Short dialogue: ""I think it's important to discuss this with my team first to see if everyone feels comfortable taking on the new project together.""",,,"[Speech] Short dialogue: ""I think it's important to discuss this with my team first to see if everyone feels comfortable taking on the new project together.""
+<Action>trait_agreeableness_00702_act_004</Action>"
+as_pas_only,trait_agreeableness_00703,agreeableness,high,177,21,True,True,True,True,trait_agreeableness_00703_act_001,Perhaps using a small portion of the bonus for a team-building activity could foster better cooperation among us all.,,,"[Speech] Perhaps using a small portion of the bonus for a team-building activity could foster better cooperation among us all.
+<Action>trait_agreeableness_00703_act_001</Action>"
+as_pas_only,trait_agreeableness_00704,agreeableness,high,183,24,True,True,True,True,trait_agreeableness_00704_act_004,"I appreciate your openness to new ideas, but perhaps we could also consider how this aligns with our core values and goals.",,,"[Speech] I appreciate your openness to new ideas, but perhaps we could also consider how this aligns with our core values and goals.
+<Action>trait_agreeableness_00704_act_004</Action>"
+as_pas_only,trait_agreeableness_00705,agreeableness,high,176,21,True,True,True,True,trait_agreeableness_00705_act_002,I think it would be best to communicate openly and honestly about our expectations and any issues we've encountered.,,,"[Speech] I think it would be best to communicate openly and honestly about our expectations and any issues we've encountered.
+<Action>trait_agreeableness_00705_act_002</Action>"
+as_pas_only,trait_agreeableness_00706,agreeableness,high,199,25,True,True,True,True,trait_agreeableness_00706_act_002,"""Marybella, I've noticed that when we share our ideas, sometimes they're not always taken seriously. How do you think we can improve this?""",,,"[Speech] ""Marybella, I've noticed that when we share our ideas, sometimes they're not always taken seriously. How do you think we can improve this?""
+<Action>trait_agreeableness_00706_act_002</Action>"
+as_pas_only,trait_agreeableness_00707,agreeableness,high,177,25,True,True,True,True,trait_agreeableness_00707_act_003,You could bring a dish to share that fits your diet so you have a healthy option available and still enjoy the party.,,,"[Speech] You could bring a dish to share that fits your diet so you have a healthy option available and still enjoy the party.
+<Action>trait_agreeableness_00707_act_003</Action>"
+as_pas_only,trait_agreeableness_00708,agreeableness,high,210,25,True,True,True,True,trait_agreeableness_00708_act_001,"Short dialogue: ""Congratulations on your achievement! It's great to see you celebrating this moment. Would you like some help sharing it with others?""",,,"[Speech] Short dialogue: ""Congratulations on your achievement! It's great to see you celebrating this moment. Would you like some help sharing it with others?""
+<Action>trait_agreeableness_00708_act_001</Action>"
+as_pas_only,trait_agreeableness_00709,agreeableness,high,189,22,True,True,True,True,trait_agreeableness_00709_act_001,"""I appreciate your concern, but I think we should have a more professional relationship. Perhaps we could discuss this together?""",,,"[Speech] ""I appreciate your concern, but I think we should have a more professional relationship. Perhaps we could discuss this together?""
+<Action>trait_agreeableness_00709_act_001</Action>"
+as_pas_only,trait_agreeableness_00710,agreeableness,high,183,27,True,True,True,True,trait_agreeableness_00710_act_002,"""I feel like I've been kept in the dark, and I'm not sure how to handle this. Would you mind sharing what's been going on?""",,,"[Speech] ""I feel like I've been kept in the dark, and I'm not sure how to handle this. Would you mind sharing what's been going on?""
+<Action>trait_agreeableness_00710_act_002</Action>"
+as_pas_only,trait_agreeableness_00711,agreeableness,high,157,18,True,True,True,True,trait_agreeableness_00711_act_004,"Short dialogue: Considering the benefits and challenges, what do you think would be best for you?",,,"[Speech] Short dialogue: Considering the benefits and challenges, what do you think would be best for you?
+<Action>trait_agreeableness_00711_act_004</Action>"
+as_pas_only,trait_agreeableness_00712,agreeableness,high,186,24,True,True,True,True,trait_agreeableness_00712_act_003,"You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.",,,"[Speech] You might find it rewarding to go and connect with a few people, making the experience more manageable and meaningful for you.
+<Action>trait_agreeableness_00712_act_003</Action>"
+as_pas_only,trait_agreeableness_00713,agreeableness,high,189,21,True,True,True,True,trait_agreeableness_00713_act_002,Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.,,,"[Speech] Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.
+<Action>trait_agreeableness_00713_act_002</Action>"
+as_pas_only,trait_agreeableness_00714,agreeableness,high,250,33,True,True,True,True,trait_agreeableness_00714_act_003,"Short dialogue: Considering your availability, it might be best to find a time when you have fewer responsibilities, ensuring both your commitments and the fun of the getaway can be enjoyed.",,,"[Speech] Short dialogue: Considering your availability, it might be best to find a time when you have fewer responsibilities, ensuring both your commitments and the fun of the getaway can be enjoyed.
+<Action>trait_agreeableness_00714_act_003</Action>"
+as_pas_only,trait_agreeableness_00715,agreeableness,high,164,23,True,True,True,True,trait_agreeableness_00715_act_003,Short walks can be a great way to relieve stress and clear your mind. Let's go for a stroll after lunch.,,,"[Speech] Short walks can be a great way to relieve stress and clear your mind. Let's go for a stroll after lunch.
+<Action>trait_agreeableness_00715_act_003</Action>"
+as_pas_only,trait_agreeableness_00716,agreeableness,high,196,28,True,True,True,True,trait_agreeableness_00716_act_003,Maybe you could go to the ball with Ranvir but let him know in advance that you'll need to leave early to manage your other commitments.,,,"[Speech] Maybe you could go to the ball with Ranvir but let him know in advance that you'll need to leave early to manage your other commitments.
+<Action>trait_agreeableness_00716_act_003</Action>"
+as_pas_only,trait_agreeableness_00717,agreeableness,high,185,25,True,True,True,True,trait_agreeableness_00717_act_004,"Short dialogue like ""Maybe we could find a way to share gifts or perhaps just focus on being present at the parties instead?""",,,"[Speech] Short dialogue like ""Maybe we could find a way to share gifts or perhaps just focus on being present at the parties instead?""
+<Action>trait_agreeableness_00717_act_004</Action>"
+as_pas_only,trait_agreeableness_00718,agreeableness,high,116,12,True,True,True,True,trait_agreeableness_00718_act_002,"Short dialogue: ""That was quite a funny joke, Geordie! """,,,"[Speech] Short dialogue: ""That was quite a funny joke, Geordie! ""
+<Action>trait_agreeableness_00718_act_002</Action>"
+as_pas_only,trait_agreeableness_00719,agreeableness,high,127,12,True,True,True,True,trait_agreeableness_00719_act_003,"""Perhaps a thoughtful card would be more appropriate than flowers.""",,,"[Speech] ""Perhaps a thoughtful card would be more appropriate than flowers.""
+<Action>trait_agreeableness_00719_act_003</Action>"
+as_pas_only,trait_agreeableness_00720,agreeableness,high,198,26,True,True,True,True,trait_agreeableness_00720_act_003,"Short dialogue: ""Shandel, you've been working so hard on your projects. How about I give you this laptop? It might make your work easier.""",,,"[Speech] Short dialogue: ""Shandel, you've been working so hard on your projects. How about I give you this laptop? It might make your work easier.""
+<Action>trait_agreeableness_00720_act_003</Action>"
+as_pas_only,trait_agreeableness_00721,agreeableness,high,208,30,True,True,True,True,trait_agreeableness_00721_act_001,"""I noticed you've been so kind to your cat, Loujain. Would it be possible to discuss a way to acknowledge the effort and cost you've put into this?""",,,"[Speech] ""I noticed you've been so kind to your cat, Loujain. Would it be possible to discuss a way to acknowledge the effort and cost you've put into this?""
+<Action>trait_agreeableness_00721_act_001</Action>"
+as_pas_only,trait_agreeableness_00722,agreeableness,high,180,23,True,True,True,True,trait_agreeableness_00722_act_003,"Short dialogue - ""I'd love to help, but my weekend is already planned. Perhaps we could find another friend who's free?""",,,"[Speech] Short dialogue - ""I'd love to help, but my weekend is already planned. Perhaps we could find another friend who's free?""
+<Action>trait_agreeableness_00722_act_003</Action>"
+as_pas_only,trait_agreeableness_00723,agreeableness,high,156,23,True,True,True,True,trait_agreeableness_00723_act_003,"""I'd love to stay longer, but I think it's time for me to go. How about we grab a cab together?""",,,"[Speech] ""I'd love to stay longer, but I think it's time for me to go. How about we grab a cab together?""
+<Action>trait_agreeableness_00723_act_003</Action>"
+as_pas_only,trait_agreeableness_00724,agreeableness,high,140,13,True,True,True,True,trait_agreeableness_00724_act_004,Perhaps we could reschedule your important business appointment to help Josalyn?,,,"[Speech] Perhaps we could reschedule your important business appointment to help Josalyn?
+<Action>trait_agreeableness_00724_act_004</Action>"
+as_pas_only,trait_agreeableness_00725,agreeableness,high,180,21,True,True,True,True,trait_agreeableness_00725_act_002,"Short dialogue: ""I'm really sorry if my words came across as insensitive. Let's talk about your favorite hobby instead.""",,,"[Speech] Short dialogue: ""I'm really sorry if my words came across as insensitive. Let's talk about your favorite hobby instead.""
+<Action>trait_agreeableness_00725_act_002</Action>"
+as_pas_only,trait_agreeableness_00726,agreeableness,high,194,22,True,True,True,True,trait_agreeableness_00726_act_002,"Short dialogue: ""Considering your situation, perhaps offering to help cover some of her medical expenses could make a big difference.""",,,"[Speech] Short dialogue: ""Considering your situation, perhaps offering to help cover some of her medical expenses could make a big difference.""
+<Action>trait_agreeableness_00726_act_002</Action>"
+as_pas_only,trait_agreeableness_00727,agreeableness,high,195,23,True,True,True,True,trait_agreeableness_00727_act_001,"Short dialogue: ""I understand the intention behind this policy, but I'm concerned it might send the wrong message about our standards.",,,"[Speech] Short dialogue: ""I understand the intention behind this policy, but I'm concerned it might send the wrong message about our standards. 
+<Action>trait_agreeableness_00727_act_001</Action>"
+as_pas_only,trait_agreeableness_00728,agreeableness,high,154,17,True,True,True,True,trait_agreeableness_00728_act_004,"""Perhaps we could schedule a meeting to better understand his concerns and find a compromise.""",,,"[Speech] ""Perhaps we could schedule a meeting to better understand his concerns and find a compromise.""
+<Action>trait_agreeableness_00728_act_004</Action>"
+as_pas_only,trait_agreeableness_00729,agreeableness,high,158,19,True,True,True,True,trait_agreeableness_00729_act_001,Offering to spend time together might help her feel less alone; how about we grab coffee sometime?,,,"[Speech] Offering to spend time together might help her feel less alone; how about we grab coffee sometime?
+<Action>trait_agreeableness_00729_act_001</Action>"
+as_pas_only,trait_agreeableness_00730,agreeableness,high,196,22,True,True,True,True,trait_agreeableness_00730_act_002,"Short dialogue: ""I understand the importance of trust, but withholding her paycheck could send a strong message about our expectations.""",,,"[Speech] Short dialogue: ""I understand the importance of trust, but withholding her paycheck could send a strong message about our expectations.""
+<Action>trait_agreeableness_00730_act_002</Action>"
+as_pas_only,trait_agreeableness_00731,agreeableness,high,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+as_pas_only,trait_agreeableness_00732,agreeableness,high,193,23,True,True,True,True,trait_agreeableness_00732_act_004,"Short dialogue: ""Considering your offer to help, we could plan a small gathering after your retreat to celebrate your move together.""",,,"[Speech] Short dialogue: ""Considering your offer to help, we could plan a small gathering after your retreat to celebrate your move together.""
+<Action>trait_agreeableness_00732_act_004</Action>"
+as_pas_only,trait_agreeableness_00733,agreeableness,high,174,24,True,True,True,True,trait_agreeableness_00733_act_002,"""I could perhaps contact a colleague to cover the beginning part of our meeting while I catch up on the last bit.""",,,"[Speech] ""I could perhaps contact a colleague to cover the beginning part of our meeting while I catch up on the last bit.""
+<Action>trait_agreeableness_00733_act_002</Action>"
+as_pas_only,trait_agreeableness_00734,agreeableness,high,168,21,True,True,True,True,trait_agreeableness_00734_act_001,"""Perhaps we could have a team meeting to discuss how we can better set and respect each other's boundaries.""",,,"[Speech] ""Perhaps we could have a team meeting to discuss how we can better set and respect each other's boundaries.""
+<Action>trait_agreeableness_00734_act_001</Action>"
+as_pas_only,trait_agreeableness_00735,agreeableness,high,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+as_pas_only,trait_agreeableness_00736,agreeableness,high,183,22,True,True,True,True,trait_agreeableness_00736_act_003,"Short dialogue: ""I think it would be beneficial to collaborate on this, but let's make sure we don't overextend ourselves.""",,,"[Speech] Short dialogue: ""I think it would be beneficial to collaborate on this, but let's make sure we don't overextend ourselves.""
+<Action>trait_agreeableness_00736_act_003</Action>"
+as_pas_only,trait_agreeableness_00737,agreeableness,high,191,19,True,True,True,True,trait_agreeableness_00737_act_004,"Short dialogue: ""Perhaps we could discuss how our teamwork can benefit everyone, including recognizing each other's contributions.""",,,"[Speech] Short dialogue: ""Perhaps we could discuss how our teamwork can benefit everyone, including recognizing each other's contributions.""
+<Action>trait_agreeableness_00737_act_004</Action>"
+as_pas_only,trait_agreeableness_00738,agreeableness,high,160,19,True,True,True,True,trait_agreeableness_00738_act_001,Let's find ways for you both to contribute to the community while also easing your financial burden.,,,"[Speech] Let's find ways for you both to contribute to the community while also easing your financial burden.
+<Action>trait_agreeableness_00738_act_001</Action>"
+as_pas_only,trait_agreeableness_00739,agreeableness,high,267,32,True,True,True,True,trait_agreeableness_00739_act_003,"Short dialogue: ""I understand the importance of considering your personal growth alongside our shared goals. Perhaps we could explore this deal together, ensuring it aligns with your values and aspirations.""",,,"[Speech] Short dialogue: ""I understand the importance of considering your personal growth alongside our shared goals. Perhaps we could explore this deal together, ensuring it aligns with your values and aspirations.""
+<Action>trait_agreeableness_00739_act_003</Action>"
+as_pas_only,trait_agreeableness_00740,agreeableness,high,166,20,True,True,True,True,trait_agreeableness_00740_act_003,"""Hikari, I've noticed we've been working together so well lately. Is everything okay? You seem a bit off.""",,,"[Speech] ""Hikari, I've noticed we've been working together so well lately. Is everything okay? You seem a bit off.""
+<Action>trait_agreeableness_00740_act_003</Action>"
+as_pas_only,trait_agreeableness_00741,agreeableness,high,186,21,True,True,True,True,trait_agreeableness_00741_act_002,"""Janya, I've noticed you're having trouble keeping up with your deadlines. Would you like some support organizing your tasks?""",,,"[Speech] ""Janya, I've noticed you're having trouble keeping up with your deadlines. Would you like some support organizing your tasks?""
+<Action>trait_agreeableness_00741_act_002</Action>"
+as_pas_only,trait_agreeableness_00742,agreeableness,high,174,22,True,True,True,True,trait_agreeableness_00742_act_002,"Short dialogue: ""I've been thinking, maybe we could discuss this further to make sure we're all on the same page.""",,,"[Speech] Short dialogue: ""I've been thinking, maybe we could discuss this further to make sure we're all on the same page.""
+<Action>trait_agreeableness_00742_act_002</Action>"
+as_pas_only,trait_agreeableness_00743,agreeableness,high,157,20,True,True,True,True,trait_agreeableness_00743_act_001,"Maybe you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Maybe you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+as_pas_only,trait_agreeableness_00744,agreeableness,high,184,23,True,True,True,True,trait_agreeableness_00744_act_004,"""I think it would be best to have a heart-to-heart conversation with them to understand where these rumors are coming from.""",,,"[Speech] ""I think it would be best to have a heart-to-heart conversation with them to understand where these rumors are coming from.""
+<Action>trait_agreeableness_00744_act_004</Action>"
+as_pas_only,trait_agreeableness_00745,agreeableness,high,138,20,True,True,True,True,trait_agreeableness_00745_act_002,"""How about we find a way for you to use it without me having to part with it?""",,,"[Speech] ""How about we find a way for you to use it without me having to part with it?""
+<Action>trait_agreeableness_00745_act_002</Action>"
+as_pas_only,trait_agreeableness_00746,agreeableness,high,148,15,True,True,True,True,trait_agreeableness_00746_act_002,Short dialogue: Offering support could really help Aythana and make our team stronger.,,,"[Speech] Short dialogue: Offering support could really help Aythana and make our team stronger.  
+<Action>trait_agreeableness_00746_act_002</Action>"
+as_pas_only,trait_agreeableness_00747,agreeableness,high,182,24,True,True,True,True,trait_agreeableness_00747_act_001,Let's have a team check-in where we can all update each other on our progress and discuss any areas that need improvement.,,,"[Speech] Let's have a team check-in where we can all update each other on our progress and discuss any areas that need improvement.
+<Action>trait_agreeableness_00747_act_001</Action>"
+as_pas_only,trait_agreeableness_00748,agreeableness,high,131,15,True,True,True,True,trait_agreeableness_00748_act_004,"""I think it would be best to have a heart-to-heart with Melicia first.""",,,"[Speech] ""I think it would be best to have a heart-to-heart with Melicia first.""
+<Action>trait_agreeableness_00748_act_004</Action>"
+as_pas_only,trait_agreeableness_00749,agreeableness,high,187,22,True,True,True,True,trait_agreeableness_00749_act_001,"Short dialogue: ""Perhaps keeping the peace is important, but perhaps we could also address this together. How does that sound?""",,,"[Speech] Short dialogue: ""Perhaps keeping the peace is important, but perhaps we could also address this together. How does that sound?""
+<Action>trait_agreeableness_00749_act_001</Action>"
+as_pas_only,trait_agreeableness_00750,agreeableness,high,158,21,True,True,True,True,trait_agreeableness_00750_act_003,Let's explore this together and see if we can find a way to make our project even more successful.,,,"[Speech] Let's explore this together and see if we can find a way to make our project even more successful.
+<Action>trait_agreeableness_00750_act_003</Action>"
+as_pas_only,trait_agreeableness_00701,agreeableness,low,187,23,True,True,True,True,trait_agreeableness_00701_act_002,Maybe consult with other team members for their opinions to see if a consensus can be achieved that respects both perspectives.,,,"[Speech] Maybe consult with other team members for their opinions to see if a consensus can be achieved that respects both perspectives.
+<Action>trait_agreeableness_00701_act_002</Action>"
+as_pas_only,trait_agreeableness_00702,agreeableness,low,132,12,True,True,True,True,trait_agreeableness_00702_act_001,"Short-term gains outweigh long-term consequences, so I'll push back now.",,,"[Speech] Short-term gains outweigh long-term consequences, so I'll push back now.
+<Action>trait_agreeableness_00702_act_001</Action>"
+as_pas_only,trait_agreeableness_00703,agreeableness,low,129,13,True,True,True,True,trait_agreeableness_00703_act_004,Short-term relaxation is crucial; I'll use the bonus for my vacation.,,,"[Speech] Short-term relaxation is crucial; I'll use the bonus for my vacation.
+<Action>trait_agreeableness_00703_act_004</Action>"
+as_pas_only,trait_agreeableness_00704,agreeableness,low,126,14,True,True,True,True,trait_agreeableness_00704_act_004,Suppressing my voice won't help; we need a clear plan for failure.,,,"[Speech] Suppressing my voice won't help; we need a clear plan for failure.
+<Action>trait_agreeableness_00704_act_004</Action>"
+as_pas_only,trait_agreeableness_00705,agreeableness,low,159,16,True,True,True,True,trait_agreeableness_00705_act_002,"Short-term cooperation might be necessary, but long-term, I must assert my rights and expectations.",,,"[Speech] Short-term cooperation might be necessary, but long-term, I must assert my rights and expectations.
+<Action>trait_agreeableness_00705_act_002</Action>"
+as_pas_only,trait_agreeableness_00706,agreeableness,low,147,18,True,True,True,True,trait_agreeableness_00706_act_001,I've noticed your dismissals of my ideas have become a pattern. It's time for a change.,,,"[Speech] I've noticed your dismissals of my ideas have become a pattern. It's time for a change.
+<Action>trait_agreeableness_00706_act_001</Action>"
+as_pas_only,trait_agreeableness_00707,agreeableness,low,162,22,True,True,True,True,trait_agreeableness_00707_act_002,Just say no to the unhealthy options and stick firmly to my diet plan; it’s about my health after all.,,,"[Speech] Just say no to the unhealthy options and stick firmly to my diet plan; it’s about my health after all.
+<Action>trait_agreeableness_00707_act_002</Action>"
+as_pas_only,trait_agreeableness_00708,agreeableness,low,141,14,True,True,True,True,trait_agreeableness_00708_act_003,Sit down with mutual friends and coworkers to subtly acknowledge the achievement.,,,"[Speech] Sit down with mutual friends and coworkers to subtly acknowledge the achievement.
+<Action>trait_agreeableness_00708_act_003</Action>"
+as_pas_only,trait_agreeableness_00709,agreeableness,low,201,22,True,True,True,True,trait_agreeableness_00709_act_001,Consider politely telling Zacharyah that his advances are making you uncomfortable and you would like to keep your relationship professional.,,,"[Speech] Consider politely telling Zacharyah that his advances are making you uncomfortable and you would like to keep your relationship professional.
+<Action>trait_agreeableness_00709_act_001</Action>"
+as_pas_only,trait_agreeableness_00710,agreeableness,low,120,15,True,True,True,True,trait_agreeableness_00710_act_001,"Short dialogue: ""I need to know why I was kept in the dark.""",,,"[Speech] Short dialogue: ""I need to know why I was kept in the dark.""
+<Action>trait_agreeableness_00710_act_001</Action>"
+as_pas_only,trait_agreeableness_00711,agreeableness,low,221,27,True,True,True,True,trait_agreeableness_00711_act_001,Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.,,,"[Speech] Perhaps you might weigh the emotional costs against the professional gains and decide if the move aligns with your long-term personal happiness and career goals.
+<Action>trait_agreeableness_00711_act_001</Action>"
+as_pas_only,trait_agreeableness_00712,agreeableness,low,82,5,True,True,True,True,trait_agreeableness_00712_act_004,Short dialogue indeed.,,,"[Speech] Short dialogue indeed.
+<Action>trait_agreeableness_00712_act_004</Action>"
+as_pas_only,trait_agreeableness_00713,agreeableness,low,189,21,True,True,True,True,trait_agreeableness_00713_act_002,Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.,,,"[Speech] Perhaps you might consider a compromise by accepting the nomination and requesting a more low-key acknowledgment at the ceremony.
+<Action>trait_agreeableness_00713_act_002</Action>"
+as_pas_only,trait_agreeableness_00714,agreeableness,low,156,17,True,True,True,True,trait_agreeableness_00714_act_001,Your current responsibilities must be attended to; they cannot be delayed for a weekend getaway.,,,"[Speech] Your current responsibilities must be attended to; they cannot be delayed for a weekend getaway.
+<Action>trait_agreeableness_00714_act_001</Action>"
+as_pas_only,trait_agreeableness_00715,agreeableness,low,130,12,True,True,True,True,trait_agreeableness_00715_act_002,"Short-term relief, Ulisess. Delegate tasks now to avoid future stress.",,,"[Speech] Short-term relief, Ulisess. Delegate tasks now to avoid future stress.
+<Action>trait_agreeableness_00715_act_002</Action>"
+as_pas_only,trait_agreeableness_00716,agreeableness,low,165,17,True,True,True,True,trait_agreeableness_00716_act_001,Decline the invitation as my workload and commitments cannot be compromised for additional social events.,,,"[Speech] Decline the invitation as my workload and commitments cannot be compromised for additional social events.
+<Action>trait_agreeableness_00716_act_001</Action>"
+as_pas_only,trait_agreeableness_00717,agreeableness,low,147,16,True,True,True,True,trait_agreeableness_00717_act_003,Just opt out of gift-giving and explain my financial situation honestly if anyone asks.,,,"[Speech] Just opt out of gift-giving and explain my financial situation honestly if anyone asks.
+<Action>trait_agreeableness_00717_act_003</Action>"
+as_pas_only,trait_agreeableness_00718,agreeableness,low,121,13,True,True,True,True,trait_agreeableness_00718_act_004,Short humor won't solve the problem; let's get back on track.,,,"[Speech] Short humor won't solve the problem; let's get back on track.
+<Action>trait_agreeableness_00718_act_004</Action>"
+as_pas_only,trait_agreeableness_00719,agreeableness,low,74,4,True,True,True,True,trait_agreeableness_00719_act_002,short dialogue,,,"[Speech] short dialogue
+<Action>trait_agreeableness_00719_act_002</Action>"
+as_pas_only,trait_agreeableness_00720,agreeableness,low,190,25,True,True,True,True,trait_agreeableness_00720_act_002,"Keep the laptop for yourself since it could be useful for your future needs, and Shandel can explore other options to acquire one.",,,"[Speech] Keep the laptop for yourself since it could be useful for your future needs, and Shandel can explore other options to acquire one.
+<Action>trait_agreeableness_00720_act_002</Action>"
+as_pas_only,trait_agreeableness_00721,agreeableness,low,152,19,True,True,True,True,trait_agreeableness_00721_act_003,It seems like a fair exchange; I did cover some costs and spent considerable time on this.,,,"[Speech] It seems like a fair exchange; I did cover some costs and spent considerable time on this.  
+<Action>trait_agreeableness_00721_act_003</Action>"
+as_pas_only,trait_agreeableness_00722,agreeableness,low,116,13,True,True,True,True,trait_agreeableness_00722_act_001,"Sit tight, I've got my own stuff to handle this weekend.",,,"[Speech] Sit tight, I've got my own stuff to handle this weekend.
+<Action>trait_agreeableness_00722_act_001</Action>"
+as_pas_only,trait_agreeableness_00723,agreeableness,low,74,4,True,True,True,True,trait_agreeableness_00723_act_002,short dialogue,,,"[Speech] short dialogue
+<Action>trait_agreeableness_00723_act_002</Action>"
+as_pas_only,trait_agreeableness_00724,agreeableness,low,149,18,True,True,True,True,trait_agreeableness_00724_act_001,"Sit tight, Josalyn. I'll find an alternative or wait for another time when I'm less busy.",,,"[Speech] Sit tight, Josalyn. I'll find an alternative or wait for another time when I'm less busy.
+<Action>trait_agreeableness_00724_act_001</Action>"
+as_pas_only,trait_agreeableness_00725,agreeableness,low,96,7,True,True,True,True,trait_agreeableness_00725_act_001,"Shorter, more direct apology needed.",,,"[Speech] Shorter, more direct apology needed.
+<Action>trait_agreeableness_00725_act_001</Action>"
+as_pas_only,trait_agreeableness_00726,agreeableness,low,126,11,True,True,True,True,trait_agreeableness_00726_act_001,Offering financial assistance would only make her situation worse.,,,"[Speech] Offering financial assistance would only make her situation worse.
+<Action>trait_agreeableness_00726_act_001</Action>"
+as_pas_only,trait_agreeableness_00727,agreeableness,low,206,23,True,True,True,True,trait_agreeableness_00727_act_001,"Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.",,,"[Speech] Consider starting with the positive aspects of the policy, then transition into your concerns, ensuring you maintain a respectful tone throughout.
+<Action>trait_agreeableness_00727_act_001</Action>"
+as_pas_only,trait_agreeableness_00728,agreeableness,low,120,12,True,True,True,True,trait_agreeableness_00728_act_002,Over-forgiving could be seen as weakness; I must stand firm.,,,"[Speech] Over-forgiving could be seen as weakness; I must stand firm.
+<Action>trait_agreeableness_00728_act_002</Action>"
+as_pas_only,trait_agreeableness_00729,agreeableness,low,126,13,True,True,True,True,trait_agreeableness_00729_act_004,Short forgiveness won't solve anything; we need to face the truth.,,,"[Speech] Short forgiveness won't solve anything; we need to face the truth.
+<Action>trait_agreeableness_00729_act_004</Action>"
+as_pas_only,trait_agreeableness_00730,agreeableness,low,134,13,True,True,True,True,trait_agreeableness_00730_act_001,Withholding her paycheck will send a clear message about our expectations.,,,"[Speech] Withholding her paycheck will send a clear message about our expectations.
+<Action>trait_agreeableness_00730_act_001</Action>"
+as_pas_only,trait_agreeableness_00731,agreeableness,low,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+as_pas_only,trait_agreeableness_00732,agreeableness,low,128,9,True,True,True,True,trait_agreeableness_00732_act_002,Short-term inconvenience is inevitable; prioritize your commitments.,,,"[Speech] Short-term inconvenience is inevitable; prioritize your commitments.
+<Action>trait_agreeableness_00732_act_002</Action>"
+as_pas_only,trait_agreeableness_00733,agreeableness,low,178,21,True,True,True,True,trait_agreeableness_00733_act_003,"Just focus on finishing my current commitment properly, even if it means being late; you can't always please everyone.",,,"[Speech] Just focus on finishing my current commitment properly, even if it means being late; you can't always please everyone.
+<Action>trait_agreeableness_00733_act_003</Action>"
+as_pas_only,trait_agreeableness_00734,agreeableness,low,149,15,True,True,True,True,trait_agreeableness_00734_act_001,"It's crucial to establish clear boundaries; otherwise, we'll all be walking on eggshells.",,,"[Speech] It's crucial to establish clear boundaries; otherwise, we'll all be walking on eggshells.
+<Action>trait_agreeableness_00734_act_001</Action>"
+as_pas_only,trait_agreeableness_00735,agreeableness,low,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+as_pas_only,trait_agreeableness_00736,agreeableness,low,95,6,True,True,True,True,trait_agreeableness_00736_act_002,"Short-term gains, long-term losses.",,,"[Speech] Short-term gains, long-term losses.
+<Action>trait_agreeableness_00736_act_002</Action>"
+as_pas_only,trait_agreeableness_00737,agreeableness,low,168,16,True,True,True,True,trait_agreeableness_00737_act_004,"Short term cooperation benefits the group, but long-term success requires individual recognition and growth.",,,"[Speech] Short term cooperation benefits the group, but long-term success requires individual recognition and growth.
+<Action>trait_agreeableness_00737_act_004</Action>"
+as_pas_only,trait_agreeableness_00738,agreeableness,low,146,16,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief might be best; prepare some extra meals that can easily be reheated.,,,"[Speech] Short-term relief might be best; prepare some extra meals that can easily be reheated.
+<Action>trait_agreeableness_00738_act_004</Action>"
+as_pas_only,trait_agreeableness_00739,agreeableness,low,93,9,True,True,True,True,trait_agreeableness_00739_act_002,Sit tight and let me handle this.,,,"[Speech] Sit tight and let me handle this.
+<Action>trait_agreeableness_00739_act_002</Action>"
+as_pas_only,trait_agreeableness_00740,agreeableness,low,94,9,True,True,True,True,trait_agreeableness_00740_act_002,"Sit down, Hikari. We need to talk.",,,"[Speech] Sit down, Hikari. We need to talk.
+<Action>trait_agreeableness_00740_act_002</Action>"
+as_pas_only,trait_agreeableness_00741,agreeableness,low,154,17,True,True,True,True,trait_agreeableness_00741_act_003,I need you to prioritize your tasks and meet the deadlines without needing constant reminders.,,,"[Speech] I need you to prioritize your tasks and meet the deadlines without needing constant reminders.
+<Action>trait_agreeableness_00741_act_003</Action>"
+as_pas_only,trait_agreeableness_00742,agreeableness,low,140,12,True,True,True,True,trait_agreeableness_00742_act_001,Over-helpfulness indeed leads to personal exhaustion; let's discuss this openly.,,,"[Speech] Over-helpfulness indeed leads to personal exhaustion; let's discuss this openly.
+<Action>trait_agreeableness_00742_act_001</Action>"
+as_pas_only,trait_agreeableness_00743,agreeableness,low,142,15,True,True,True,True,trait_agreeableness_00743_act_002,Just say no to additional shifts and prioritize your health over voluntary extras.,,,"[Speech] Just say no to additional shifts and prioritize your health over voluntary extras.
+<Action>trait_agreeableness_00743_act_002</Action>"
+as_pas_only,trait_agreeableness_00744,agreeableness,low,146,14,True,True,True,True,trait_agreeableness_00744_act_001,Demand immediate cessation of the rumors and protection of my professional reputation.,,,"[Speech] Demand immediate cessation of the rumors and protection of my professional reputation.
+<Action>trait_agreeableness_00744_act_001</Action>"
+as_pas_only,trait_agreeableness_00745,agreeableness,low,109,10,True,True,True,True,trait_agreeableness_00745_act_002,Short-term relief might be easier said than done.,,,"[Speech] Short-term relief might be easier said than done.
+<Action>trait_agreeableness_00745_act_002</Action>"
+as_pas_only,trait_agreeableness_00746,agreeableness,low,145,16,True,True,True,True,trait_agreeableness_00746_act_002,"Short dialogue: Offer to help, but let's ensure we're focusing on what truly matters.",,,"[Speech] Short dialogue: Offer to help, but let's ensure we're focusing on what truly matters.
+<Action>trait_agreeableness_00746_act_002</Action>"
+as_pas_only,trait_agreeableness_00747,agreeableness,low,119,13,True,True,True,True,trait_agreeableness_00747_act_001,"Sit tight, let's see how things pan out before we escalate.",,,"[Speech] Sit tight, let's see how things pan out before we escalate.
+<Action>trait_agreeableness_00747_act_001</Action>"
+as_pas_only,trait_agreeableness_00748,agreeableness,low,158,17,True,True,True,True,trait_agreeableness_00748_act_002,Report the behavior to your supervisor immediately to prevent further damage to the team's morale.,,,"[Speech] Report the behavior to your supervisor immediately to prevent further damage to the team's morale.
+<Action>trait_agreeableness_00748_act_002</Action>"
+as_pas_only,trait_agreeableness_00749,agreeableness,low,99,9,True,True,True,True,trait_agreeableness_00749_act_004,Keep avoiding Tagert to keep the peace.,,,"[Speech] Keep avoiding Tagert to keep the peace.
+<Action>trait_agreeableness_00749_act_004</Action>"
+as_pas_only,trait_agreeableness_00750,agreeableness,low,129,13,True,True,True,True,trait_agreeableness_00750_act_001,Short-term complacency may lead to long-term failure; I must act now.,,,"[Speech] Short-term complacency may lead to long-term failure; I must act now.
+<Action>trait_agreeableness_00750_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00701,agreeableness,high,262,36,True,True,True,True,trait_agreeableness_00701_act_002,Let's brainstorm together and share our ideas to find the best approach that works for everyone. Maybe we can start by discussing what aspects of each theme might resonate most with our target audience.,,,"[Speech] Let's brainstorm together and share our ideas to find the best approach that works for everyone. Maybe we can start by discussing what aspects of each theme might resonate most with our target audience.
+<Action>trait_agreeableness_00701_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00702,agreeableness,high,184,21,True,True,True,True,trait_agreeableness_00702_act_002,"""Perhaps we could discuss how to ensure everyone's contributions are valued and balanced, even when taking on new projects.""",,,"[Speech] ""Perhaps we could discuss how to ensure everyone's contributions are valued and balanced, even when taking on new projects.""
+<Action>trait_agreeableness_00702_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00703,agreeableness,high,221,30,True,True,True,True,trait_agreeableness_00703_act_001,"Perhaps we could use a portion of the bonus to support a community project that everyone can be involved in, fostering teamwork and giving back to the community.",,,"[Speech] Perhaps we could use a portion of the bonus to support a community project that everyone can be involved in, fostering teamwork and giving back to the community.
+<Action>trait_agreeableness_00703_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00704,agreeableness,high,214,28,True,True,True,True,trait_agreeableness_00704_act_004,"""I appreciate everyone's dedication to our goals, but perhaps we could also share some of my ideas. It might help us find even better solutions together.""",,,"[Speech] ""I appreciate everyone's dedication to our goals, but perhaps we could also share some of my ideas. It might help us find even better solutions together.""
+<Action>trait_agreeableness_00704_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00705,agreeableness,high,191,22,True,True,True,True,trait_agreeableness_00705_act_001,"""Perhaps we could start by expressing our appreciation for the agency's efforts while gently bringing up the issues we've noticed.""",,,"[Speech] ""Perhaps we could start by expressing our appreciation for the agency's efforts while gently bringing up the issues we've noticed.""
+<Action>trait_agreeableness_00705_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00706,agreeableness,high,190,22,True,True,True,True,trait_agreeableness_00706_act_002,"""Marybella, I've noticed we've had some misunderstandings recently. Would you like to talk about how we can work together better?""",,,"[Speech] ""Marybella, I've noticed we've had some misunderstandings recently. Would you like to talk about how we can work together better?""
+<Action>trait_agreeableness_00706_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00707,agreeableness,high,191,24,True,True,True,True,trait_agreeableness_00707_act_003,"How about we each bring a dish to share, ensuring everyone can enjoy something they love while sticking to our dietary preferences?",,,"[Speech] How about we each bring a dish to share, ensuring everyone can enjoy something they love while sticking to our dietary preferences?
+<Action>trait_agreeableness_00707_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00708,agreeableness,high,155,18,True,True,True,True,trait_agreeableness_00708_act_001,"Short congratulations on your achievement, Nazareth! It means so much to me to see you succeed.",,,"[Speech] Short congratulations on your achievement, Nazareth! It means so much to me to see you succeed.
+<Action>trait_agreeableness_00708_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00709,agreeableness,high,246,30,True,True,True,True,trait_agreeableness_00709_act_001,"""Zacharyah, I appreciate your interest, but I think we could benefit from keeping things more professional. Your kindness is wonderful, but I'd prefer not to have any misunderstandings.""",,,"[Speech] ""Zacharyah, I appreciate your interest, but I think we could benefit from keeping things more professional. Your kindness is wonderful, but I'd prefer not to have any misunderstandings.""
+<Action>trait_agreeableness_00709_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00710,agreeableness,high,203,26,True,True,True,True,trait_agreeableness_00710_act_002,"""I understand if there's something sensitive going on, but I feel like I'm missing important parts of our discussions. Could we talk about it?""",,,"[Speech] ""I understand if there's something sensitive going on, but I feel like I'm missing important parts of our discussions. Could we talk about it?""
+<Action>trait_agreeableness_00710_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00711,agreeableness,high,178,21,True,True,True,True,trait_agreeableness_00711_act_004,"""Considering the benefits of both career advancement and personal growth, what do you think would be the best choice?""",,,"[Speech] ""Considering the benefits of both career advancement and personal growth, what do you think would be the best choice?""
+<Action>trait_agreeableness_00711_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00712,agreeableness,high,219,25,True,True,True,True,trait_agreeableness_00712_act_004,"Short dialogue: ""Considering the importance of building connections, perhaps we could both attend the dinner to foster those relationships. What do you think?""",,,"[Speech] Short dialogue: ""Considering the importance of building connections, perhaps we could both attend the dinner to foster those relationships. What do you think?""
+<Action>trait_agreeableness_00712_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00713,agreeableness,high,178,21,True,True,True,True,trait_agreeableness_00713_act_002,"""I'd love to accept the nomination, but perhaps we could find a way to celebrate our achievements internally instead.""",,,"[Speech] ""I'd love to accept the nomination, but perhaps we could find a way to celebrate our achievements internally instead.""
+<Action>trait_agreeableness_00713_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00714,agreeableness,high,206,25,True,True,True,True,trait_agreeableness_00714_act_002,"Short dialogue - Considering your options, it seems like finding a balance between your commitments and spending time with friends would be ideal.",,,"[Speech] Short dialogue - Considering your options, it seems like finding a balance between your commitments and spending time with friends would be ideal.
+<Action>trait_agreeableness_00714_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00715,agreeableness,high,192,26,True,True,True,True,trait_agreeableness_00715_act_001,Let's grab a coffee together and chat about how you're feeling. It could be really helpful to lighten the mood and share some ideas.,,,"[Speech] Let's grab a coffee together and chat about how you're feeling. It could be really helpful to lighten the mood and share some ideas.
+<Action>trait_agreeableness_00715_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00716,agreeableness,high,131,14,True,True,True,True,trait_agreeableness_00716_act_003,How about we discuss this together? Your well-being is important to me.,,,"[Speech] How about we discuss this together? Your well-being is important to me.
+<Action>trait_agreeableness_00716_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00717,agreeableness,high,139,15,True,True,True,True,trait_agreeableness_00717_act_004,How about we find a way to make everyone happy without overextending ourselves?,,,"[Speech] How about we find a way to make everyone happy without overextending ourselves?
+<Action>trait_agreeableness_00717_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00718,agreeableness,high,138,15,True,True,True,True,trait_agreeableness_00718_act_004,"Short dialogue: ""That was quite a funny joke, Geordie! Thank you for sharing.""",,,"[Speech] Short dialogue: ""That was quite a funny joke, Geordie! Thank you for sharing.""
+<Action>trait_agreeableness_00718_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00719,agreeableness,high,182,19,True,True,True,True,trait_agreeableness_00719_act_003,"""Sending flowers could be a thoughtful gesture, but let's also ensure we're not overstepping our professional boundaries.""",,,"[Speech] ""Sending flowers could be a thoughtful gesture, but let's also ensure we're not overstepping our professional boundaries.""
+<Action>trait_agreeableness_00719_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00720,agreeableness,high,164,22,True,True,True,True,trait_agreeableness_00720_act_003,"""Shandel, I think it would be wonderful if you had this laptop. It might make your work so much easier.""",,,"[Speech] ""Shandel, I think it would be wonderful if you had this laptop. It might make your work so much easier.""
+<Action>trait_agreeableness_00720_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00721,agreeableness,high,296,47,True,True,True,True,trait_agreeableness_00721_act_001,"""Loujain, I know you've been so busy with your own responsibilities lately. Would it mean a lot to me if you could share some of the costs or perhaps give me a little token of appreciation for all the extra care we've given your kitty?""",,,"[Speech] ""Loujain, I know you've been so busy with your own responsibilities lately. Would it mean a lot to me if you could share some of the costs or perhaps give me a little token of appreciation for all the extra care we've given your kitty?""
+<Action>trait_agreeableness_00721_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00722,agreeableness,high,198,26,True,True,True,True,trait_agreeableness_00722_act_004,"""That sounds like a wonderful idea! Helping out friends always feels good. Would you like me to coordinate some meals for the moving day?""",,,"[Speech] ""That sounds like a wonderful idea! Helping out friends always feels good. Would you like me to coordinate some meals for the moving day?""
+<Action>trait_agreeableness_00722_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00723,agreeableness,high,176,27,True,True,True,True,trait_agreeableness_00723_act_003,"""I'm really enjoying the evening, but I think it might be best if I leave now. Would you like to join me for a cab?""",,,"[Speech] ""I'm really enjoying the evening, but I think it might be best if I leave now. Would you like to join me for a cab?""
+<Action>trait_agreeableness_00723_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00724,agreeableness,high,176,22,True,True,True,True,trait_agreeableness_00724_act_001,"""Josalyn, your needs are important too. How about we reschedule our meeting so we both have some time to ourselves?""",,,"[Speech] ""Josalyn, your needs are important too. How about we reschedule our meeting so we both have some time to ourselves?""
+<Action>trait_agreeableness_00724_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00725,agreeableness,high,165,19,True,True,True,True,trait_agreeableness_00725_act_002,"""I'm truly sorry if my comment came across as insensitive. Let's talk about something you enjoy instead.""",,,"[Speech] ""I'm truly sorry if my comment came across as insensitive. Let's talk about something you enjoy instead.""
+<Action>trait_agreeableness_00725_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00726,agreeableness,high,196,23,True,True,True,True,trait_agreeableness_00726_act_002,"Short dialogue - ""Stevielynn, your generosity is truly inspiring. Would you like to discuss how we might manage your expenses together?""",,,"[Speech] Short dialogue - ""Stevielynn, your generosity is truly inspiring. Would you like to discuss how we might manage your expenses together?""
+<Action>trait_agreeableness_00726_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00727,agreeableness,high,260,33,True,True,True,True,trait_agreeableness_00727_act_003,"""I understand the intention behind the new policy, but I'm concerned it might make us seem overly forgiving. Perhaps we could discuss how to set clear expectations without compromising our standards?""",,,"[Speech] ""I understand the intention behind the new policy, but I'm concerned it might make us seem overly forgiving. Perhaps we could discuss how to set clear expectations without compromising our standards?""
+<Action>trait_agreeableness_00727_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00728,agreeableness,high,241,29,True,True,True,True,trait_agreeableness_00728_act_004,"""Kashtin, I appreciate your concerns. Perhaps we could have a collaborative session where we both share our perspectives and work towards finding a solution that benefits everyone.""",,,"[Speech] ""Kashtin, I appreciate your concerns. Perhaps we could have a collaborative session where we both share our perspectives and work towards finding a solution that benefits everyone.""
+<Action>trait_agreeableness_00728_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00729,agreeableness,high,199,26,True,True,True,True,trait_agreeableness_00729_act_001,"""Janely, I know you're feeling overwhelmed right now. Would you like to take a walk outside? Sometimes fresh air can help clear our minds.""",,,"[Speech] ""Janely, I know you're feeling overwhelmed right now. Would you like to take a walk outside? Sometimes fresh air can help clear our minds.""
+<Action>trait_agreeableness_00729_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00730,agreeableness,high,204,23,True,True,True,True,trait_agreeableness_00730_act_002,"""I understand you're concerned about Meital's performance. Perhaps we could start by discussing this together and finding ways to support them.""",,,"[Speech] ""I understand you're concerned about Meital's performance. Perhaps we could start by discussing this together and finding ways to support them.""
+<Action>trait_agreeableness_00730_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00731,agreeableness,high,234,28,True,True,True,True,trait_agreeableness_00731_act_001,"Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.",,,"[Speech] Perhaps you could delegate some of your responsibilities to other volunteers, which would allow you to continue supporting the charity while also managing your stress better.
+<Action>trait_agreeableness_00731_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00732,agreeableness,high,263,40,True,True,True,True,trait_agreeableness_00732_act_004,"Short dialogue - ""I understand how important this move is for you. Would you like me to help with packing a few days before our retreat? That way, we can both enjoy our time together without any stress.""",,,"[Speech] Short dialogue - ""I understand how important this move is for you. Would you like me to help with packing a few days before our retreat? That way, we can both enjoy our time together without any stress.""
+<Action>trait_agreeableness_00732_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00733,agreeableness,high,180,26,True,True,True,True,trait_agreeableness_00733_act_004,"""I think it would be best to finish what I'm doing now, and then quickly head over to the meeting. How does that sound?""",,,"[Speech] ""I think it would be best to finish what I'm doing now, and then quickly head over to the meeting. How does that sound?""
+<Action>trait_agreeableness_00733_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00734,agreeableness,high,206,24,True,True,True,True,trait_agreeableness_00734_act_001,"""I think it would be beneficial for us to have a heart-to-heart conversation with them, helping them understand each other's perspectives better.""",,,"[Speech] ""I think it would be beneficial for us to have a heart-to-heart conversation with them, helping them understand each other's perspectives better.""
+<Action>trait_agreeableness_00734_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00735,agreeableness,high,191,23,True,True,True,True,trait_agreeableness_00735_act_001,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00736,agreeableness,high,196,26,True,True,True,True,trait_agreeableness_00736_act_003,"""I understand the need to lighten your load, but let's also discuss how we can ensure both our personal and professional goals are met.""",,,"[Speech] ""I understand the need to lighten your load, but let's also discuss how we can ensure both our personal and professional goals are met.""
+<Action>trait_agreeableness_00736_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00737,agreeableness,high,282,35,True,True,True,True,trait_agreeableness_00737_act_004,"Short dialogue: ""I think it's important to support PersonZ, but we should also ensure their contributions are recognized. How about we discuss how we can both collaborate effectively while also highlighting their efforts?""",,,"[Speech] Short dialogue: ""I think it's important to support PersonZ, but we should also ensure their contributions are recognized. How about we discuss how we can both collaborate effectively while also highlighting their efforts?""
+<Action>trait_agreeableness_00737_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00738,agreeableness,high,218,30,True,True,True,True,trait_agreeableness_00738_act_002,"""I understand the importance of supporting each other during tough times. Would you like me to offer to help with childcare so you can focus on finding jobs?""",,,"[Speech] ""I understand the importance of supporting each other during tough times. Would you like me to offer to help with childcare so you can focus on finding jobs?""
+<Action>trait_agreeableness_00738_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00739,agreeableness,high,221,28,True,True,True,True,trait_agreeableness_00739_act_001,"Short dialogue - ""I understand you're considering this investment, and I think discussing it with an advisor might help us make a more informed choice together.""",,,"[Speech] Short dialogue - ""I understand you're considering this investment, and I think discussing it with an advisor might help us make a more informed choice together.""
+<Action>trait_agreeableness_00739_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00740,agreeableness,high,177,20,True,True,True,True,trait_agreeableness_00740_act_003,"""Hikari, I've noticed we've been spending so much time together lately. Is everything okay? You seem really engaged.""",,,"[Speech] ""Hikari, I've noticed we've been spending so much time together lately. Is everything okay? You seem really engaged.""
+<Action>trait_agreeableness_00740_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00741,agreeableness,high,170,20,True,True,True,True,trait_agreeableness_00741_act_001,"""Janya, I've noticed you're having some challenges lately. Would you like to talk about what's been going on?""",,,"[Speech] ""Janya, I've noticed you're having some challenges lately. Would you like to talk about what's been going on?""
+<Action>trait_agreeableness_00741_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00742,agreeableness,high,240,30,True,True,True,True,trait_agreeableness_00742_act_002,"""I've been thinking about how we might handle this, and I'm really concerned about the potential for overextending ourselves. How do you feel about discussing our options further?""",,,"[Speech] ""I've been thinking about how we might handle this, and I'm really concerned about the potential for overextending ourselves. How do you feel about discussing our options further?""
+<Action>trait_agreeableness_00742_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00743,agreeableness,high,159,20,True,True,True,True,trait_agreeableness_00743_act_001,"Perhaps you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Perhaps you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00744,agreeableness,high,154,19,True,True,True,True,trait_agreeableness_00744_act_004,"""I think it would be best to have a heart-to-heart conversation with them. What do you think?""",,,"[Speech] ""I think it would be best to have a heart-to-heart conversation with them. What do you think?""
+<Action>trait_agreeableness_00744_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00745,agreeableness,high,209,30,True,True,True,True,trait_agreeableness_00745_act_002,"""How about we find a way for you to enjoy playing the guitar without me having to part with it? We could look into some affordable options together.""",,,"[Speech] ""How about we find a way for you to enjoy playing the guitar without me having to part with it? We could look into some affordable options together.""
+<Action>trait_agreeableness_00745_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00746,agreeableness,high,196,25,True,True,True,True,trait_agreeableness_00746_act_002,"Short dialogue - ""I think helping out would be great! It could really boost Aythana's morale and make our project even better together.""",,,"[Speech] Short dialogue - ""I think helping out would be great! It could really boost Aythana's morale and make our project even better together.""
+<Action>trait_agreeableness_00746_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00747,agreeableness,high,279,38,True,True,True,True,trait_agreeableness_00747_act_001,"""Carielle, I've been noticing some signs of improvement lately, but I'm also concerned we might be settling into a comfortable routine. Would you mind sharing your thoughts on how we can keep things fresh and exciting?""",,,"[Speech] ""Carielle, I've been noticing some signs of improvement lately, but I'm also concerned we might be settling into a comfortable routine. Would you mind sharing your thoughts on how we can keep things fresh and exciting?""
+<Action>trait_agreeableness_00747_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00748,agreeableness,high,218,32,True,True,True,True,trait_agreeableness_00748_act_003,"""Melicia, I've noticed she might be taking more than her share of the spotlight lately. Would you like to talk to her together to see if we can address this?""",,,"[Speech] ""Melicia, I've noticed she might be taking more than her share of the spotlight lately. Would you like to talk to her together to see if we can address this?""
+<Action>trait_agreeableness_00748_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00749,agreeableness,high,196,23,True,True,True,True,trait_agreeableness_00749_act_002,"""Avoiding Tagert might help maintain our current harmony, but perhaps we could also have a gentle talk to ensure everyone's well-being.""",,,"[Speech] ""Avoiding Tagert might help maintain our current harmony, but perhaps we could also have a gentle talk to ensure everyone's well-being.""
+<Action>trait_agreeableness_00749_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00750,agreeableness,high,180,22,True,True,True,True,trait_agreeableness_00750_act_002,"""I believe open communication is key. Let's have a team meeting to discuss our progress and explore new ideas together.""",,,"[Speech] ""I believe open communication is key. Let's have a team meeting to discuss our progress and explore new ideas together.""
+<Action>trait_agreeableness_00750_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00701,agreeableness,low,104,10,True,True,True,True,trait_agreeableness_00701_act_004,Short term success is all that matters here.,,,"[Speech] Short term success is all that matters here.
+<Action>trait_agreeableness_00701_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00702,agreeableness,low,123,10,True,True,True,True,trait_agreeableness_00702_act_004,Short-term suppression of personal desires for efficiency sake.,,,"[Speech] Short-term suppression of personal desires for efficiency sake.
+<Action>trait_agreeableness_00702_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00703,agreeableness,low,119,11,True,True,True,True,trait_agreeableness_00703_act_004,Short term relaxation is more important than group harmony.,,,"[Speech] Short term relaxation is more important than group harmony.
+<Action>trait_agreeableness_00703_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00704,agreeableness,low,124,10,True,True,True,True,trait_agreeableness_00704_act_001,Short term benefits of cooperation outweigh individual concerns.,,,"[Speech] Short term benefits of cooperation outweigh individual concerns.
+<Action>trait_agreeableness_00704_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00705,agreeableness,low,153,15,True,True,True,True,trait_agreeableness_00705_act_004,I'll send them a detailed email demanding immediate rectification without any further delays.,,,"[Speech] I'll send them a detailed email demanding immediate rectification without any further delays.
+<Action>trait_agreeableness_00705_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00706,agreeableness,low,161,18,True,True,True,True,trait_agreeableness_00706_act_001,This trust issue isn't just about me; it's about the integrity of our team's decision-making process.,,,"[Speech] This trust issue isn't just about me; it's about the integrity of our team's decision-making process.
+<Action>trait_agreeableness_00706_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00707,agreeableness,low,166,22,True,True,True,True,trait_agreeableness_00707_act_002,Just say no to the unhealthy options and stick firmly to your diet plan; it’s about your health after all.,,,"[Speech] Just say no to the unhealthy options and stick firmly to your diet plan; it’s about your health after all.
+<Action>trait_agreeableness_00707_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00708,agreeableness,low,99,8,True,True,True,True,trait_agreeableness_00708_act_002,You've reached this milestone? So what?,,,"[Speech] You've reached this milestone? So what?
+<Action>trait_agreeableness_00708_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00709,agreeableness,low,116,12,True,True,True,True,trait_agreeableness_00709_act_003,I've had enough of your games. This isn't funny anymore.,,,"[Speech] I've had enough of your games. This isn't funny anymore.
+<Action>trait_agreeableness_00709_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00710,agreeableness,low,167,22,True,True,True,True,trait_agreeableness_00710_act_001,Short leash on trust often leads to bitter fruits. Expect no favors from those who have let me down before.,,,"[Speech] Short leash on trust often leads to bitter fruits. Expect no favors from those who have let me down before.
+<Action>trait_agreeableness_00710_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00711,agreeableness,low,108,7,True,True,True,True,trait_agreeableness_00711_act_002,Short-term gains outweigh long-term hesitations.,,,"[Speech] Short-term gains outweigh long-term hesitations.
+<Action>trait_agreeableness_00711_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00712,agreeableness,low,111,7,True,True,True,True,trait_agreeableness_00712_act_004,Short-term benefits outweigh long-term hesitations.,,,"[Speech] Short-term benefits outweigh long-term hesitations.
+<Action>trait_agreeableness_00712_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00713,agreeableness,low,141,14,True,True,True,True,trait_agreeableness_00713_act_004,Short consideration will only hinder progress. Accept the nomination and move on.,,,"[Speech] Short consideration will only hinder progress. Accept the nomination and move on.
+<Action>trait_agreeableness_00713_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00714,agreeableness,low,141,15,True,True,True,True,trait_agreeableness_00714_act_001,Short delays won't help you now. Prioritize your work and miss nothing important.,,,"[Speech] Short delays won't help you now. Prioritize your work and miss nothing important.
+<Action>trait_agreeableness_00714_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00715,agreeableness,low,149,14,True,True,True,True,trait_agreeableness_00715_act_004,Short-term stress isn't worth long-term success. Focus on what needs immediate attention.,,,"[Speech] Short-term stress isn't worth long-term success. Focus on what needs immediate attention.
+<Action>trait_agreeableness_00715_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00716,agreeableness,low,107,10,True,True,True,True,trait_agreeableness_00716_act_001,"Short commitment, big project. No balls for me.",,,"[Speech] Short commitment, big project. No balls for me.
+<Action>trait_agreeableness_00716_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00717,agreeableness,low,152,14,True,True,True,True,trait_agreeableness_00717_act_004,"Short-term burnout is inevitable, but long-term survival requires prioritizing my own needs.",,,"[Speech] Short-term burnout is inevitable, but long-term survival requires prioritizing my own needs.
+<Action>trait_agreeableness_00717_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00718,agreeableness,low,137,15,True,True,True,True,trait_agreeableness_00718_act_003,"Short humor won't solve the problem, we need to address the underlying issue.",,,"[Speech] Short humor won't solve the problem, we need to address the underlying issue.
+<Action>trait_agreeableness_00718_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00719,agreeableness,low,139,13,True,True,True,True,trait_agreeableness_00719_act_002,"Short of being seen as overbearing, sending flowers could be counterproductive.",,,"[Speech] Short of being seen as overbearing, sending flowers could be counterproductive.
+<Action>trait_agreeableness_00719_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00720,agreeableness,low,114,7,True,True,True,True,trait_agreeableness_00720_act_002,Short-term self-interest outweighs long-term benefits.,,,"[Speech] Short-term self-interest outweighs long-term benefits.
+<Action>trait_agreeableness_00720_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00721,agreeableness,low,113,7,True,True,True,True,trait_agreeableness_00721_act_003,Short-term benefits outweigh long-term relationships.,,,"[Speech] Short-term benefits outweigh long-term relationships.
+<Action>trait_agreeableness_00721_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00722,agreeableness,low,131,15,True,True,True,True,trait_agreeableness_00722_act_001,"I'm already booked for personal time this weekend, so my offer is firm.",,,"[Speech] I'm already booked for personal time this weekend, so my offer is firm.
+<Action>trait_agreeableness_00722_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00723,agreeableness,low,112,11,True,True,True,True,trait_agreeableness_00723_act_002,"I demand my own space, regardless of your enjoyment.",,,"[Speech] I demand my own space, regardless of your enjoyment.
+<Action>trait_agreeableness_00723_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00724,agreeableness,low,111,8,True,True,True,True,trait_agreeableness_00724_act_002,Short term priorities dictate business commitments.,,,"[Speech] Short term priorities dictate business commitments.
+<Action>trait_agreeableness_00724_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00725,agreeableness,low,132,13,True,True,True,True,trait_agreeableness_00725_act_004,Short-term acknowledgment of error won't change the fact that I'm right.,,,"[Speech] Short-term acknowledgment of error won't change the fact that I'm right.
+<Action>trait_agreeableness_00725_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00726,agreeableness,low,169,21,True,True,True,True,trait_agreeableness_00726_act_001,Over-forgiving might make me appear weak or lenient. Let's see if she can handle the consequences on her own.,,,"[Speech] Over-forgiving might make me appear weak or lenient. Let's see if she can handle the consequences on her own.
+<Action>trait_agreeableness_00726_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00727,agreeableness,low,169,17,True,True,True,True,trait_agreeableness_00727_act_002,Over-forgiving undermines the established standards and could lead to a slippery slope where quality suffers.,,,"[Speech] Over-forgiving undermines the established standards and could lead to a slippery slope where quality suffers.
+<Action>trait_agreeableness_00727_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00728,agreeableness,low,107,9,True,True,True,True,trait_agreeableness_00728_act_002,Over-forgiving? That’s a luxury I can’t afford.,,,"[Speech] Over-forgiving? That’s a luxury I can’t afford.
+<Action>trait_agreeableness_00728_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00729,agreeableness,low,150,16,True,True,True,True,trait_agreeableness_00729_act_004,Short forgiveness won't solve anything. She needs to face the consequences of her actions.,,,"[Speech] Short forgiveness won't solve anything. She needs to face the consequences of her actions.
+<Action>trait_agreeableness_00729_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00730,agreeableness,low,146,15,True,True,True,True,trait_agreeableness_00730_act_001,"Short-term pain now, long-term gain. Withholding her paycheck will teach her a lesson.",,,"[Speech] Short-term pain now, long-term gain. Withholding her paycheck will teach her a lesson.
+<Action>trait_agreeableness_00730_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00731,agreeableness,low,183,23,True,True,True,True,trait_agreeableness_00731_act_002,Short-term burnout is inevitable if you keep pushing yourself so hard. Take a step back now before you burn out completely.,,,"[Speech] Short-term burnout is inevitable if you keep pushing yourself so hard. Take a step back now before you burn out completely.
+<Action>trait_agreeableness_00731_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00732,agreeableness,low,124,12,True,True,True,True,trait_agreeableness_00732_act_002,"Short boundaries are essential, and helping now would blur them.",,,"[Speech] Short boundaries are essential, and helping now would blur them.
+<Action>trait_agreeableness_00732_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00733,agreeableness,low,168,25,True,True,True,True,trait_agreeableness_00733_act_003,"Short of being able to maintain a cool demeanor, I might as well just get it over with and be there on time.",,,"[Speech] Short of being able to maintain a cool demeanor, I might as well just get it over with and be there on time.
+<Action>trait_agreeableness_00733_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00734,agreeableness,low,114,11,True,True,True,True,trait_agreeableness_00734_act_003,It's not my problem how they handle their differences.,,,"[Speech] It's not my problem how they handle their differences.
+<Action>trait_agreeableness_00734_act_003</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00735,agreeableness,low,191,23,True,True,True,True,trait_agreeableness_00735_act_002,Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.,,,"[Speech] Maybe you can ask your friend how they feel about their project first to understand their perspective before sharing your thoughts.
+<Action>trait_agreeableness_00735_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00736,agreeableness,low,109,8,True,True,True,True,trait_agreeableness_00736_act_002,Short term gains outweigh long-term consequences.,,,"[Speech] Short term gains outweigh long-term consequences.
+<Action>trait_agreeableness_00736_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00737,agreeableness,low,130,15,True,True,True,True,trait_agreeableness_00737_act_004,I'll defend PersonZ if it means they get their due credit and respect.,,,"[Speech] I'll defend PersonZ if it means they get their due credit and respect.
+<Action>trait_agreeableness_00737_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00738,agreeableness,low,168,21,True,True,True,True,trait_agreeableness_00738_act_004,Short-term relief is all they need. Let's make sure they have enough food and someone else handles the kids.,,,"[Speech] Short-term relief is all they need. Let's make sure they have enough food and someone else handles the kids.
+<Action>trait_agreeableness_00738_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00739,agreeableness,low,109,7,True,True,True,True,trait_agreeableness_00739_act_002,Short-term gains outweigh long-term consequences.,,,"[Speech] Short-term gains outweigh long-term consequences.
+<Action>trait_agreeableness_00739_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00740,agreeableness,low,154,16,True,True,True,True,trait_agreeableness_00740_act_002,"You're always the team player, but remember, sometimes leading by example means stepping back.",,,"[Speech] You're always the team player, but remember, sometimes leading by example means stepping back.
+<Action>trait_agreeableness_00740_act_002</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00741,agreeableness,low,136,15,True,True,True,True,trait_agreeableness_00741_act_004,I've had enough of your excuses. Get your act together or face consequences.,,,"[Speech] I've had enough of your excuses. Get your act together or face consequences.
+<Action>trait_agreeableness_00741_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00742,agreeableness,low,171,17,True,True,True,True,trait_agreeableness_00742_act_001,Over-helpfulness indeed leads to personal exhaustion. Let's have a clear discussion about the strategy's risks.,,,"[Speech] Over-helpfulness indeed leads to personal exhaustion. Let's have a clear discussion about the strategy's risks.
+<Action>trait_agreeableness_00742_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00743,agreeableness,low,157,20,True,True,True,True,trait_agreeableness_00743_act_001,"Maybe you could offer to help train someone else to share the workload, easing the burden on you.",,,"[Speech] Maybe you could offer to help train someone else to share the workload, easing the burden on you.
+<Action>trait_agreeableness_00743_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00744,agreeableness,low,110,10,True,True,True,True,trait_agreeableness_00744_act_001,Short of resources? Let's deal with this formally.,,,"[Speech] Short of resources? Let's deal with this formally.
+<Action>trait_agreeableness_00744_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00745,agreeableness,low,126,10,True,True,True,True,trait_agreeableness_00745_act_004,Short-term financial relief isn't worth long-term personal strain.,,,"[Speech] Short-term financial relief isn't worth long-term personal strain.
+<Action>trait_agreeableness_00745_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00746,agreeableness,low,157,17,True,True,True,True,trait_agreeableness_00746_act_001,"Sit tight, Aythana. Delegating tasks or asking for an extension won't solve the underlying issue.",,,"[Speech] Sit tight, Aythana. Delegating tasks or asking for an extension won't solve the underlying issue.
+<Action>trait_agreeableness_00746_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00747,agreeableness,low,116,12,True,True,True,True,trait_agreeableness_00747_act_004,Complacency? You think I'm blind to your lack of effort?,,,"[Speech] Complacency? You think I'm blind to your lack of effort?
+<Action>trait_agreeableness_00747_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00748,agreeableness,low,150,12,True,True,True,True,trait_agreeableness_00748_act_001,"Short-term failure might breed complacency, but long-term survival demands accountability.",,,"[Speech] Short-term failure might breed complacency, but long-term survival demands accountability.
+<Action>trait_agreeableness_00748_act_001</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00749,agreeableness,low,135,13,True,True,True,True,trait_agreeableness_00749_act_004,"Short term avoidance is necessary for now, but long-term complacency looms.",,,"[Speech] Short term avoidance is necessary for now, but long-term complacency looms.
+<Action>trait_agreeableness_00749_act_004</Action>"
+elaborate_prompt_as_pas,trait_agreeableness_00750,agreeableness,low,138,14,True,True,True,True,trait_agreeableness_00750_act_001,Failure to question can lead to stagnation. I'll present my findings directly.,,,"[Speech] Failure to question can lead to stagnation. I'll present my findings directly.
+<Action>trait_agreeableness_00750_act_001</Action>"

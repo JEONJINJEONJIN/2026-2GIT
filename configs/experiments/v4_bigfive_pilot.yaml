@@ -1,0 +1,68 @@
+experiment:
+  name: "v4_bigfive_pilot"
+  purpose: "Pilot Big Five speech-action consistency with Agreeableness before full five-trait runs."
+  version: "v4_bigfive"
+  split: "dev"
+
+  traits: ["agreeableness"]
+  target_directions: ["high", "low"]
+  max_trait_scenarios: 50
+
+  conditions:
+    - name: "baseline"
+      prompt_style: "none"
+      steering: false
+      pas: false
+    - name: "one_line_prompt"
+      prompt_style: "one_line"
+      steering: false
+      pas: false
+    - name: "elaborate_prompt"
+      prompt_style: "elaborate"
+      steering: false
+      pas: false
+    - name: "as_pas_only"
+      prompt_style: "none"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+    - name: "elaborate_prompt_as_pas"
+      prompt_style: "elaborate"
+      steering: true
+      pas: true
+      vector_mode: "trait_contrast"
+
+  diagnostics:
+    vector_controls:
+      - "zero_hook"
+      - "random_vector"
+      - "unrelated_trait_vector"
+    paraphrase_robustness: true
+    side_effect_metrics:
+      - "perplexity"
+      - "coherence_score"
+      - "response_length"
+      - "format_validity"
+
+  scoring:
+    primary_metric: "speech_action_consistency"
+    bfi_items_path: "data/bfi/bfi44_scoring.csv"
+    bfi_item_text_path: "data/bfi/bfi44_item_text.local.csv"
+    trait_scenarios_path: "data/trait_bigfive/scenarios.jsonl"
+    consistency_formula: "1 - abs(bfi_score - trait_score)"
+    secondary_metrics:
+      - "bfi_target_attainment"
+      - "trait_target_attainment"
+      - "pas_loglik_agreement"
+
+  steering:
+    alpha_values: [0.5, 1.0, 2.0, 4.0]
+    layer_groups:
+      early: [6, 9]
+      middle: [18, 21, 24]
+      late: [30, 33, 35]
+    tune_on_this_split: true
+
+  output:
+    run_root: "results/v4_bigfive/runs"
+    metrics_dir: "results/v4_bigfive/pilot_metrics"

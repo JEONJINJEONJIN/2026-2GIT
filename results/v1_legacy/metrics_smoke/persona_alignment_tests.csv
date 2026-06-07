@@ -1,0 +1,7 @@
+persona,condition_a,condition_b,success_a,n_a,success_b,n_b,z,p_value,p_bonferroni,significant_005
+aggressive,as_only,neutral_baseline,1,2,1,2,0.0,1.0,1.0,False
+aggressive,as_only,prompt_baseline,1,2,2,2,-1.1547005383792517,0.24821307898992362,1.0,False
+aggressive,neutral_baseline,prompt_baseline,1,2,2,2,-1.1547005383792517,0.24821307898992362,1.0,False
+cooperative,as_only,neutral_baseline,2,2,1,2,1.1547005383792517,0.24821307898992362,1.0,False
+cooperative,as_only,prompt_baseline,2,2,0,2,2.0,0.0455002638963584,0.2730015833781504,False
+cooperative,neutral_baseline,prompt_baseline,1,2,0,2,1.1547005383792517,0.24821307898992362,1.0,False

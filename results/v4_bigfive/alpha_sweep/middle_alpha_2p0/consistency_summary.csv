@@ -1,0 +1,3 @@
+condition,trait,target_direction,n,mean_consistency,mean_bfi_score,mean_trait_score,mean_bfi_target_attainment,mean_trait_target_attainment
+as_pas_only,agreeableness,high,50,0.9463977907432656,0.5555555555555561,0.5181590861430486,0.05555555555555552,0.018159086143048498
+as_pas_only,agreeableness,low,50,0.9106892587423872,0.5555555555555561,0.46791290105352856,-0.05555555555555552,0.03208709894647141

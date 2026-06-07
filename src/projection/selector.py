@@ -14,7 +14,7 @@ def cosine_similarity(vec1, vec2):
         Cosine similarity as a float.
     """
     vec1 = vec1.float()
-    vec2 = vec2.float()
+    vec2 = vec2.to(vec1.device).float()
     dot = torch.dot(vec1, vec2)
     norm1 = torch.norm(vec1)
     norm2 = torch.norm(vec2)

@@ -1,0 +1,13 @@
+left,right,layer,cosine_similarity
+trait_contrast.extraversion,trait_contrast.neuroticism,18,-0.2247353196144104
+trait_contrast.extraversion,trait_contrast.neuroticism,21,-0.12771457433700562
+trait_contrast.extraversion,trait_contrast.neuroticism,24,0.03864198550581932
+trait_contrast.extraversion,trait_contrast.neuroticism,mean,-0.10460263614853223
+trait_contrast.extraversion,trait_contrast.openness,18,0.5043114423751831
+trait_contrast.extraversion,trait_contrast.openness,21,0.5456262826919556
+trait_contrast.extraversion,trait_contrast.openness,24,0.6195873022079468
+trait_contrast.extraversion,trait_contrast.openness,mean,0.5565083424250284
+trait_contrast.neuroticism,trait_contrast.openness,18,-0.21917714178562164
+trait_contrast.neuroticism,trait_contrast.openness,21,-0.13706417381763458
+trait_contrast.neuroticism,trait_contrast.openness,24,0.010707962326705456
+trait_contrast.neuroticism,trait_contrast.openness,mean,-0.11517778442551692

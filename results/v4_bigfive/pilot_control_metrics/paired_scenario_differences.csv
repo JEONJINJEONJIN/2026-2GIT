@@ -1,0 +1,7 @@
+condition,reference_condition,trait,target_direction,n_paired_scenarios,mean_paired_delta_consistency
+as_pas_only,zero_hook,agreeableness,high,50,0.018455547532055465
+as_pas_only,zero_hook,agreeableness,low,50,-0.039993616843201976
+random_vector,zero_hook,agreeableness,high,50,0.004446226580496613
+random_vector,zero_hook,agreeableness,low,50,0.0056921029009521186
+unrelated_trait_vector,zero_hook,agreeableness,high,50,-0.0004685534686087944
+unrelated_trait_vector,zero_hook,agreeableness,low,50,0.0023312610650600128

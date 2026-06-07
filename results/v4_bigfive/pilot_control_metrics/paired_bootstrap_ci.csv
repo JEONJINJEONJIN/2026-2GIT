@@ -1,0 +1,7 @@
+condition,reference_condition,trait,target_direction,metric,n_paired_scenarios,mean_delta,ci,ci_lower,ci_upper,n_bootstrap,seed
+as_pas_only,zero_hook,agreeableness,high,consistency,50,0.018455547532055465,0.95,0.009738367252264077,0.026644375106820165,500,42
+as_pas_only,zero_hook,agreeableness,low,consistency,50,-0.039993616843201976,0.95,-0.05057179998425339,-0.030551546624372802,500,42
+random_vector,zero_hook,agreeableness,high,consistency,50,0.004446226580496613,0.95,0.0013047872714888158,0.00823587579405818,500,42
+random_vector,zero_hook,agreeableness,low,consistency,50,0.0056921029009521186,0.95,0.001904223859945532,0.009341560264237169,500,42
+unrelated_trait_vector,zero_hook,agreeableness,high,consistency,50,-0.0004685534686087944,0.95,-0.005859407660322703,0.0056964325305357295,500,42
+unrelated_trait_vector,zero_hook,agreeableness,low,consistency,50,0.0023312610650600128,0.95,-0.0030187109090383376,0.008329833599691545,500,42

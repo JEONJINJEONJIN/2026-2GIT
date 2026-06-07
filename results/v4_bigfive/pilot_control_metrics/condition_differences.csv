@@ -1,0 +1,7 @@
+condition,reference_condition,trait,target_direction,delta_consistency,delta_bfi_target_attainment,delta_trait_target_attainment
+as_pas_only,zero_hook,agreeableness,high,0.018455547532055472,0.0,0.03679346072367981
+as_pas_only,zero_hook,agreeableness,low,-0.03999361684320213,0.0,0.04582962709962883
+random_vector,zero_hook,agreeableness,high,0.004446226580496648,0.0,0.002014448014647447
+random_vector,zero_hook,agreeableness,low,0.005692102900952123,0.0,-0.005628335589207247
+unrelated_trait_vector,zero_hook,agreeableness,high,-0.0004685534686083015,0.0,0.00012954652254183307
+unrelated_trait_vector,zero_hook,agreeableness,low,0.0023312610650602084,0.0,-0.0001049221121783581

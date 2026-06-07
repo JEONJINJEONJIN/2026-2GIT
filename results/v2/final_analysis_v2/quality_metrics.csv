@@ -1,0 +1,11 @@
+condition,persona,n,parse_ok_rate,unknown_rate
+as_only_neg,aggressive,30,1.0,0.0
+as_only_neg,cooperative,30,1.0,0.0
+as_only_sep,aggressive,30,1.0,0.0
+as_only_sep,cooperative,30,1.0,0.0
+neutral_baseline,aggressive,30,1.0,0.0
+neutral_baseline,cooperative,30,1.0,0.0
+prompt_as,aggressive,30,1.0,0.0
+prompt_as,cooperative,30,1.0,0.0
+prompt_baseline,aggressive,30,1.0,0.0
+prompt_baseline,cooperative,30,1.0,0.0

@@ -1,0 +1,33 @@
+experiment:
+  name: "v3_measurement_validation"
+  purpose: "Validate whether description loglik scoring is stable across paraphrases and suitable as a forced-choice action preference endpoint."
+  version: "v3"
+  split: "dev"
+
+  personas: ["aggressive", "cooperative"]
+  conditions:
+    - name: "neutral_baseline"
+      persona_prompt: false
+      steering: false
+    - name: "as_only"
+      persona_prompt: false
+      steering: true
+      vector_mode: "contrast_explicit"
+
+  scoring:
+    modes: ["loglik"]
+    primary_metric: "aligned_probability_mass"
+    use_action_paraphrases: true
+    aggregate_paraphrases: "mean"
+    report_top1_alignment: true
+    report_rank_metrics: true
+    report_margin_metrics: true
+
+  data:
+    scenarios_path: "data/scenarios/team_a_scenarios.jsonl"
+    actions_path: "data/actions/team_a_action_definitions.jsonl"
+    require_split: true
+    allowed_splits: ["dev"]
+
+  output:
+    run_root: "results/v3/runs"
